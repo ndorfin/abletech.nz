@@ -1,0 +1,37 @@
+@import "vars";
+@import "mixins";
+$slide-width:1000px;
+.section_scene {padding:0 0 1em !important; position:relative; min-height:500px;
+  .banner_container {padding:0 !important;}
+	figure {position:relative; margin:0;}
+	figcaption {position:absolute; bottom:0; left:0; right:0; padding:0.5em; color:#fff; font-size:36px; text-shadow:0 0 10px #000; font-weight:600; line-height:1;}
+  nav {position:absolute; bottom:2em; left:50%; width:120px; margin-left:-60px; text-align:center;
+    ul {@include list_stripped(); display:inline-block;}
+    li {display:inline-block; margin:0 5px;}
+    a {display:block; width:18px; height:18px; text-align:left; @include hide_text(); border:#fff solid 1px; border-radius:50%; box-shadow:0 0 2px 0 #000;
+      &:hover {background-color:rgba(255,255,255,.5);}
+    }
+  }
+}
+
+.selected_0 li:first-child a,
+.selected_1 li:nth-child(2) a,
+.selected_2 li:nth-child(3) a {background-color:#fff;}
+
+.example_flybuys figcaption {right:55%;}
+.example_sharesight figcaption {top:35%; left:55%; text-align:right; bottom:auto;}
+.example_youshop figcaption {top:0; left:62%; text-align:right; bottom:auto; color:#333; text-shadow:0 0 3px #fff;}
+
+.section_alternate + .section_alternate.section_scene {margin-top:-2em;}
+
+#slideshow_wrapper {position:relative; width:100%; height:500px; overflow:hidden;
+  ul {display:table; margin:0; padding:0; list-style:none; width:$slide-width*3;}
+  li {display:table-cell; width:$slide-width; padding:0; height:500px;}
+}
+#slideshow_container {position:absolute; transform:translateZ(0); user-select:none; text-size-adjust:none; width:$slide-width*3; height:500px;}
+
+
+
+@media (min-width:1000px) {
+  .section_scene {display:block;}
+}

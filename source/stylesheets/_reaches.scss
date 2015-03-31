@@ -1,0 +1,72 @@
+@import "vars";
+@import "mixins";
+$carousel_width:320px - (16px * 2);
+#reaches_wrapper {position:relative; width:100%; height:296px; overflow:hidden; margin-left:-5px; margin-top:1em; z-index:1;}
+.reaches_container {position:absolute; transform:translateZ(0); user-select:none; text-size-adjust:none; width:($carousel_width * 9) - (4px * 9); height:100%;}
+.reaches {display:table; margin:0; padding:0; list-style:none;}
+.reach {display:inline-block; margin:0 -2px; padding:0 6px; max-width:$carousel_width; vertical-align:top; box-sizing:border-box;}
+.figure_reach {display:block; margin:0;
+  figcaption {display:none;}
+}
+.reach_description {padding:0; box-sizing:border-box;
+  p {margin:0;}
+}
+
+@media (min-width:640px) {
+  #reaches_wrapper {margin-top:2em;}
+}
+@media (max-width:799px) {
+  .reach .reach_description {background:none !important;}
+}
+
+@media (min-width:800px) {
+  #reaches_wrapper {height:auto; margin-left:0;}
+  .reaches_container {width:auto; position:static; margin-left:0; transform:none;}
+  .reach_card {perspective:1000px;}
+  .reaches {display:block;}
+  .reach {display:block; float:left; position:relative; padding:0; margin:0; height:100%; width:33.3%; transform-style:preserve-3d; max-width:none;
+    &:active,
+    &:hover {
+      .figure_reach {z-index:1; transform:rotateY(180deg);}
+      .reach_description {transform:rotateY(0); opacity:1;}
+    }
+  }
+  .figure_reach {backface-visibility:hidden; transform:rotateY(0); transition:.4s;}
+  .reach_description {transform:rotateY(-180deg); transition:.4s; backface-visibility:hidden; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,.9); z-index:2; padding:1em; opacity:0; height:100%; background-repeat:no-repeat; background-position:50% 1em;
+    &:before {content:""; width:1px; display:inline-block; vertical-align:middle; height:100%; margin-left:-6px;}
+    &.invert {color:#fff; text-shadow:none;}
+    p {display:inline-block; vertical-align:middle; text-align:center; font-size:13px; line-height:1.2; background-repeat:no-repeat; background-position:50% 0;}
+    // .reach_nz_post              & {
+    //   p {background-image:image-url('logo_nz_post.png'); padding-top:44px;}
+    // }
+    .reach_meatmail             & {background-color:#f14f50;
+      p {background-image:image-url('logo_meat_mail.png'); padding-top:46px;}
+    }
+    .reach_auckland_transport   & {background-color:#1e3d51;
+      p {background-image:image-url('logo_auckland_transport.png'); padding-top:67px;}
+    }
+    .reach_red_cross            & {
+      p {background-image:image-url('logo_red_cross.png'); padding-top:46px;}
+    }
+    .reach_spring_to_the_street & {background-color:#bddda6;
+      p {background-image:image-url('logo_spring_to_the_street.png'); padding-top:66px;}
+    }
+    .reach_radio_nz             & {background-color:#320d04;
+      p {background-image:image-url('logo_radio_nz.png'); padding-top:74px;}
+    }
+    .reach_journey_planner      & {background-color:#f1f4d9;
+      p {background-image:image-url('logo_c_w_j_p.png'); padding-top:99px;}
+    }
+    .reach_aed_locations        & {
+      p {background-image:image-url('logo_aed_locations.png'); padding-top:66px;}
+    }
+    .reach_regthedog            & {background-color:#dd4432;
+      p {background-image:image-url('logo_reg_the_dog.png'); padding-top:101px;}
+    }
+  }
+}
+
+@media (min-width:1000px) {
+  .reaches {margin-top:3em;}
+  .reach_description {font-size:16px;}
+}

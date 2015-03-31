@@ -1,0 +1,58 @@
+@import "vars";
+@import "mixins";
+
+.section {
+	> :last-child {margin-bottom:0;}
+}
+
+.section_scene {display:none;}
+
+.section_aside {
+	aside {margin-bottom:2em; text-align:center;}
+}
+
+/* body {overflow-x:hidden;} Required to contain the pseudo-element overflow */
+.section_column {max-width:$max-width; margin:0 auto; padding:1em;}
+
+.banner_container {max-width:$max-width; padding:0; margin:0 auto; position:relative;}
+.section_column_banner {background-color:#eee; max-width:100%;}
+
+.section_alternate {background-color:$colour_abletech_red; color:$colour_abletech_red_inverse;
+  a,
+	a:visited {color:$colour_abletech_red_inverse;}
+	.heading,
+	p {text-shadow:0 0 1px rgba(0,0,0,.7);}
+}
+
+.section_nav {padding:0;}
+
+@media (min-width:480px) {
+	.section_column {padding:2em 1em;}
+	.section_nav {padding:0;}
+}
+
+@media (min-width:600px) {
+	.section_column {padding:4em 1em;}
+	.section_nav {padding:0;}
+}
+
+@media (min-width:720px) {
+	.section_aside {
+		aside {float:left; width:45%; text-align:right;
+			figure {text-align:left;}
+			& ~ * {margin-left:47%;}
+		}
+		& + * {clear:left;}
+    .you & {
+      aside {margin-top:-1em;}
+    }
+	}
+}
+
+@media (min-width:800px) {
+	.section_nav {padding:1em 0;}
+}
+
+@media (min-width:1032px) {
+	.banner_container {padding:0 1em;}
+}

@@ -1,0 +1,52 @@
+@import "vars";
+@import "mixins";
+
+.contact_details {list-style:none; padding:0; margin:1em 0;
+	li {font-size:0.9em; margin-top:1em;
+		strong {text-transform:uppercase; color:$colour_abletech_red; font-weight:bold; font-size:0.9em; display:block;}
+		a {color:$colour_text_default; text-decoration:none;}
+	}
+}
+
+.contact_networks {list-style:none; padding:0; margin:1em 0; text-align:center;
+	li {display:inline-block; margin:0 0.5em; vertical-align:top;}
+	a {display:block; @include hide_text();}
+}
+
+.contact_email {background-color:$colour_abletech_red; color:#fff; padding:0.25em; font-size:1.5em; margin:1em -0.75em 0; text-align:center;
+	a {color:#fff; text-decoration:none; font-weight:200;}
+}
+
+#section_map {padding:0; overflow:hidden;
+	a {display:block; margin:0 -120px;}
+	p {margin:0; text-align:center;}
+}
+
+@media (min-width:480px) {
+	.contact_details {
+		li {width:49%; display:inline-block;}
+	}
+	.contact_email {font-size:2em;}
+	.contact_networks {margin-top:2em;}
+	#section_map {
+		a {margin:0 -80px;}
+	}
+}
+
+@media (min-width:800px) {
+	#contact_details_container {min-height:300px;}
+	.contact_details {float:left; width:50%;
+		li {margin:1em 0 0;}
+	}
+	.contact_email {margin-left:50%; margin-right:0; padding-left:1em; text-align:left;}
+	.contact_networks {margin-top:3em; text-align:right;
+		a {text-align:left;}
+	}
+	#section_map {
+		a {margin:0;}
+	}
+}
+
+@media (min-width:1000px) {
+	#section_map {padding:1em 0;}
+}

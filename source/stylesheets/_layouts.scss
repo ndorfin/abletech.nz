@@ -1,0 +1,18 @@
+@import "vars";
+@import "mixins";
+
+.layout {}
+.layout_columns_3 {
+	.column {}
+	.column + .column {}
+}
+ul.layout {@include list_stripped();
+	li.column {}
+}
+
+@media (min-width:800px) {
+	.layout_columns_3 {overflow:hidden;
+		.column {width:28%; display:block; float:left;}
+		.column + .column {margin-left:8%;}
+	}
+}

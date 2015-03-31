@@ -1,0 +1,20 @@
+$colour_background:#fff;
+$colour_text_default:#333;
+$colour_abletech_red:#7e000c;
+$colour_abletech_red_inverse:#fff;
+$colour_abletech_grey:#b3b3b3;
+$colour_off_background:#eee;
+
+$colour_link:#0074a2;
+$colour_link_active:darken($colour_link, 10%);
+$colour_link_visited:#004d6b;
+
+$colour_footer_background:#363636;
+
+$font_family:"Droid Sans", Helvetica, Arial, sans-serif;
+
+$path_images:'/images/';
+
+$max-res:2560px; /* Change this value based on the maximum horizontal resolution your site might encounter */
+$max-width:1000px; /* Container max-width */
+$split-remaining:($max-res - $max-width)/2;

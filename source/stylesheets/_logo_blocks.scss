@@ -1,0 +1,48 @@
+@import "vars";
+@import "mixins";
+
+.logo_blocks {z-index:2; list-style:none; display:table; margin:2em 0 0; padding:0; width:100%; min-height:240px;
+  li {display:table-cell; text-align:center; vertical-align:bottom; width:33.3%;
+    &:first-child,
+    &:nth-child(2) {display:none;}
+  }
+  a {display:block; box-sizing:border-box; @include hide_text(); background-position:50% 50%; background-repeat:no-repeat; transition:all .3s;}
+}
+
+@media (min-width:600px) {
+  .home .logo_blocks {position:relative; top:auto; left:auto;}
+  .logo_addressfinder        {background-image:inline-image('logo_addressfinder.png');        background-color:#1e1e1e; min-height:80px;}
+  .logo_c_w_j_p              {background-image:inline-image('logo_c_w_j_p.png');              background-color:#f1f4d9; min-height:120px;}
+  // .logo_kiwi_bank            {background-image:inline-image('logo_kiwi_bank.png');            background-color:#fff;    min-height:100px; background-position:0 50% !important;}
+  .logo_loyalty_nz           {background-image:inline-image('logo_loyalty_nz.png');           background-color:#ad0040; min-height:120px;}
+  .logo_met_service          {background-image:inline-image('logo_met_service.png');          background-color:#00264d; min-height:80px;}
+  .logo_msd                  {background-image:inline-image('logo_msd.png');                  background-color:#fff;    min-height:80px;}
+  .logo_nzx                  {background-image:inline-image('logo_nzx.png');                  background-color:#015ea4; min-height:80px;}
+  // .logo_nz_post              {background-image:inline-image('logo_nz_post.png');              background-color:#fff;    min-height:80px;}
+  .logo_radio_nz             {background-image:inline-image('logo_radio_nz.png');             background-color:#320d04; min-height:120px;}
+  .logo_reg_the_dog          {background-image:inline-image('logo_reg_the_dog.png');          background-color:#dd4432; min-height:120px;}
+  .logo_sharesight           {background-image:inline-image('logo_sharesight.png');           background-color:#30343d; min-height:120px;}
+  .logo_snapper              {background-image:inline-image('logo_snapper.png');              background-color:#fff;    min-height:100px;}
+  .logo_watch_my_gear        {background-image:inline-image('logo_watch_my_gear.png');        background-color:#a40d1e; min-height:80px;}
+  .logo_auckland_transport   {background-image:inline-image('logo_auckland_transport.png');   background-color:#1e3d51; min-height:100px;}
+  .logo_aed_locations        {background-image:inline-image('logo_aed_locations.png');        background-color:#fff;    min-height:100px;}
+  .logo_red_cross            {background-image:inline-image('logo_red_cross.png');            background-color:#fff;    min-height:80px;}
+  .logo_spring_to_the_street {background-image:inline-image('logo_spring_to_the_street.png'); background-color:#bddda6; min-height:100px;}
+  .logo_meat_mail            {background-image:inline-image('logo_meat_mail.png');            background-color:#f14f50; min-height:80px;}
+}
+
+@media (min-width:800px) {
+  .logo_blocks {
+    li {width:25%;
+      &:nth-child(2) {display:table-cell;}
+    }
+  }
+}
+
+@media (min-width:1000px) {
+  .logo_blocks {
+    li {width:20%;
+      &:first-child {display:table-cell;}
+    }
+  }
+}

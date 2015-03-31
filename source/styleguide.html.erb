@@ -1,0 +1,215 @@
+---
+title: Abletech website styleguide
+page_classes: styleguide
+hide_from_sitemap: true
+---
+
+<style>
+	section {}
+	section > h1 {border-bottom:#ccc solid 1px; clear:both; font-size:2em;}
+	section > h2 {clear:both; font-size:1.5em;}
+	.sg_example {margin-left:2em; border:#ccc dotted 1px;}
+	.sg_example_stripped {margin:0; border:none;}
+</style>
+<h1>Styleguide</h1>
+<nav>
+	<ul>
+		<li><a href="#headings">Headings</a></li>
+		<li><a href="#text-treatment">Text treatment</a></li>
+		<li><a href="#quotes">Quotes</a></li>
+		<li><a href="#sections">Sections</a></li>
+		<li><a href="#services">Services</a></li>
+		<li><a href="#logos">Logos</a></li>
+		<li><a href="#images">Images</a></li>
+	</ul>
+</nav>
+<section id="headings">
+	<h1>Headings</h1>
+	<h2>Unstyled</h2>
+	<div class="sg_example">
+		<h1>Heading level 1<br>with a break</h1>
+		<h2>Heading level 2<br>with a break</h2>
+		<h3>Heading level 3<br>with a break</h3>
+		<h4>Heading level 4<br>with a break</h4>
+		<h5>Heading level 5<br>with a break</h5>
+		<h6>Heading level 6<br>with a break</h6>
+		<p>Paragraph<br>with a break</p>
+	</div>
+	<h2>Base</h2>
+	<div class="sg_example">
+		<h1 class="heading">Heading level 1<br>with a break</h1>
+		<h2 class="heading">Heading level 2<br>with a break</h2>
+		<h3 class="heading">Heading level 3<br>with a break</h3>
+		<h4 class="heading">Heading level 4<br>with a break</h4>
+		<h5 class="heading">Heading level 5<br>with a break</h5>
+		<h6 class="heading">Heading level 6<br>with a break</h6>
+		<p  class="heading">Paragraph<br>with a break</p>
+	</div>
+	<h2>Page heading</h2>
+	<div class="sg_example">
+		<h1 class="heading heading_page">Heading level 1<br>with a break</h1>
+		<h2 class="heading heading_page">Heading level 2<br>with a break</h2>
+		<h3 class="heading heading_page">Heading level 3<br>with a break</h3>
+		<h4 class="heading heading_page">Heading level 4<br>with a break</h4>
+		<h5 class="heading heading_page">Heading level 5<br>with a break</h5>
+		<h6 class="heading heading_page">Heading level 6<br>with a break</h6>
+		<p  class="heading heading_page">Paragraph<br>with a break</p>
+	</div>
+	<h2>Section heading</h2>
+	<div class="sg_example">
+		<h1 class="heading heading_section">Heading level 1<br>with a break</h1>
+		<h2 class="heading heading_section">Heading level 2<br>with a break</h2>
+		<h3 class="heading heading_section">Heading level 3<br>with a break</h3>
+		<h4 class="heading heading_section">Heading level 4<br>with a break</h4>
+		<h5 class="heading heading_section">Heading level 5<br>with a break</h5>
+		<h6 class="heading heading_section">Heading level 6<br>with a break</h6>
+		<p  class="heading heading_section">Paragraph<br>with a break</p>
+	</div>
+	<h2>Content heading</h2>
+	<div class="sg_example">
+		<h1 class="heading heading_content">Heading level 1<br>with a break</h1>
+		<h2 class="heading heading_content">Heading level 2<br>with a break</h2>
+		<h3 class="heading heading_content">Heading level 3<br>with a break</h3>
+		<h4 class="heading heading_content">Heading level 4<br>with a break</h4>
+		<h5 class="heading heading_content">Heading level 5<br>with a break</h5>
+		<h6 class="heading heading_content">Heading level 6<br>with a break</h6>
+		<p  class="heading heading_content">Paragraph<br>with a break</p>
+	</div>
+</section>
+
+<section id="text-treatment">
+	<h1>Text treatment</h1>
+	<h2>Replacement</h2>
+	<div class="sg_example">
+		<p>Replace this with a plus: <span class="replace replace_no_js replace_plus">plus</span></p>
+		<p>Replace this with a time-sensitive greeting: <span class="replace replace_js replace_greeting">greeting</span></p>
+		<p>Replace this with a user count: <span class="replace replace_js replace_user_count">Thousands</span></p>
+	</div>
+	<h2>Paragraph intros</h2>
+	<div class="sg_example">
+		<p class="paragraph_intro">
+			This is an introductory paragraph.<br>
+			As you’ll see it has a slightly larger font-size than subsequent (and default) paragraphs.
+		</p>
+		<p>
+			This is a default paragraph.<br>
+			Complete with line-break.
+		</p>
+	</div>
+</section>
+
+<section id="quotes">
+	<h1>Quotes</h1>
+	<h2>Blockquotes</h2>
+	<div class="sg_example">
+		<blockquote>
+			<p>Over the years the Abletech team have never ceased to impress with their outstanding technical know-how, support, and willingness to go the extra mile.</p>
+			<footer>
+				<p><cite>Scott Ryburn</cite> - Sharesight</p>
+			</footer>
+		</blockquote>
+	</div>
+</section>
+
+<section id="sections">
+	<h1>Sections</h1>
+	<h2>Column-based section</h2>
+	<div class="sg_example sg_example_stripped">
+		<section class="section section_column">
+			<img src="//placehold.it/1200x300" alt="">
+		</section>
+		<section class="section section_column">
+			<p>And another...</p>
+			<img src="//placehold.it/1200x300" alt="">
+		</section>
+	</div>
+	<h2>Column-based section with full-width banner background</h2>
+	<div class="sg_example sg_example_stripped">
+		<section class="section section_column section_column_banner">
+			<img src="//placehold.it/1200x300" alt="">
+		</section>
+		<section class="section section_column section_column_banner section_alternate">
+			<img src="//placehold.it/1200x300" alt="">
+		</section>
+	</div>
+</section>
+
+<section id="services">
+	<h1>Services</h1>
+	<div class="sg_example" style="background-color:#eee;">
+		<ul class="services">
+			<li class="service service_rapid_projects"><a href="#">
+				<h2>Rapid projects</h2>
+				<p>A great way to see how we operate, understand our capablities and experience the huge benefits of the technologies that we use.</p>
+			</a></li>
+			<li class="service service_web_apps"><a href="#">
+				<h2>Web apps</h2>
+				<p>Web apps offer sophisticated functionality from inside the web browser and are accessible from anywhere with web access.</p>
+			</a></li>
+			<li class="service service_mobile_apps"><a href="#">
+				<h2>Mobile apps</h2>
+				<p>Get the most out of the mobile revolution. We have extensive experience developing stand-alone and integrated applications.</p>
+			</a></li>
+			<li class="service service_apis"><a href="#">
+				<h2>APIs</h2>
+				<p>Web APIs (Application Programming Interface) allow data to be shared between applications, publicly or privately, over the Internet.</p>
+			</a></li>
+			<li class="service service_saas"><a href="#">
+				<h2><acronym title="Software as a service">SaaS</acronym></h2>
+				<p>Web applications can offer sophisticated functionality without the need to have specific computer software loaded on the end-users PC.</p>
+			</a></li>
+			<li class="service service_maps_and_geo_data"><a href="#">
+				<h2>Maps & geo data</h2>
+				<p>We specialise in Google Maps development and build custom online map your unique needs.</p>
+			</a></li>
+		</ul>
+
+	</div>
+</section>
+
+<section id="logos">
+	<h1>Logos</h1>
+	<h2>Logo blocks</h2>
+	<div class="sg_example">
+		<ul class="logo_blocks">
+			<li><a class="logo_radio_nz"      href="/work/#RadioNewZealand">Radio New Zealand</a></li>
+			<li><a class="logo_addressfinder" href="/work/#AddressFinder">AddressFinder</a></li>
+			<li><a class="logo_c_w_j_p"       href="/work/#CyclingAndWalkingJourneyPlanner">Cycling & Walking Journey Planner</a></li>
+			<li><a class="logo_nz_post"       href="/work/#NewZealandPost">New Zealand Post</a></li>
+			<li><a class="logo_nzx"           href="/work/#NZX">NZX</a></li>
+			<li><a class="logo_loyalty_nz"    href="/work/#LoyaltyNewZealand">Loyalty New Zealand</a></li>
+			<li><a class="logo_sharesight"    href="/work/#ShareSight">Sharesight</a></li>
+			<li><a class="logo_met_service"   href="/work/#MetService">MetService</a></li>
+			<li><a class="logo_watch_my_gear" href="/work/#WatchMyGear">WatchMyGear</a></li>
+			<li><a class="logo_reg_the_dog"   href="/work/#RegTheDog">RegTheDog</a></li>
+		</ul>
+	</div>
+</section>
+<section id="images">
+	<h1>Images</h1>
+	<h2>Figures</h2>
+	<h3>Base figure</h3>
+	<div class="sg_example">
+		<figure class="figure">
+			<img src="//placehold.it/300" alt="An adorable kitten.">
+			<figcaption>Scratch.</figcaption>
+		</figure>
+	</div>
+	<h3>Profile figure</h3>
+	<div class="sg_example">
+		<figure class="figure figure_profile">
+			<img src="//placehold.it/300" alt="Scratch">
+			<figcaption>Scratch</figcaption>
+		</figure>
+	</div>
+	<h3>Polaroid figure</h3>
+	<div class="sg_example">
+		<figure class="figure figure_polaroid">
+			<img src="//placehold.it/300" alt="Scratch">
+			<figcaption>Scratch</figcaption>
+		</figure>
+	</div>
+</section>
+
+
+

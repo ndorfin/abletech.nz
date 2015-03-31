@@ -1,0 +1,62 @@
+@import "vars";
+@import "mixins";
+
+.section_post {margin:3em 1em; padding:1em 0; max-width:1000px; box-sizing:border-box;
+  > blockquote {margin:1em 1em 2em;}
+  > footer {margin:0 -1em -1em !important; background-color:#eee; padding:0.5em 1em; overflow:hidden;}
+
+  .date {float:right; margin:0;
+    a,
+    a:visited {color:#999; text-decoration:none;}
+  }
+
+  .tags {list-style:none; margin:0; padding:0; display:inline;
+    li {display:inline-block; margin-right:1em;}
+    a:before {content:"#";}
+    a,
+    a:visited {color:#999; text-decoration:none;}
+  }
+
+  .date a:hover,
+  .tags a:hover {text-decoration:underline;}
+
+  blockquote > p:first-child {
+    &:before {content:"“";}
+    &:after {content:"”";}
+  }
+}
+
+.blog {
+  img {height:auto;}
+  figcaption p {margin-bottom:0;}
+  figure {margin-right:0; margin-left:0;}
+  figure + footer {margin-top:1em;}
+  .heading > a,
+  .heading > a:visited {color:inherit;}
+  hr {border:none; margin:2em 0; height:1px; background:#ccc;}
+}
+
+#tumblr_controls {display:none;}
+
+#blog_header {position:relative;
+  p {position:absolute; top:50%; right:1em; margin:0;
+    a {display:block; width:26px; height:26px; @include hide_text(); background:url('https://abletech.nz/images/icon_rss_small-98388ef7.png') 50% 50% no-repeat; background-size:contain; margin-top:-13px; border-radius:3px;}
+  }
+}
+
+#pagination {
+  ul {@include list_stripped();}
+  .previous {float:left;}
+  .next {float:right;}
+  p {text-align:center; margin:0 140px;}
+}
+
+@media (min-width:600px) {
+  .section_post {padding:1em; border:#eee solid 1px; border-radius:5px;}
+}
+@media (min-width:1000px) {
+  .section_post {margin:3em auto;}
+  #blog_header {
+    p a {width:52px; height:52px; margin-top:-26px;}
+  }
+}

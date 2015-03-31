@@ -1,0 +1,117 @@
+@import "vars";
+@import "mixins";
+
+//http://codepen.io/ndorfin/pen/KwVeNp?editors=001
+
+.home {
+	article > header {background:$colour_off_background; padding-bottom:0;
+    .heading {margin-bottom:2em;}
+  }
+	.logo_blocks {@include off_left();}
+}
+
+#meet_carl {margin:-2em auto 0; overflow:hidden; max-width:250px; height:320px; background:image-url('bg_carl_large_25.jpg') 100% 0 no-repeat; background-size:188px 500px;
+	a {@include hide_text(); margin:0 auto; display:block; width:250px; height:500px; background:image-url('sprite_homepage_headings.png') 0 -32px no-repeat; background-size:141px 101px; position:relative;
+		&:before {content:""; position:absolute; top:56px; left:82px; width:40px; height:36px; background-position:0 0; background-size:40px auto;}
+		&:after {content:""; position:absolute; top:125px; left:119px; background:image-url('bg_video_play.png') 0 0 no-repeat; width:85px; height:49px;}
+		&:hover:after {background-color:#fff; border-radius:5px;}
+	}
+}
+#logos_container {position:absolute; bottom:0; left:0; right:0;}
+#homepage_masthead {position:relative;
+  .iframe_container {margin:0; transition:opacity .5s; opacity:0; position:relative; padding-bottom:56.25%; height:0;
+    h1 {@include off_left();}
+  }
+  iframe {position:absolute; top:0; left:0; width:100%; height:100%;
+    html {background-color:#fff;}
+  }
+  .banner_container {transition:opacity .5s; opacity:1;}
+  & + #carousel {max-height:500px; transition:max-height .5s, padding .5s; overflow:hidden;}
+  &.video_active {padding:0 !important; background-color:#fff; position:relative;
+    .iframe_container {opacity:1;}
+    .banner_container {position:absolute; opacity:0; z-index:-1; left:0; right:0;}
+    & + #carousel {max-height:0; min-height:0; padding:0 !important;}
+    #iframe_close {position:absolute; top:0; right:1em; width:32px; height:32px; background:#ccc image-url('bg_video_close.png') 50% 50% no-repeat; cursor:pointer; background-size:24px; border-radius:4px; @include hide_text();
+      &:hover {background-color:$colour_abletech_red;}
+    }
+  }
+
+}
+
+#client_testimonials {
+	h1 {margin:0 0 1em; line-height:1; @include hide_text(); background:image-url('sprite_homepage_headings.png') 0 0 no-repeat; background-size:143px 106px; width:144px; height:32px;}
+	blockquote {margin-left:2em; margin-right:2em;}
+	> p {margin:2em 0 0;}
+}
+
+#articles {
+	.layout {margin-top:2em; margin-bottom:2em;
+		a {color:initial; text-decoration:none;}
+		p {line-height:2;}
+		.meta {font-size:0.9em; color:#888; margin:1em 0 -0.25em;}
+	}
+}
+
+#our_products {text-align:center;
+	.heading {font-weight:300;}
+	ul {list-style:none; padding:0; margin:1em 0 0;}
+	li {margin:1em 0 0;}
+	a {display:block; border-radius:6px; background-position:50% 50%; background-repeat:no-repeat; @include hide_text(); padding:0.5em;
+		&:hover {background-color:rgba(255,255,255,.2);}
+	}
+}
+#product_watch_my_gear a {background-image:image-url('logo_watch_my_gear_large.png'); height:56px; min-width:214px; background-position:50% 100%;}
+#product_addressfinder a {background-image:image-url('logo_addressfinder_large.png'); height:22px; min-width:220px;}
+
+#working_with .heading:after,
+.the_rest_of_the_gang:after,
+#pages_heading:after,
+#meet_carl a:before {background-image:image-url('sprite_grey_arrows.png'); background-repeat:no-repeat;}
+
+@media (min-width:520px) {
+	#our_products {
+		ul {margin-top:2em;}
+		li {display:inline-block; margin:0 -3px; line-height:56px; vertical-align:middle; box-sizing:border-box; width:50%;}
+	}
+	#product_addressfinder a {height:56px;}
+}
+@media (min-width:600px) {
+	.home {
+		article > header {
+      .banner_container {min-height:260px; padding-bottom:240px;}
+      .heading {padding-right:220px;}
+    }
+	}
+	#meet_carl {position:absolute; top:0; right:1em; z-index:1; height:500px;}
+}
+@media (min-width:800px) {
+	#client_testimonials {position:relative;
+		h1 {position:absolute; right:1em; top:50%; margin-top:-4em;
+      &:after {content:""; position:absolute; left:-60px; background:image-url('sprite_grey_arrows.png') 0 -45px no-repeat; background-size:50px auto; height:30px; width:50px;}
+    }
+		blockquote {margin-right:330px; margin-left:0;}
+	}
+}
+
+@media (min-width:900px) {
+	#our_products {padding:1em;
+		.heading {float:left; font-size:1.2em; width:45%; text-align:left; line-height:72px;}
+		ul {margin-left:46%; margin-top:0;}
+	}
+}
+
+@media (min-width:1000px) {
+  #logos_container {left:1em; right:1em;}
+  #homepage_masthead {
+    .no-js & .banner_container {padding-bottom:60px;}
+    &.video_active {
+      .iframe_container {width:1000px; height:560px; margin-left:auto; margin-right:auto; padding:0;}
+    }
+  }
+  #meet_carl {right:0;}
+	.home {
+		article > header {padding-bottom:0;
+      .heading {margin-bottom:1em;}
+    }
+	}
+}

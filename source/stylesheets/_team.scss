@@ -1,0 +1,75 @@
+@import "vars";
+@import "mixins";
+.team {
+	.section_column_banner {background-color:#efefef;}
+}
+#team_activities {position:relative; min-height:360px; padding-top:1em;
+  .figure {position:absolute; right:1em; left:1em; z-index:-1; max-width:480px; margin:0 auto; }
+  .figure:nth-child(2) {transform:rotate(3deg);  z-index:3;}
+  .figure:nth-child(3) {transform:rotate(-6deg); z-index:2;}
+  .figure:nth-child(4) {transform:rotate(-3deg); z-index:1;
+    & + .figure {display:none;}
+  }
+  .figure:first-child {transform:none; z-index:4; transform:translateX(0); transition:transform .3s, opacity .3s; opacity:1;
+    &.swipe {transform:translateX(-320px); opacity:0;}
+  }
+  .js & {
+    .figure:first-child {cursor:pointer;}
+  }
+}
+
+.founding_partners,
+.the_rest_of_the_gang {@include hide_text(); margin:2em auto 0;}
+.founding_partners {width:83px; height:51px; padding-left:50px; padding-bottom:50px; background:image-url('bg_founding_partners.png') 100% 0 no-repeat; background-size:83px 51px; position:relative; margin-left:50%;
+  &:after {content:""; position:absolute; bottom:0; width:50px; height:45px; left:0; background:image-url('bg_founding_partners_arrow.png') 0 0 no-repeat; background-size:50px 45px;}
+}
+.the_rest_of_the_gang {margin-top:5em; width:112px; height:52px; position:relative; background:image-url('bg_the_rest_of_the_gang.png') 0 0 no-repeat; background-size:112px 52px; padding-bottom:45px; padding-right:60px;
+  &:after {content:""; position:absolute; bottom:0; left:30px; width:50px; height:45px; background-position:0 0; background-size:50px 74px;}
+}
+
+.profiles {@include list_stripped();}
+
+#favourite_tech {
+	.heading {text-align:center;}
+	.list_technologies {text-align:center;
+		> li {display:inline-block; width:49%;}
+	}
+}
+
+@media (min-width:500px) {
+  #team_activities {min-height:480px;}
+  .the_rest_of_the_gang {margin-left:20px;}
+	#favourite_tech {
+		.list_technologies {
+			> li {width:32%;}
+		}
+	}
+}
+
+@media (min-width:560px) {
+  .founding_partners {margin-left:100px;}
+}
+
+@media (min-width:720px) {
+  #team_activities {
+    .figure {}
+  }
+}
+
+@media (min-width:900px) {
+	#favourite_tech {
+		.list_technologies {
+			> li {float:left; width:16.5%; box-sizing:border-box;}
+		}
+	}
+}
+
+@media (min-width:1000px) {
+	#favourite_tech {
+		.heading {float:right; position:relative; @include hide_text(); width:114px; height:75px; background:image-url('bg_heading_favourite_technologies.png') 100% 0 no-repeat; background-size:114px 75px;
+      &:after {content:""; position:absolute; bottom:-43px; left:0; width:40px; height:46px; background:image-url('bg_favourite_tech_arrow.png') 0 0 no-repeat; background-size:40px 46px;}
+    }
+	}
+	.founding_partners {margin-left:60%;}
+	.the_rest_of_the_gang {margin-left:700px; margin-top:0;}
+}

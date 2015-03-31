@@ -1,0 +1,35 @@
+@import "vars";
+@import "mixins";
+
+blockquote {margin:0;
+	p {margin:0;}
+	> p {font-family:Georgia, "Times New Roamn", serif; font-size:1.1em; line-height:1.3; font-weight:300;
+		&:first-child {position:relative;
+			&:before {content:"“"; position:absolute; left:-0.5em;}
+		}
+		&:after {content:"”"; margin-left:0.25em;}
+	}
+	> footer {margin-top:0.6em;
+		p {color:#9d9d9d; font-size:0.9em;}
+		cite {color:#7e000c; font-style:normal;}
+	}
+}
+
+@media (min-width:480px) {
+	blockquote {
+		> p {font-size:1.3em;}
+	}
+}
+@media (min-width:720px) {
+	blockquote {
+		> p {font-size:1.6em;}
+		> footer {
+			p {font-size:1.1em;}
+		}
+	}
+}
+@media (min-width:1000px) {
+	blockquote {
+		> p {font-size:1.9em;}
+	}
+}

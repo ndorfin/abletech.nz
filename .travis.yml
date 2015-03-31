@@ -1,0 +1,28 @@
+branches:
+  only:
+    - master
+    - develop
+    - /^release\/.*$/
+    - /^hotfix\/.*$/
+language: ruby
+rvm:
+  - 2.2.1
+env:
+  - RAILS_ENV=development
+cache:
+  - apt
+  - bundler
+script:
+  - xvfb-run bundle exec rspec
+after_success:
+  - if [[ "$TRAVIS_BRANCH" = "master" ]]; then export MM_ENV=production; fi
+  - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export MM_ENV=staging; fi
+  - echo "BRANCH is $TRAVIS_BRANCH"
+  - echo "MM_ENV is $MM_ENV"
+  - echo "TRAVIS_PULL_REQUEST is $TRAVIS_PULL_REQUEST"
+  - bundle exec middleman build --verbose
+  - if [[ "$TRAVIS_BRANCH" = "master" ]]; then bundle exec middleman s3_sync; fi
+  - if [[ "$TRAVIS_BRANCH" = "develop" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then bundle exec middleman s3_sync; fi
+
+notifications:
+  slack: abletech:NQVuvrCXsRLZ9Vqeejo6vcwn

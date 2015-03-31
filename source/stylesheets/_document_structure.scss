@@ -1,0 +1,97 @@
+@import "vars";
+@import "mixins";
+html {}
+body {margin:0; font:normal normal 16px/1.5 $font_family; background:#fff; color:#222; -webkit-font-smoothing:subpixel-antialiased; overflow-x:hidden;}
+$banner_height:75px;
+[role="banner"] {padding:0 1em; max-width:$max-width; margin:0 auto; position:relative;
+	h1 {margin:0; padding:11px 0; float:left; font-size:1em;
+		a {display:block; width:179px; height:35px; background:image-url('logo_abletech_large.png') 50% 50% no-repeat; @include hide_text(); background-size:contain;}
+	}
+	h2 {display:none;margin:0; text-align:right; padding:0.5em 0; height:41px; line-height:41px; vertical-align:middle; font-size:1em;
+		.js & {display:block;}
+		a {text-transform:uppercase;}
+	}
+}
+[role="navigation"] {padding:1em 0 0; clear:left;
+	.js & {max-height:400px; padding-left:1em; padding-right:1em; overflow:hidden; position:absolute; top:53px; left:0; right:0; transition:max-height .3s, padding-top .3s; background:#fff; z-index:10;}
+	.menu_closed & {max-height:0; padding-top:0;}
+	ul {@include list_stripped(); margin-right:-1em;}
+	li {border-top:#eee solid 1px; margin:0 -1em;
+		&:first-child {border-top:none;}
+	}
+	a {display:block; color:$colour_text_default; text-decoration:none; padding:0.5em 1em; background-color:#fff; transition:all .2s;
+		&:visited {color:$colour_text_default;}
+		&:hover {background-color:#f5f5f5;}
+	}
+}
+
+/* Set the active nav by body-class */
+.blog .nav_blog a,
+.home .nav_home a,
+.work .nav_work a,
+.you .nav_team a,
+.team .nav_team a,
+.contact .nav_contact a {color:$colour_abletech_red;
+	&:visited {color:$colour_abletech_red;}
+}
+
+[role="main"] {
+	&:after {@include clearfix();}
+}
+[role="contentinfo"] {background-color:#363636 !important; color:#fff; padding:2em 1em 3em; position:relative;
+	h1 {@include off_left();}
+	a {color:#fff; text-decoration:none}
+	dl {margin:0;}
+	dt {@include off_left();}
+	dd {margin:0; font-weight:300;}
+	.email {font-size:1.5em;}
+	.telephone {font-size:1.1em; margin:0.65em 0;}
+	.address {margin:1.5em 0;}
+	.network {display:inline-block; margin-right:15px;
+    a {background-color:$colour_footer_background; transition:background-color .2s; border-radius:50%;}
+		a:hover {background-color:#555;}
+	}
+}
+
+@media (min-width:640px) {
+	[role="contentinfo"] {position:relative;
+    .banner_container {min-height:9em;}
+		.email {margin-bottom:1em;}
+		.telephone {margin:1.4em 0 0;}
+		.address {position:absolute; right:1em; top:4.25em; margin:0; text-align:right;}
+		.network {position:absolute; right:1em; top:0; margin:0; line-height:0;}
+		.icon_footer_facebook {position:absolute; right:64px;}
+		.icon_footer_linkedin {position:absolute; right:132px;}
+		dl:after {content:""; clear:both; width:0; height:0; display:block;}
+	}
+}
+
+@media (min-width:720px) {
+	[role="banner"] {min-height:$banner_height;
+		h1 {float:left; padding:0;
+			a {height:$banner_height;}
+		}
+		h2 {
+			.js & {display:none;}
+		}
+	}
+	[role="navigation"] {text-align:right; clear:none; padding-top:0;
+		.js & {position:static; transition:none;}
+		.menu_closed & {max-height:none;}
+		ul {}
+		li {display:inline-block; border-top:none; margin:0;}
+		a {display:inline-block; padding:0 15px; line-height:$banner_height; vertical-align:middle;}
+	}
+  .blog .nav_blog a,
+	.home .nav_home a,
+	.work .nav_work a,
+  .you .nav_team a,
+	.team .nav_team a,
+	.contact .nav_contact a {position:relative;
+		&:after {content:""; height:3px; background-color:$colour_abletech_red; position:absolute; top:62%; left:1em; right:1em;}
+	}
+}
+
+@media (min-width:1024px) {
+	[role="contentinfo"] {padding-left:0; padding-right:0;}
+}

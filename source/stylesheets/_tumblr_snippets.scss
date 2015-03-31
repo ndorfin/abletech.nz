@@ -1,0 +1,29 @@
+#blog_latest {
+  h1 {float:left; margin-top:0; font-weight:normal;}
+  ul {clear:left;}
+}
+#blog_rss {text-align:right; margin:0; min-height:85px;
+  a {text-align:left; @include hide_text(); display:inline-block; width:26px; height:26px; background:image-url('icon_rss_small.png') 50% 50% no-repeat; background-size:contain; vertical-align:top; margin-top:8px;}
+}
+.no-js #blog_latest {display:none;}
+
+@media (max-width:999px) {
+  #blog_latest {display:none;}
+}
+
+.tumblr_container {margin:0 -2em;}
+.tumblr_posts {list-style:none; margin:0; padding:0; display:table; width:100%; border-spacing:0; box-sizing:border-box;
+  > li {width:33%; display:table-cell; padding:0 32px; border-left:#eee solid 1px; font-size:0.85em;
+    &:first-child {border-left:0;}
+  }
+  img {height:auto;}
+  h2 {font-size:1.5em; font-weight:500; line-height:1; margin-top:0;
+    a {color:#333; text-decoration:none;}
+  }
+  .published-date {font-size:0.85em; margin-top:-1em; color:gray;}
+  .post-body {margin-bottom:1em;
+    > * {display:none;}
+    > *:first-child {display:block;}
+  }
+}
+
