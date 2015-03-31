@@ -1,7 +1,9 @@
 The Abletech public-facing website.
 ===================================
 
-The static website is hosted on Amazon S3. We also use the Amazon CloudFront CDN.
+The static website is hosted on Amazon S3, and published using the Amazon CloudFront CDN.
+
+[![Build Status](https://travis-ci.org/AbleTech/abletech.nz.svg?branch=develop)](https://travis-ci.org/AbleTech/abletech.nz)
 
 ## Installation
 1. Fork this repo
