@@ -34,4 +34,5 @@ after_success:
 - if [[ "$TRAVIS_BRANCH" = "master" ]]; then bundle exec middleman s3_sync; fi
 - if [[ "$TRAVIS_BRANCH" = "develop" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then bundle exec middleman s3_sync; fi
 notifications:
-  slack: abletech:NQVuvrCXsRLZ9Vqeejo6vcwn
+  slack:
+    secure: hl2m3ASUXdCDm3ztf9TYo05WtAvptI4Ql2tIP5UbOdGqG7eVSRcdd7RYwq7s1AHwlgkLs8BbqUQTcdTR9xRpzIH5RlYAv4kLIYKu7N6qnjdn6iN6ag7sC671I6AbfnA2sl4IKnomhEBW0n/NnBtQ+hm+UtTigXe8o2rprljhSOM=
