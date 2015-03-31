@@ -1,28 +1,38 @@
 branches:
   only:
-    - master
-    - develop
-    - /^release\/.*$/
-    - /^hotfix\/.*$/
+  - master
+  - develop
+  - "/^release\\/.*$/"
+  - "/^hotfix\\/.*$/"
 language: ruby
 rvm:
-  - 2.2.1
+- 2.2.1
 env:
+  matrix:
   - RAILS_ENV=development
+  global:
+  - secure: i8IMqL3LCxdtbTwbJe0OOM6yjUzoio84eF5+ODsJGDIp77sYf1/ZNDnUeB6A+iNQj86d66rPKrhejaAQEh9MfMEdViVP9Cj0BUPgWrfkMZID5UFWeBGgQZNMJgMmgWeZU2PmnUeJRL2tTfoFhmCtdmnoVWywmvzaiHLlLp+LyfI=
+  - secure: bPS1ACG3hz2ZJ3zrtcp0vQ1vbeLks4N5Kpyy4aFpdmgCdsmw9eVaMf0q3qjdHByvGe1Eq8TE2X5dgil7Rs+wakp8FfT72cHD/7SQXvUJjFcGSYkXs/e9A0TBsUgtfQQa95x3difYDgx5mYbm3v4Wi3TagMWsGi9YqKs5xbvsR1M=
+  - secure: KPQlh2TS59uhZuJ2JMrsfc51LHllrNfnGJgjOxVGMBNW956Hs37v7n/+RQueMx6aznN1EGlJX4gYNlbD5jKWL6MZ4apkycYVO9/OtKg+0ByYqOXGtoMwYFCxtn3yrcTH0BpvuaCt1HiI+A2NGuqwgNJsZQ/XlgZAjbiDP7K2gNo=
+  - secure: EJt3bnY4St7dgTnWYF8ZGj5a0UcC6XpYXBxiRq1Q9JiYAAHhFMsoP9w9eH4i4wiQahpm+hrTvX1mjF8bZEInKQ/RMF75hZ7Er+OWRPNtJr63RDoTDYLI2DTSimv/zoSDS59naQByhHGoPLfMlmr2qR9acpVzfcd0Jqnp7RyIB/M=
+  - secure: ZgWIAu7waz/m3w7EaC6QVkFfuDYcUoJGv/5BFxqIuqsrduI8FqdmdFY2pnlIMPVvt5jVDzXyMnLc+itXRSrY4ZndvLgzVCQV+KuHNyxCsVidV6OvhDYUNZzuhZvTWW6QK0Pi+Tjg69fV4dEXbOIfRRfVj2MhS0E5UAGCfUib7yQ=
+  - secure: RXp9v0s+ED4ISbM9zvT3X1hzNBRKLUreIJVmBdNKxgJzeeMZtiaTdlVLqRilnHWidMnhjV6yPNDMoYhDB9+85aBjxCQZ8+r/JrGE+cHgJ1CTRgswce1UhEndKWtNVZaMCWDI6NsNaAcSrrR69XgNh/JSsnZMvf0V8yeE3RmRbQo=
+  - secure: Xm7/OVs6Sq6H4fmWwjDXZP0TLXqGGH7usTCll1IX+8GZZY64riibyRZIztf+t2IO8jg6KF+do2aZNbhnfBnli2j9U2KCNM0bOsHq3H/KmgwmA23pQbm9uwK5/6Ev098g6avGbRyUgOmpma4gVBy/fTaAPRrxFTheinr1cxygrdE=
+  - secure: Qa0pgci1waMGWgKk6huekUJNzjd/X+xFuyXgGWMkgSR23exmJEOzfhkSgf/5thLJHYFwnuCoDKLFFT1NI9zvbhuLccjWCaApJmb3b9EJ/8bT2JosSQKXYFYZM6BwWIaV51w7C8Y0ayqhwu75v8tZzhe4adR7iY/+Ry8/sz73dSQ=
 cache:
-  - apt
-  - bundler
+- apt
+- bundler
 script:
-  - xvfb-run bundle exec rspec
+- xvfb-run bundle exec rspec
 after_success:
-  - if [[ "$TRAVIS_BRANCH" = "master" ]]; then export MM_ENV=production; fi
-  - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export MM_ENV=staging; fi
-  - echo "BRANCH is $TRAVIS_BRANCH"
-  - echo "MM_ENV is $MM_ENV"
-  - echo "TRAVIS_PULL_REQUEST is $TRAVIS_PULL_REQUEST"
-  - bundle exec middleman build --verbose
-  - if [[ "$TRAVIS_BRANCH" = "master" ]]; then bundle exec middleman s3_sync; fi
-  - if [[ "$TRAVIS_BRANCH" = "develop" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then bundle exec middleman s3_sync; fi
-
+- if [[ "$TRAVIS_BRANCH" = "master" ]]; then export MM_ENV=production; fi
+- if [[ "$TRAVIS_BRANCH" != "master" ]]; then export MM_ENV=staging; fi
+- echo "BRANCH is $TRAVIS_BRANCH"
+- echo "MM_ENV is $MM_ENV"
+- echo "TRAVIS_PULL_REQUEST is $TRAVIS_PULL_REQUEST"
+- bundle exec middleman build --verbose
+- if [[ "$TRAVIS_BRANCH" = "master" ]]; then bundle exec middleman s3_sync; fi
+- if [[ "$TRAVIS_BRANCH" = "develop" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then
+  bundle exec middleman s3_sync; fi
 notifications:
   slack: abletech:NQVuvrCXsRLZ9Vqeejo6vcwn
