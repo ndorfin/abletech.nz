@@ -9,6 +9,6 @@ module ApplicationConfig
     BUCKET = 'abletech-nz'
     ACCESS_ID = ENV['AWS_ACCESS_ID']
     SECRET_KEY = ENV['AWS_SECRET_KEY']
-    CLOUDFRONT_DIST_ID = 'E3AG7KDTVAFWPJ'
+    CLOUDFRONT_DIST_ID = ENV['AWS_CLOUDFRONT_ID']
   end
 end
