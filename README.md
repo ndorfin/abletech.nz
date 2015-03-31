@@ -15,7 +15,7 @@ The static website is hosted on Amazon S3. We also use the Amazon CloudFront CDN
     git checkout develop
     git pull origin develop
     MM_ENV=staging bundle exec middleman build
-    MM_ENV=staging AWS_ACCESS_ID=XXXXXXXXXX AWS_SECRET_KEY=YYYYYYYYYY AWS_CLOUDFRONT_ID=ZZZZZZZZZZ bundle exec middleman s3_sync
+    MM_ENV=staging AWS_ACCESS_ID_STAGING=XXXXXXXXXX AWS_SECRET_KEY_STAGING=YYYYYYYYYY AWS_CLOUDFRONT_ID_STAGING=ZZZZZZZZZZ bundle exec middleman s3_sync
 
 ## Building/Deploying PRODUCTION:
 
