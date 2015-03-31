@@ -6,7 +6,7 @@ module ApplicationConfig
   end
 
   module S3
-    BUCKET = 'staging-abletech-nz'
+    BUCKET = ENV['AWS_BUCKET_ID']
     ACCESS_ID = ENV['AWS_ACCESS_ID']
     SECRET_KEY = ENV['AWS_SECRET_KEY']
     CLOUDFRONT_DIST_ID = ENV['AWS_CLOUDFRONT_ID']
