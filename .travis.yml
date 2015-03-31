@@ -1,28 +1,33 @@
 branches:
   only:
-    - master
-    - develop
-    - /^release\/.*$/
-    - /^hotfix\/.*$/
+  - master
+  - develop
+  - "/^release\\/.*$/"
+  - "/^hotfix\\/.*$/"
 language: ruby
 rvm:
-  - 2.2.1
+- 2.2.1
 env:
+  matrix:
   - RAILS_ENV=development
+  global:
+  - secure: i/hAxVJmdYfcKil0lbNyL9mMkaaAJvFuYW3zRFg3yfL0kWee/PNWGnHZGQRZ1+RdpJjwImHnlIPvHauFnyufROWzzgaDiO0UhObzoFp6ZTYnF2y0/ECovyZKST3m/i22SOFYvfCqO7jOidAEoWSn6QR7ryRfXyuQ3mPdwuiqOSY=
+  - secure: ltkRcV8SkAmMzIWaloPHCwRbOjjFwb4DepvmdWzJ5F9aT1PEFRRb/QexGDCprkr6Op19XevKq3uK8oBYhv26Uxgis57KBed4e8ZDoJP+Wal2gmiGuRXt2ozGou41m31MdooGS8eybThvI1AyZMgK5P/tyZ80rDI0OrqKtZwKKQE=
+  - secure: k1sFB+SQvII//u/yn9LJNLaH3wveS3mZfBBfX2OnFTmBpbgdiKLbaV3kKt59VID1i5Eb0+RZWFPV5YMWcpNqTROxeHKdayyP1ktcayAolWJguyFlOeOr/32wnfxPFM3oMglXWmQkJRK90u6EBESjjPYcwrrClkWvJ66TjLwf044=
 cache:
-  - apt
-  - bundler
+- apt
+- bundler
 script:
-  - xvfb-run bundle exec rspec
+- xvfb-run bundle exec rspec
 after_success:
-  - if [[ "$TRAVIS_BRANCH" = "master" ]]; then export MM_ENV=production; fi
-  - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export MM_ENV=staging; fi
-  - echo "BRANCH is $TRAVIS_BRANCH"
-  - echo "MM_ENV is $MM_ENV"
-  - echo "TRAVIS_PULL_REQUEST is $TRAVIS_PULL_REQUEST"
-  - bundle exec middleman build --verbose
-  - if [[ "$TRAVIS_BRANCH" = "master" ]]; then bundle exec middleman s3_sync; fi
-  - if [[ "$TRAVIS_BRANCH" = "develop" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then bundle exec middleman s3_sync; fi
-
+- if [[ "$TRAVIS_BRANCH" = "master" ]]; then export MM_ENV=production; fi
+- if [[ "$TRAVIS_BRANCH" != "master" ]]; then export MM_ENV=staging; fi
+- echo "BRANCH is $TRAVIS_BRANCH"
+- echo "MM_ENV is $MM_ENV"
+- echo "TRAVIS_PULL_REQUEST is $TRAVIS_PULL_REQUEST"
+- bundle exec middleman build --verbose
+- if [[ "$TRAVIS_BRANCH" = "master" ]]; then bundle exec middleman s3_sync; fi
+- if [[ "$TRAVIS_BRANCH" = "develop" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then
+  bundle exec middleman s3_sync; fi
 notifications:
   slack: abletech:NQVuvrCXsRLZ9Vqeejo6vcwn
