@@ -1,0 +1,278 @@
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+    {block:Description}
+    <meta name="description" content="{MetaDescription}">
+    {/block:Description}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script>document.documentElement.className = 'js';</script>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link rel="stylesheet" href="https://abletech.nz/stylesheets/blog.css?4">
+    <link rel="shortcut icon" href="https://abletech.nz/favicon.ico">
+  </head>
+  <body class="blog {select:Layout}
+  {block:IndexPage} blog-index-page{/block:IndexPage}
+  {block:PermalinkPage} blog-permalink{/block:PermalinkPage}
+  {block:SearchPage} blog-search-page {block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}
+  ">
+    <script>document.body.className += ' menu_closed';</script>
+    <header role="banner">
+      <h1><a href="http://abletech.nz/">Abletech</a></h1>
+      <h2><a id="menu_link" class="button button_menu" href="#menu">Menu</a></h2>
+      <nav role="navigation">
+        <ul id="menu">
+          <li class="nav_home"><a href="https://abletech.nz/">Home</a></li>
+          <li class="nav_work"><a href="https://abletech.nz/work/">Work</a></li>
+          <li class="nav_team"><a href="https://abletech.nz/team/">Team</a></li>
+          <li class="nav_jobs"><a href="https://abletech.nz/jobs/">Jobs</a></li>
+          <li class="nav_blog"><a href="http://blog.abletech.nz">Blog</a></li>
+          <li class="nav_contact"><a href="https://abletech.nz/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article role="main">
+      <header class="section section_column section_column_banner">
+        <div id="blog_header" class="banner_container">
+          <h1 class="heading heading_page">Abletech blog</h1>
+          <p><a href="http://blog.abletech.nz/rss">Subscribe to our blog RSS</a></p>
+        </div>
+      </header>
+
+      {block:SearchPage}
+      <h2 class="heading heading_content">
+        {lang:SearchResultCount results for SearchQuery}
+        {block:NoSearchResults}{lang:Sorry no search results found}{/block:NoSearchResults}
+      </h2>
+      {/block:SearchPage}
+
+      {block:Posts}
+      <section class="section section_post">
+        {block:Text}
+        {block:Title}
+        <h2 class="heading heading_content"><a href="{Permalink}">{Title}</a></h2>
+        {/block:Title}
+        {block:Body}
+        <div class="body-text">
+          {Body}
+        </div>
+        {/block:Body}
+        {/block:Text}
+
+        {block:Photo}
+        {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}
+        {block:Caption}
+        {Caption}
+        {/block:Caption}
+        {/block:Photo}
+
+        {block:Photoset}
+        {Photoset}
+        {block:Caption}
+        {Caption}
+        {/block:Caption}
+        {/block:Photoset}
+
+        {block:Quote}
+        <blockquote>
+          <p>{Quote}</p>
+          {block:Source}
+          <footer>
+            <p><cite>{Source}</cite></p>
+          </footer>
+          {/block:Source}
+        </blockquote>
+        {/block:Quote}
+
+        {block:Link}
+        <div>
+          <p>
+            <a {Target} href="{URL}">
+              {block:Thumbnail}
+              <img src="{Thumbnail}" alt="">
+              {/block:Thumbnail}
+              <span class="link-text-wrapper">
+                <span class="link-text">
+                  <span class="link-title">{Name}</span>
+                  {block:Host}
+                  <span class="link-host">{Host}</span>
+                  {/block:Host}
+                </span>
+              </span>
+            </a>
+          </p>
+          {block:Description}
+          <div class="caption">
+            {Description}
+          </div>
+          {/block:Description}
+        </div>
+        {/block:Link}
+
+        {block:Chat}
+        <div class="post-content">
+          {block:Title}<h2 class="title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+          <ul class="conversation">
+          {block:Lines}
+            <li class="chat-{Alt}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
+          {/block:Lines}
+          </ul>
+        </div>
+        {/block:Chat}
+
+
+        {block:Audio}
+        <div class="post-content {block:Caption}with-caption{/block:Caption}">
+          <div class="audio_container">
+            {block:AudioEmbed}
+              {AudioEmbed color="white"}
+            {/block:AudioEmbed}
+          </div>
+          {block:Caption}
+          <div class="caption">
+            {Caption}
+          </div>
+          {/block:Caption}
+        </div>
+        {/block:Audio}
+
+
+        {block:Video}
+        <figure class="figure figure_polaroid">
+          <div class="video-wrapper">
+            {Video-700}
+          </div>
+          {block:Caption}
+          <figcaption>
+            {Caption}
+          </figcaption>
+          {/block:Caption}
+        </figure>
+        {/block:Video}
+
+        {block:Answer}
+        <div class="post-content">
+          <div class="note-item note-item-asker">
+            <div class="text">
+              <p class="asker"><strong>{Asker}</strong> asked:</p>
+              <div class="asker-question">
+                {Question}
+              </div>
+            </div>
+            <div class="avatar">
+              <img class="asker-avatar" src="{AskerPortraitURL-96}" alt="">
+            </div>
+          </div>
+
+          {block:Answerer}
+          <div class="note-item note-item-answerer">
+            <div class="text">
+              <p class="answerer"><strong>{Answerer}</strong> answered:</p>
+              <div class="answerer-answer">
+                {Answer}
+              </div>
+            </div>
+            <div class="avatar">
+              <img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="">
+            </div>
+          </div>
+          {/block:Answerer}
+
+          <div class="replies">
+            {Replies}
+          </div>
+        </div>
+        {/block:Answer}
+
+        {block:Date}
+        <footer>
+          <p class="date"><a href="{Permalink}" title="{TimeAgo}" class="meta-item post-date">{ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}</a></p>
+          {block:HasTags}
+          <ul class="tags">
+          {block:Tags}
+          <li><a class="meta-item tag-link" href="{TagURL}">{Tag}</a></li>
+          {/block:Tags}
+          </ul>
+          {/block:HasTags}
+
+        </footer>
+        {/block:Date}
+      </section>
+
+      {block:PermalinkPage}
+        {block:Date}
+          {block:IfDisqusShortname}
+          <section class="comments">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+              (function() {
+               var dsq = document.createElement('script');
+               dsq.async = 1;
+               dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.body).appendChild(dsq);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+          </section>
+          {/block:IfDisqusShortname}
+        {/block:Date}
+      {/block:PermalinkPage}
+    {/block:Posts}
+
+
+    {block:IndexPage}
+      <footer class="section_column">
+        {block:Pagination}
+        <nav id="pagination" class="banner_container">
+          <ul>
+            {block:PreviousPage}
+            <li class="previous">
+              <a href="{PreviousPage}" class="button" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}">←&nbsp;{lang:Previous}</a>
+            </li>
+            {/block:PreviousPage}
+            {block:NextPage}
+            <li class="next">
+              <a href="{NextPage}" class="button" data-current-page="{CurrentPage}" data-total-pages="{TotalPages}">{lang:Next}&nbsp;→</a>
+            </li>
+            {/block:NextPage}
+          </ul>
+          <p class="archive"><a href="/archive" class="button">{lang:Archive}</a></p>
+        </nav>
+        {/block:Pagination}
+      </footer>
+    {/block:IndexPage}
+
+    </article>
+    <footer role="contentinfo" class="section_column section_column_banner">
+      <div class="banner_container">
+        <h1>Want to know more about Abletech?</h1>
+        <dl>
+          <dt>Email us:</dt>
+          <dd class="email"><a href="mailto:hello@abletech.co.nz">hello@abletech.co.nz</a></dd>
+          <dt>Phone us:</dt>
+          <dd class="telephone"><a href="tel:+6449103100">+64 4 910 3100</a></dd>
+          <dd class="telephone"><a href="tel:+64800142253">0800 14 2253</a></dd>
+          <dt>Visit us:</dt>
+          <dd class="address">
+            Level 7, 186-190 Willis Street<br>
+            Te Aro, Wellington 6011<br>
+            New Zealand
+          </dd>
+          <dt>Follow us on:</dt>
+          <dd class="network"><a class="network_icon icon_footer_linkedin" href="http://www.linkedin.com/company/able-technology">LinkedIn: Abletech</a></dd>
+          <dd class="network"><a class="network_icon icon_footer_facebook" href="https://www.facebook.com/abletech">Facebook: Abletech</a></dd>
+          <dd class="network"><a class="network_icon icon_footer_twitter" href="https://www.twitter.com/abletech">Twitter: Abletech</a></dd>
+        </dl>
+      </div>
+    </footer>
+    <script>
+      window.addEventListener('load', function(){
+        var s = document.createElement('script');
+        s.src = 'https://abletech.nz/javascripts/blog.js?1';
+        document.body.appendChild(s);
+      });
+    </script>
+  </body>
+</html>
