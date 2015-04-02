@@ -25,12 +25,17 @@ $banner_height:75px;
 	}
 }
 
+.nav_jobs a {
+  &:before {font-size:.75em; height:1em; width:1em; line-height:1em; margin-right:.5em; content:"2"; background:$colour_abletech_red; color:#fff; display:inline-block; padding:.3em; border-radius:50%; text-align:center;}
+}
+
 /* Set the active nav by body-class */
 .blog .nav_blog a,
 .home .nav_home a,
 .work .nav_work a,
 .you .nav_team a,
 .team .nav_team a,
+.jobs .nav_jobs a,
 .contact .nav_contact a {color:$colour_abletech_red;
 	&:visited {color:$colour_abletech_red;}
 }
@@ -87,9 +92,16 @@ $banner_height:75px;
 	.work .nav_work a,
   .you .nav_team a,
 	.team .nav_team a,
+  .jobs .nav_jobs a,
 	.contact .nav_contact a {position:relative;
 		&:after {content:""; height:3px; background-color:$colour_abletech_red; position:absolute; top:62%; left:1em; right:1em;}
 	}
+  .nav_jobs a {position:relative; padding-right:1.6em !important;
+    &:before {position:absolute; right:.5em; top:50%; margin-top:-1.5em; margin-right:0;}
+  }
+  .jobs .nav_jobs a {
+    &:after {right:1.6em;}
+  }
 }
 
 @media (min-width:1024px) {
