@@ -1,4 +1,5 @@
 //= require_tree ./classList
+//= require _document.head
 //= require _date.extensions
 //= require _iscroll
 //= require _window.shuffle

@@ -17,7 +17,7 @@ class Abletech.UIManager
 
   highResStyles: ->
     return @_highResStyles if @_highResStyles?
-    @_highResStyles = new Abletech.HighResStyles('stylesheet_parking')
+    @_highResStyles = new Abletech.HighResStyles()
     @_highResStyles.init()
     @_highResStyles
 

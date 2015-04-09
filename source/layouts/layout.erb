@@ -53,15 +53,12 @@
       </div>
     </footer>
     <script>
+      var highResCSSURL = '<%= asset_path(:css, "high-res") %>';
       window.addEventListener('load', function(){
         var s = document.createElement('script');
-        s.async = 1;
         s.src = '<%= asset_path(:js, "main") %>';
         document.body.appendChild(s);
       });
     </script>
-    <textarea id="stylesheet_parking" style="display:none;">
-      <%= stylesheet_link_tag "high-res" %>
-    </textarea>
   </body>
 </html>
