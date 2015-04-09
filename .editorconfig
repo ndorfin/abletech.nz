@@ -20,10 +20,18 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.html, *.html.erb]
+[*.html]
 indent_style = tab
 indent_size = 2
 
-[*.scss, *.css]
+[*.html.erb]
+indent_style = tab
+indent_size = 2
+
+[*.scss]
+indent_style = tab
+indent_size = 2
+
+[*.css]
 indent_style = tab
 indent_size = 2
