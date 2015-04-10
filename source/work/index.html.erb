@@ -1,5 +1,6 @@
 ---
 title: What we do at Abletech
+description: We’ve worked with companies big and small, building web apps, mobile apps, static websites, APIs and Geographic Information Systems (GIS).
 page_classes: work
 ---
 
@@ -169,3 +170,7 @@ page_classes: work
 		<li>Design and build: an iterative process where you stay in the loop, in full control</li>
 	</ol>
 </section>
+
+<% content_for :load_page_script do %>
+addScript('<%= asset_path(:js, "page.work") %>');
+<% end %>

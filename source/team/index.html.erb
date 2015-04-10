@@ -1,267 +1,55 @@
 ---
 title: Team Abletech
+description: The people that make up Abletech.
 page_classes: team
 ---
-
+<%
+	founders = data.team.profiles.select {|p| p[:founder] == true}
+	rest_of_the_gang = data.team.profiles.select {|p| p[:founder] != true}
+%>
 <section class="section section_column section_column_banner">
   <div class="banner_container">
   	<h1 class="heading heading_page">Thinkers, innovators, cyclists, climbers, foodies.</h1>
   	<h2 class="founding_partners">Founding partners</h2>
   	<ul class="profiles">
+			<% founders.each do |p| %>
   		<li class="profile_scope profile_large" itemscope itemtype="http://schema.org/Person">
   			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Carl Penwarden</h3>
-  				<img itemprop="image" src="/images/photo_carl_2x.jpg" alt="Carl Penwarden">
+  				<h3 class="profile_name" itemprop="name"><%= p[:name] %></h3>
+  				<img itemprop="image" src="/images/<%= p[:photo] %>" alt="<%= p[:name] %>">
   			</div>
   			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Managing Director, BE</p>
-  				<p>With a background in Customer Relationship Management and <acronym title="Information Technology">IT</acronym> Product Development, Carl is skilled at listening to clients and understanding their ideas. With a plan formed, he makes things happen. Carl understands the complexities of application development and customers’ needs for tangible and rapid outcomes from investment. He enjoys leading, motivating and engaging the Abletech team.</p>
+  				<p class="paragraph_intro" itemprop="jobTitle"><%= p[:title] %></p>
+  				<%= p[:description].html_safe %>
   			</div>
   		</li>
-  		<li class="profile_scope profile_large" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Nigel Ramsay</h3>
-  				<img itemprop="image" src="/images/photo_nigel_2x.jpg" alt="Nigel Ramsay">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Principal Consultant, MTech (Hons)</p>
-  				<p>Extensive experience in analysing customers’ needs and changing technologies gives Nigel the acumen and understanding that customers come back for. He continues to code software alongside his teams and values customer input throughout the development process. This results in cost-effective outcomes of the highest quality.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope profile_large" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Marcus Baguley</h3>
-  				<img itemprop="image" src="/images/photo_marcus_2x.jpg" alt="Marcus Baguley">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Principal Consultant, MSc (Hons)</p>
-  				<p>As an architect or systems designer, agile project manager or team mentor, Marcus works with solutions from beginning-to-end and is never too far away from code. He’s been deploying successful systems worldwide since 1992 and ensures Abletech customers receive outstanding solutions, swiftly.</p>
-  			</div>
-  		</li>
+  		<% end %>
   	</ul>
   	<h2 class="the_rest_of_the_gang">The rest of the gang</h2>
   	<ul class="profiles">
+			<% rest_of_the_gang.each do |p| %>
   		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
   			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Andrew French</h3>
-  				<img itemprop="image" src="/images/photo_andy_2x.jpg" alt="Andrew French">
+  				<h3 class="profile_name" itemprop="name"><%= p[:name] %></h3>
+  				<img itemprop="image" src="/images/<%= p[:photo] %>" alt="<%= p[:name] %>">
   			</div>
   			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant</p>
-  				<p>With experience across many software disciplines Andy now perfects mobile and web applications. He’s built multiple reliable and user-friendly Android & Ruby on Rails apps for both internal and external clients. A big football fan, Andy plays for a local team and follows the Wellington Phoenix.</p>
+  				<p class="paragraph_intro" itemprop="jobTitle"><%= p[:title] %></p>
+  				<%= p[:description].html_safe %>
   			</div>
   		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Aurynn Shaw</h3>
-  				<img itemprop="image" src="/images/photo_aurynn_2x.jpg" alt="Aurynn Shaw">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant</p>
-  				<p>Aurynn has experience in high-scale environments and cloud deployments. She is a Python engineer and enjoys making application deployments that are provable, testable, and scalable into the cloud through systems orchestration and automatic scaling. Aurynn finds NZ naturally photogenic and likes the way Wellington ‘has no winter’.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Ben Campbell</h3>
-  				<img itemprop="image" src="/images/photo_ben_2x.jpg" alt="Ben Campbell">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant</p>
-  				<p>Ben has a background in network engineering and is skilled at configuring routers, hardware and general <acronym title="Information Technology">IT</acronym> support. He joined the Abletech team in 2014 as a Ruby on Rails developer and likes seeing the code come to life when he tests it. He enjoys Wellington’s rock-climbing walls and getting out motorcycling.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Blair Macdonald</h3>
-  				<img itemprop="image" src="/images/photo_blair_2x.jpg" alt="Blair Macdonald">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Sales Consultant</p>
-  				<p>Blair brings a variety of skills and experience to Abletech from his investigative background. He works with the WatchMyGear team to ensure customers get the most from both their web-based dashboard and their mobile scanning app.  He enjoys spending time with his family, mountain-biking and Youth Group adventures.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope profile_fifth" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Calvin Kaye</h3>
-  				<img itemprop="image" src="/images/photo_calvin_2x.jpg" alt="Calvin Kaye">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BSc</p>
-  				<p>Calvin loves web development and enjoys building software that solves real-life problems. He enjoys developing applications that make our lives easier. Calvin originally joined the Abletech team as a Summer of Tech Intern and his degree is in Computer Science.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Damian Kaye</h3>
-  				<img itemprop="image" src="/images/photo_damian_2x.jpg" alt="Damian Kaye">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BSc</p>
-  				<p>Damian is interested in putting creativity into the front end interaction of web and mobile apps. Damian joined the Abletech team in 2012.  When he’s not at work you will find him gaming with friends, working on personal apps or on the soccer field.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Dawn Richardson</h3>
-  				<img itemprop="image" src="/images/photo_dawn_2x.jpg" alt="Dawn Richardson">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant</p>
-  				<p>Dawn joined the Abletech team in 2014 after a Summer of Tech internship. She continues to work, with Ruby on Rails, while she completes her conjoint degree in Computer Science and Finance. She enjoys snowboarding, rock climbing and Sweden!</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">James Bowles</h3>
-  				<img itemprop="image" src="/images/photo_james_2x.jpg" alt="James Bowles">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BInfSc</p>
-  				<p>James has a Bachelor of Information Science from Massey University. He loves his job; hand-crafting Rails applications and <acronym title="Application Programme Interface">API</acronym>s and working alongside customers turning their ideas into realities. When he isn’t VIMing, he is out on his favourite mountain biking tracks, at the climbing gym or enjoying good coffee with his wife, Sarah-Rose.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope profile_fifth" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Jo Wilson</h3>
-  				<img itemprop="image" src="/images/photo_jo_2x.jpg" alt="Jo Wilson">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Communications, BA, DipTchg</p>
-  				<p>With a background in broadcasting and teaching, Jo brings a variety of skills to the Abletech team. She writes content for web or mobile applications and enjoys any form of communication. Jo enjoys going on beach and camping adventures with her family.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Jordan Carter</h3>
-  				<img itemprop="image" src="/images/photo_jordan_2x.jpg" alt="Jordan Carter">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BInfSc</p>
-  				<p>With extensive experience with Ruby on Rails, Jordan has provided solutions for customers ranging from startups to government ministries. He majored in Computer Science at Massey University and joined Abletech in 2011. Jordan is interested in artificial intelligence, robotics and autonomous flight, Wellington’s great coffee and even better boutique beer.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Joseph Leniston</h3>
-  				<img itemprop="image" src="/images/photo_joseph_2x.jpg" alt="Joseph Leniston">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BBI</p>
-  				<p>Joseph has many years of development experience. He has worked with Ruby on Rails, Java in Enterprise, and on Android. He enjoys utilising new technologies to help businesses achieve their goals. Outside of work he likes walks around Zealandia and the Orongorongo River in the Rimutaka Forest Park. He prefers to drink good coffee or locally brewed beer.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Kendall Flutey</h3>
-  				<img itemprop="image" src="/images/photo_kendall_2x.jpg" alt="Kendall Flutey">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BCom, MEntr, DipGrad(Acc)</p>
-  				<p>Kendall’s background in business, accounting and entrepreneurship gives her a keen interest in the customer’s bottom line. She joined the Abletech team in 2014 after studying in Otago, and enjoys working with a range of software development tools. Kendall enjoys Wellington’s creative events, she plays basketball, watches rugby and attends tech/innovation meetups.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Naiki Pohe</h3>
-  				<img itemprop="image" src="/images/photo_naiki_2x.jpg" alt="Naiki Pohe">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BSc</p>
-  				<p>Naiki joined the team after a Summer of Tech internship in 2012 and has worked on many internal and external client projects. She’s great at understanding the need for functional yet visually appealing solutions. In her spare time she’s trying to top the Fitbit leaderboard by getting outdoors with family and friends.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope profile_fifth" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Natalie Ferguson</h3>
-  				<img itemprop="image" src="/images/photo_natalie_2x.jpg" alt="Natalie Ferguson">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Interaction and Web Designer</p>
-  				<p>Natalie’s company <a href="http://www.decisiveflow.com/">Decisive Flow</a> has an impressive history of working with many companies the world over. Decisive Flow shares offices with Abletech and they are one of Abletech’s key business partners. She enjoys designing interfaces to meet the unique goals of each business.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Oliver Greenaway</h3>
-  				<img itemprop="image" src="/images/photo_oliver_2x.jpg" alt="Oliver Greenaway">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Trainee Technical Consultant</p>
-  				<p>Oliver joined the Abletech team as a Summer Intern. He’s enjoying studying for a degree in Software Engineering at Victoria University of Wellington. In his free time Oliver enjoys being in the outdoors, especially rock climbing and tramping.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Pam Ramsay</h3>
-  				<img itemprop="image" src="/images/photo_pam_2x.jpg" alt="Pam Ramsay">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Accounts, B.Ed, DipTchg</p>
-  				<p>Pam’s been part of the Abletech team since the very beginning and works behind the scenes keeping all the company records in order. She manages administrative systems and keeps operations in full swing. Her family's favourite Wellington spots include Otari Bush and Scorching Bay.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Ross Jourdain</h3>
-  				<img itemprop="image" src="/images/photo_ross_2x.jpg" alt="Ross Jourdain">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BSc</p>
-  				<p>With an extensive background in systems integration and security projects ranging from print publishing and self-service kiosks to secure email, Ross now focuses on system design and development. He has two young boys at home who keep him out of trouble most of the time.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Russell Healy</h3>
-  				<img itemprop="image" src="/images/photo_russell_2x.jpg" alt="Russell Healy">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BSc, BCA</p>
-  				<p>Russell has extensive experience working with software development teams, as a Development Manager, Solution Architect and Software Developer in both private and public sectors. He is an experienced speaker at LeanKanban and Agile conferences. Russell reckons Wellington summers are the best in the world.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope profile_fifth" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Sean Arnold</h3>
-  				<img itemprop="image" src="/images/photo_sean_2x.jpg" alt="Sean Arnold">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BSc</p>
-  				<p>Via the Summer of Tech Internship Programme, Sean joined the Abletech team in 2012. He has a BSc in Computer Science from Victoria University of Wellington. Sean enjoys consulting with customers and developing high-functioning user-friendly web and mobile solutions.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Shaun O’Connell</h3>
-  				<img itemprop="image" src="/images/photo_shaun_2x.jpg" alt="Shaun O’Connell">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant</p>
-  				<p>With many years of experience as a web developer Shaun relocated from Cape Town, South Africa, to join the Abletech team after meeting at Webstock 2014. His interests are in front-end development, Interaction Design and User Experience Design. Shaun enjoys Wellington’s cultural and intellectual richness and likes mountain biking, robotics and marine conservation.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope" itemscope itemtype="http://schema.org/Person">
-  			<div class="profile_photo">
-  				<h3 class="profile_name" itemprop="name">Tracey Norrish</h3>
-  				<img itemprop="image" src="/images/photo_tracey_2x.jpg" alt="Tracey Norrish">
-  			</div>
-  			<div class="details">
-  				<p class="paragraph_intro" itemprop="jobTitle">Technical Consultant, BSc, PGCertPH, BA(Hons)</p>
-  				<p>Tracey brings a wealth of experience to each project. She majored in Computer Science at the University of Otago.  Tracey enjoys solving complex problems with Ruby and tinkering with other languages. She loves living in Wellington where the coffee’s hot, the beer is cold and there’s running and mountain biking trails right outside the window.</p>
-  			</div>
-  		</li>
-  		<li class="profile_scope profile_placeholder">
-  			<a href="/team/you/">
-  				<div class="profile_photo">
-  					<h3 class="profile_name">You?</h3>
-  					<img src="/images/team_you.png" alt="You?">
-  				</div>
-          <div class="details">
-            <p>You are an innovative thinker who sees the big picture but you also have an eye for detail. You are keen on web and mobile development. So what are you waiting for?</p>
-          </div>
-  			</a>
-  		</li>
+  		<% end %>
+			<li class="profile_scope profile_placeholder">
+				<a href="/team/you/">
+					<div class="profile_photo">
+						<h3 class="profile_name">You?</h3>
+						<img src="/images/team_you.png" alt="You?">
+					</div>
+			    <div class="details">
+			      <p>You are an innovative thinker who sees the big picture but you also have an eye for detail. You are keen on web and mobile development. So what are you waiting for?</p>
+			    </div>
+				</a>
+			</li>
   	</ul>
   </div>
 </section>
@@ -289,3 +77,7 @@ page_classes: team
   	</ul>
   </div>
 </section>
+
+<% content_for :load_page_script do %>
+addScript('<%= asset_path(:js, "page.team") %>');
+<% end %>

@@ -1,5 +1,5 @@
-window.Abletech ||= {}
-class Abletech.HighResStyles
+window.UI ||= {}
+class UI.HighResStyles
   'use strict'
 
   addStyleSheet: =>

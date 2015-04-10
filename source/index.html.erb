@@ -1,5 +1,6 @@
 ---
 title: Abletech
+description: Abletech is a web development consultancy based in Wellington, New Zealand. We love working with Ruby, Ruby on Rails (RoR), Middleman and other Open Source Software (OSS) stacks.
 page_classes: home
 ---
 
@@ -65,3 +66,6 @@ page_classes: home
   </div>
 </section>
 <section id="blog_latest" class="section section_column"></section>
+<% content_for :load_page_script do %>
+addScript('<%= asset_path(:js, "page.home") %>');
+<% end %>
