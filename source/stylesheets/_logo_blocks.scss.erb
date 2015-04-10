@@ -1,0 +1,34 @@
+@import "vars";
+@import "mixins";
+
+.logo_blocks {z-index:2; list-style:none; display:table; margin:2em 0 0; padding:0; width:100%; min-height:240px;
+  li {display:table-cell; text-align:center; vertical-align:bottom; width:33.3%;
+    &:first-child,
+    &:nth-child(2) {display:none;}
+  }
+  a {display:block; box-sizing:border-box; @include hide_text(); background-position:50% 50%; background-repeat:no-repeat; transition:all .3s;}
+}
+
+@media (min-width:600px) {
+  .home .logo_blocks {position:relative; top:auto; left:auto;}
+	<% homepageLogos = data.clients.clients.select {|l| l[:homepageVisible] == true} %>
+	<% homepageLogos.each do |l| %>
+	.logo_<%= l[:class] %> {background-image:inline-image('<%= l[:logo][:url] %>'); background-color:<%= l[:logo][:background_color] %>; min-height:<%= l[:logo][:min_height] %>px;}
+	<% end %>
+}
+
+@media (min-width:800px) {
+  .logo_blocks {
+    li {width:25%;
+      &:nth-child(2) {display:table-cell;}
+    }
+  }
+}
+
+@media (min-width:1000px) {
+  .logo_blocks {
+    li {width:20%;
+      &:first-child {display:table-cell;}
+    }
+  }
+}
