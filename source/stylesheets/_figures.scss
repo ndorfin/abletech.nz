@@ -63,7 +63,7 @@
     &.profile_large {width:25%;
       .details {margin-left:0; bottom:223px;}
     }
-    &.profile_fifth {
+    &:nth-of-type(5n) {
       .details {left:auto; right:0;}
     }
     &:hover {
