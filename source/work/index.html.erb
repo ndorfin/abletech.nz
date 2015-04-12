@@ -123,42 +123,14 @@ page_classes: work
   <div class="banner_container">
   	<h1 class="heading heading_subsection">A bit more about what we do…</h1>
   	<ul class="services">
-  		<li class="service service_apis">
-        <a href="/work/services/apis/">
-          <h2>APIs</h2>
-          <p>Web APIs (Application Programming Interface) allow data to be shared between applications, publicly or privately, over the Internet.</p>
-        </a>
-      </li>
-      <li class="service service_maps_and_geo_data">
-        <a href="/work/services/mapping/">
-          <h2>Maps and Geospatial</h2>
-          <p>We specialise in Google Maps development and build custom online maps to meet your unique needs.</p>
-        </a>
-      </li>
-      <li class="service service_mobile_apps">
-        <a href="/work/services/mobile/">
-          <h2>Mobile apps</h2>
-          <p>Get the most out of the mobile revolution. We have extensive experience developing stand-alone and integrated applications.</p>
-        </a>
-      </li>
-      <li class="service service_rapid_projects">
-  			<a href="/work/services/rapid-projects/">
-  				<h2>Rapid projects</h2>
-  				<p>A great way to see how we operate, understand our capablities and experience the huge benefits of the technologies that we use.</p>
+  		<% data.services.services.each do |s| %>
+  		<li class="service <%= s[:class] %>">
+  			<a href="<%= s[:url] %>">
+  				<h2><%= s[:title].html_safe %></h2>
+  				<p><%= s[:description].html_safe %></p>
   			</a>
   		</li>
-  		<li class="service service_saas">
-        <a href="/work/services/saas/">
-          <h2><acronym title="Software as a service">SaaS</acronym></h2>
-          <p>Web applications can offer sophisticated functionality without the need to have specific computer software loaded on the end-users PC.</p>
-        </a>
-      </li>
-      <li class="service service_web_apps">
-  			<a href="/work/services/web/">
-  				<h2>Web apps</h2>
-  				<p>Web apps offer sophisticated functionality from inside the web browser and are accessible from anywhere with web access.</p>
-  			</a>
-  		</li>
+  		<% end %>
   	</ul>
   </div>
 </section>

@@ -67,13 +67,11 @@ page_classes: team
 <section id="favourite_tech" class="section section_column section_column_banner">
   <div class="banner_container">
   	<h1 class="heading heading_section">Some of our favourite technologies</h1>
-  	<ul class="list_technologies list_count_6">
-  		<li class="technology technology_ruby_on_rails">Ruby on Rails</li>
-  		<li class="technology technology_javascript">JavaScript</li>
-  		<li class="technology technology_html5">HTML5</li>
-  		<li class="technology technology_android">Android</li>
-  		<li class="technology technology_apple">Apple</li>
-  		<li class="technology technology_google_maps">Google Maps</li>
+  	<ul class="list_technologies list_count_<%= data.tech.tech.length %>">
+  		<% sorted_tech = data.tech.tech.sort_by {|t| t[:order]} %>
+  		<% sorted_tech.each do |t| %>
+  		<li class="technology <%= t[:class] %>"><%= t[:title] %></li>
+  		<% end %>
   	</ul>
   </div>
 </section>

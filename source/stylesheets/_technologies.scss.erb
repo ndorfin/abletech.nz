@@ -1,0 +1,11 @@
+@import "vars";
+@import "mixins";
+
+.technology {display:block; @include hide_text(); background-position:50% 50%; background-repeat:no-repeat; height:166px; background-size:50%;}
+<% data.tech.tech.each do |t| %>
+.<%= t[:class] %> {background-image:image-url('<%= t[:logo] %>'); min-width:<%= t[:min_width] %>px; <%= "background-position:#{t[:offset]};" if t[:offset] %>}
+<% end %>
+
+@media (min-width:800px) {
+	.technology {background-size:auto;}
+}
