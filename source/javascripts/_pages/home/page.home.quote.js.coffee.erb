@@ -1,0 +1,38 @@
+window.Abletech ||= {}
+class Abletech.Quote
+  'use strict'
+
+  constructor: (elemID) ->
+    @testimonials = document.getElementById(elemID)
+
+  testimonials: null
+  quotes: [
+  	<% data.quotes.quotes.each do |q| %>
+    {
+      q: '<%= q[:quote] %>'
+      a: '<%= q[:cite] %>'
+      t: '<%= q[:title] %>'
+    }
+    <% end %>
+  ]
+
+  clearQuote: =>
+    @testimonials.innerHTML = ''
+
+  addRandomQuote: =>
+    quotesLength = @quotes.length
+    randomIndex = Math.floor(Math.random() * (quotesLength - 1) + 1)
+    @testimonials.innerHTML = '\
+      <blockquote>\
+        <p>' + @quotes[randomIndex].q + '</p>\
+        <footer>\
+          <p>\
+            <cite>' + @quotes[randomIndex].a + '</cite> - ' + @quotes[randomIndex].t + '\
+          </p>\
+        </footer>\
+      </blockquote>'
+
+  init: =>
+    if @testimonials
+      @clearQuote()
+      @addRandomQuote()
