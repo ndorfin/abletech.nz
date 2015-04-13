@@ -15,5 +15,11 @@ class Abletech.TeampageManager
     # Phase 2, resolution-independent classes
     @teamPolaroids()
 
-abletechTeampage = new Abletech.TeampageManager()
-abletechTeampage.init()
+bootstrap = ->
+	if window.Abletech.LOADED
+		abletechTeampage = new Abletech.TeampageManager()
+		abletechTeampage.init()
+	else
+		window.setTimeout(bootstrap, 10)
+
+bootstrap()

@@ -65,17 +65,12 @@
 				s.src = url;
 				document.body.appendChild(s);
 			};
-			document.addEventListener('DOMContentLoaded', function(){
-				addScript('<%= asset_path(:js, "main") %>');
-			});
-			<% if content_for?(:load_page_script) %>
 			window.addEventListener('load', function(){
+				addScript('<%= asset_path(:js, "main") %>');
+				<% if content_for?(:load_page_script) %>
 				<%= yield_content :load_page_script %>
+				<% end %>
 			});
-			<% end %>
 		</script>
-		<% if content_for?(:javascript) %>
-			<%= yield_content :javascript %>
-		<% end %>
 	</body>
 </html>

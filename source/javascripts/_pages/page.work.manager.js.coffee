@@ -29,5 +29,11 @@ class Abletech.WorkpageManager
     # Phase 4, Watch the window.resize event
     @addResizeHandler()
 
-abletechWorkpage = new Abletech.WorkpageManager()
-abletechWorkpage.init()
+bootstrap = ->
+	if window.Abletech.LOADED
+		abletechWorkpage = new Abletech.WorkpageManager()
+		abletechWorkpage.init()
+	else
+		window.setTimeout(bootstrap, 10)
+
+bootstrap()

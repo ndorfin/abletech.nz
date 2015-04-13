@@ -64,5 +64,11 @@ class Abletech.HomepageManager
     # Phase 4, Watch the window.resize event
     @addResizeHandler()
 
-abletechHomepage = new Abletech.HomepageManager()
-abletechHomepage.init()
+bootstrap = ->
+	if window.Abletech.LOADED
+		abletechHomepage = new Abletech.HomepageManager()
+		abletechHomepage.init()
+	else
+		window.setTimeout(bootstrap, 10)
+
+bootstrap()

@@ -9,3 +9,6 @@
 //= require _ui/ui.textReplacement
 //= require _ui/ui.google_analytics
 //= require _ui/ui.manager
+//= require_self
+window.Abletech || (window.Abletech = {});
+Abletech.LOADED = true;
