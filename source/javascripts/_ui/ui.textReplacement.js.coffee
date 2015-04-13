@@ -1,5 +1,5 @@
-window.Abletech ||= {}
-class Abletech.TextReplacement
+window.UI ||= {}
+class UI.TextReplacement
   'use strict'
 
   getTimeText: ->

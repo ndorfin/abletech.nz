@@ -169,19 +169,12 @@ hide_from_sitemap: true
 
 <section id="logos">
 	<h1>Logos</h1>
-	<h2>Logo blocks</h2>
+	<h2>All Logos</h2>
 	<div class="sg_example">
-		<ul class="logo_blocks">
-			<li><a class="logo_radio_nz"      href="/work/#RadioNewZealand">Radio New Zealand</a></li>
-			<li><a class="logo_addressfinder" href="/work/#AddressFinder">AddressFinder</a></li>
-			<li><a class="logo_c_w_j_p"       href="/work/#CyclingAndWalkingJourneyPlanner">Cycling & Walking Journey Planner</a></li>
-			<li><a class="logo_nz_post"       href="/work/#NewZealandPost">New Zealand Post</a></li>
-			<li><a class="logo_nzx"           href="/work/#NZX">NZX</a></li>
-			<li><a class="logo_loyalty_nz"    href="/work/#LoyaltyNewZealand">Loyalty New Zealand</a></li>
-			<li><a class="logo_sharesight"    href="/work/#ShareSight">Sharesight</a></li>
-			<li><a class="logo_met_service"   href="/work/#MetService">MetService</a></li>
-			<li><a class="logo_watch_my_gear" href="/work/#WatchMyGear">WatchMyGear</a></li>
-			<li><a class="logo_reg_the_dog"   href="/work/#RegTheDog">RegTheDog</a></li>
+		<ul class="logo_grid logos">
+			<% data.clients.clients.each do |l| %>
+			<li><a class="logo_<%=l[:class]%>" href="<%= l[:url]%>"><%= l[:url]%></a></li>
+			<% end %>
 		</ul>
 	</div>
 </section>

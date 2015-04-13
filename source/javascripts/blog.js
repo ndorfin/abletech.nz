@@ -1,4 +1,4 @@
-//= require_tree ./classList
-//= require _abletech.menuLink
-//= require _abletech.google_analytics
-//= require _abletech.blog.manager
+//= require _lib/classList
+//= require _ui/ui.menuLink
+//= require _ui/ui.google_analytics
+//= require _ui/ui.blog.manager

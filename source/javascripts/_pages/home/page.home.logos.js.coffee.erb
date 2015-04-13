@@ -16,65 +16,13 @@ class Abletech.HomepageLogos
   animationControl: null
 
   logos: [
-    {
-      c:'logo_addressfinder'
-      t:'AddressFinder'
-    },{
-      c:'logo_aed_locations'
-      t:'AED Locations'
-    },{
-      c:'logo_auckland_transport'
-      t:'Auckland Transport'
-    },{
-      c:'logo_c_w_j_p'
-      t:'Cycling and Walking Journey Planner'
-    },{
-    #   c:'logo_kiwi_bank'
-    #   t:'Kiwibank'
-    # },{
-      c:'logo_loyalty_nz'
-      t:'Loyalty New Zealand'
-    },{
-      c:'logo_meat_mail'
-      t:'Meatmail'
-    },{
-      c:'logo_met_service'
-      t:'Met Service'
-    },{
-      c:'logo_msd'
-      t:'Ministry of Social Development'
-    },{
-      c:'logo_nzx'
-      t:'NZX'
-    },{
-    #   c:'logo_nz_post'
-    #   t:'New Zealand Post'
-    # },{
-      c:'logo_radio_nz'
-      t:'Radio New Zealand'
-    },
-    # {
-    #   c:'logo_red_cross'
-    #   t:'Red Cross'
-    # },
-    {
-      c:'logo_reg_the_dog'
-      t:'Reg the Dog'
-    },{
-      c:'logo_sharesight'
-      t:'Sharesight'
-    },{
-      c:'logo_snapper'
-      t:'Snapper'
-    },
-    # {
-    #   c:'logo_spring_to_the_street'
-    #   t:'Spring to the street'
-    # },
-    {
-      c:'logo_watch_my_gear'
-      t:'Watch my gear'
-    }
+  	<% homepage_logos = data.clients.clients.select {|l| l[:homepageVisible] == true} %>
+  	<% homepage_logos.each do |l| %>
+  	{
+  		c: 'logo_<%= l[:class] %>'
+  		t: '<%= l[:name] %>'
+  	}
+  	<% end %>
   ]
 
   clearLogos: =>
@@ -100,7 +48,7 @@ class Abletech.HomepageLogos
   addLogos: =>
     newArray = window.shuffle(@logos)
     templateUl = document.createElement('ul')
-    templateUl.className = 'logo_blocks'
+    templateUl.className = 'logo_blocks logos'
 
     counter = 0
     for i in [0..(@config.maxColumns-1)]

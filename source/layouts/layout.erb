@@ -1,67 +1,81 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-  <head>
-    <meta charset="UTF-8">
-    <title><%= current_page.data.title || "Abletech" %></title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    <script>document.documentElement.className = 'js';</script>
-    <%= inline_stylesheet "main" if current_page.data.page_classes == 'home' %>
-    <%= stylesheet_link_tag "other-pages" unless current_page.data.page_classes == 'home' %>
-  </head>
-  <body class="<%= current_page.data.page_classes %>">
-    <script>document.body.className += ' menu_closed';</script>
-    <header role="banner">
-      <h1><a href="/">Abletech</a></h1>
-      <h2><a id="menu_link" class="button button_menu" href="#menu">Menu</a></h2>
-      <nav role="navigation">
-        <ul id="menu">
-          <li class="nav_home"><a href="/">Home</a></li>
-          <li class="nav_work"><a href="/work/">Work</a></li>
-          <li class="nav_team"><a href="/team/">Team</a></li>
-          <li class="nav_jobs"><a href="/jobs/">Jobs</a></li>
-          <li class="nav_blog"><a href="http://blog.abletech.nz">Blog</a></li>
-          <li class="nav_contact"><a href="/contact/">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <article role="main">
-      <%= yield %>
-      <%= partial 'partials/_services_nav' if current_page.data.page_classes.include? 'service_page' %>
-    </article>
-    <footer role="contentinfo" class="section_column section_column_banner">
-      <div class="banner_container">
-        <h1>Want to know more about Abletech?</h1>
-        <dl>
-          <dt>Email us:</dt>
-          <dd class="email"><a href="mailto:hello@abletech.co.nz">hello@abletech.co.nz</a></dd>
-          <dt>Phone us:</dt>
-          <dd class="telephone"><a href="tel:+6449103100">+64 4 910 3100</a></dd>
-          <dd class="telephone"><a href="tel:+64800142253">0800 14 2253</a></dd>
-          <dt>Visit us:</dt>
-          <dd class="address">
-            Level 7, 186-190 Willis Street<br>
-            Te Aro, Wellington 6011<br>
-            New Zealand
-          </dd>
-          <dt>Follow us on:</dt>
-          <dd class="network"><a class="network_icon icon_footer_linkedin" href="http://www.linkedin.com/company/able-technology">LinkedIn: Abletech</a></dd>
-          <dd class="network"><a class="network_icon icon_footer_facebook" href="https://www.facebook.com/abletech">Facebook: Abletech</a></dd>
-          <dd class="network"><a class="network_icon icon_footer_twitter" href="https://www.twitter.com/abletech">Twitter: Abletech</a></dd>
-        </dl>
-      </div>
-    </footer>
-    <script>
-      window.addEventListener('load', function(){
-        var s = document.createElement('script');
-        s.async = 1;
-        s.src = '<%= asset_path(:js, "main") %>';
-        document.body.appendChild(s);
-      });
-    </script>
-    <textarea id="stylesheet_parking" style="display:none;">
-      <%= stylesheet_link_tag "high-res" %>
-    </textarea>
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><%= current_page.data.title || "Abletech" %></title>
+		<% if current_page.data.description %>
+		<meta name="description" content="<%= current_page.data.description %>">
+		<% end %>
+		<link rel="dns-prefetch" href="https://www.google-analytics.com">
+		<% if current_page.data.page_classes == 'home' %>
+		<link rel="dns-prefetch" href="https://api.tumblr.com">
+		<% end %>
+		<script>document.documentElement.className = 'js';</script>
+		<%= inline_stylesheet "main" if current_page.data.page_classes == 'home' %>
+		<%= stylesheet_link_tag "other-pages" unless current_page.data.page_classes == 'home' %>
+	</head>
+	<body class="<%= current_page.data.page_classes %>">
+		<script>document.body.className += ' menu_closed';</script>
+		<header role="banner">
+			<h1><a href="/">Abletech</a></h1>
+			<h2><a id="menu_link" class="button button_menu" href="#menu">Menu</a></h2>
+			<nav role="navigation">
+				<ul id="menu">
+					<li class="nav_home"><a href="/">Home</a></li>
+					<li class="nav_work"><a href="/work/">Work</a></li>
+					<li class="nav_team"><a href="/team/">Team</a></li>
+					<li class="nav_jobs"><a href="/jobs/">Jobs</a></li>
+					<li class="nav_blog"><a href="http://blog.abletech.nz">Blog</a></li>
+					<li class="nav_contact"><a href="/contact/">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<article role="main">
+			<%= yield %>
+			<%= partial 'partials/_services_nav' if current_page.data.page_classes.include? 'service_page' %>
+		</article>
+		<footer role="contentinfo" class="section_column section_column_banner">
+			<div class="banner_container">
+				<h1>Want to know more about Abletech?</h1>
+				<dl>
+					<dt>Email us:</dt>
+					<dd class="email"><a href="mailto:hello@abletech.co.nz">hello@abletech.co.nz</a></dd>
+					<dt>Phone us:</dt>
+					<dd class="telephone"><a href="tel:+6449103100">+64 4 910 3100</a></dd>
+					<dd class="telephone"><a href="tel:+64800142253">0800 14 2253</a></dd>
+					<dt>Visit us:</dt>
+					<dd class="address">
+						Level 7, 186-190 Willis Street<br>
+						Te Aro, Wellington 6011<br>
+						New Zealand
+					</dd>
+					<dt>Follow us on:</dt>
+					<dd class="network"><a class="network_icon icon_footer_linkedin" href="http://www.linkedin.com/company/able-technology">LinkedIn: Abletech</a></dd>
+					<dd class="network"><a class="network_icon icon_footer_facebook" href="https://www.facebook.com/abletech">Facebook: Abletech</a></dd>
+					<dd class="network"><a class="network_icon icon_footer_twitter" href="https://www.twitter.com/abletech">Twitter: Abletech</a></dd>
+				</dl>
+			</div>
+		</footer>
+		<script>
+			var highResCSSURL = '<%= asset_path(:css, "high-res") %>';
+			var addScript = function(url){
+				var s = document.createElement('script');
+				s.src = url;
+				document.body.appendChild(s);
+			};
+			document.addEventListener('DOMContentLoaded', function(){
+				addScript('<%= asset_path(:js, "main") %>');
+			});
+			<% if content_for?(:load_page_script) %>
+			window.addEventListener('load', function(){
+				<%= yield_content :load_page_script %>
+			});
+			<% end %>
+		</script>
+		<% if content_for?(:javascript) %>
+			<%= yield_content :javascript %>
+		<% end %>
+	</body>
 </html>
