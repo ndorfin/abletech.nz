@@ -58,19 +58,19 @@
 				</dl>
 			</div>
 		</footer>
-		<script>
-			var highResCSSURL = '<%= asset_path(:css, "high-res") %>';
-			var addScript = function(url){
-				var s = document.createElement('script');
-				s.src = url;
-				document.body.appendChild(s);
-			};
-			window.addEventListener('load', function(){
-				addScript('<%= asset_path(:js, "main") %>');
-				<% if content_for?(:load_page_script) %>
-				<%= yield_content :load_page_script %>
-				<% end %>
-			});
-		</script>
+<script>
+var highResCSSURL = '<%= asset_path(:css, "high-res") %>';
+function addScript(url){
+	var s = document.createElement('script');
+	s.src = url;
+	document.body.appendChild(s);
+}
+window.onload = function(){
+	addScript('<%= asset_path(:js, "main") %>');
+<%- if content_for?(:load_page_script) %>
+	<%= yield_content :load_page_script %>
+<% end -%>
+}
+</script>
 	</body>
 </html>
