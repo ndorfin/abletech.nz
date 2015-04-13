@@ -5,14 +5,9 @@
 	.heading {display:inline-block; padding:0 0 50px 0; position:relative;
     &:after {content:""; width:50px; height:45px; position:absolute; bottom:0; left:50px; background-position:0 0; background-size:50px 74px;}
   }
-	img {margin:0 auto;}
+  ul {margin-top:1em;}
 }
 
-@media (min-width:438px) {
-	#working_with {
-		img {display:block; max-width:406px;}
-	}
-}
 @media (min-width:640px) {
 	#working_with {
 		.heading {padding:0 60px 45px 0;
@@ -21,13 +16,5 @@
 	}
 	#how_can_we_help {
 		p {margin-right:33%;}
-	}
-}
-
-@media (min-width:1032px) {
-	#working_wall {overflow:hidden;
-		img {float:left; max-width:100%; margin:0;
-			& + img {float:none;}
-		}
 	}
 }

@@ -1,20 +1,37 @@
 @import "vars";
 @import "mixins";
 
+.logos {
+	a {display:block; box-sizing:border-box; @include hide_text(); background-position:50% 50%; background-repeat:no-repeat;}
+}
+
 .logo_blocks {z-index:2; list-style:none; display:table; margin:2em 0 0; padding:0; width:100%; min-height:240px;
   li {display:table-cell; text-align:center; vertical-align:bottom; width:33.3%;
     &:first-child,
     &:nth-child(2) {display:none;}
   }
-  a {display:block; box-sizing:border-box; @include hide_text(); background-position:50% 50%; background-repeat:no-repeat; transition:all .3s;}
+  a {transition:all .3s;}
+}
+
+.logo_grid {@include list_stripped();}
+
+<% homepageLogos = data.clients.clients.select {|l| l[:homepageVisible] == true || l[:workpageVisible] == true} %>
+<% homepageLogos.each do |l| %>
+.logo_<%= l[:class] %> {background-image:inline-image('<%= l[:logo][:url] %>'); background-color:<%= l[:logo][:background_color] %>; min-height:<%= l[:logo][:min_height] %>px;}
+<% end %>
+
+@media (min-width:430px) {
+  .logo_grid {overflow:hidden;
+  	li {width:50%; float:left; display:block;}
+  	a {min-height:120px;}
+  }
 }
 
 @media (min-width:600px) {
+  .logo_grid {
+  	li {width:33.3%;}
+  }
   .home .logo_blocks {position:relative; top:auto; left:auto;}
-	<% homepageLogos = data.clients.clients.select {|l| l[:homepageVisible] == true} %>
-	<% homepageLogos.each do |l| %>
-	.logo_<%= l[:class] %> {background-image:inline-image('<%= l[:logo][:url] %>'); background-color:<%= l[:logo][:background_color] %>; min-height:<%= l[:logo][:min_height] %>px;}
-	<% end %>
 }
 
 @media (min-width:800px) {
@@ -23,6 +40,9 @@
       &:nth-child(2) {display:table-cell;}
     }
   }
+  .logo_grid {
+  	li {width:25%;}
+  }
 }
 
 @media (min-width:1000px) {
@@ -30,5 +50,8 @@
     li {width:20%;
       &:first-child {display:table-cell;}
     }
+  }
+  .logo_grid {
+  	li {width:20%;}
   }
 }

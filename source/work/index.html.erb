@@ -107,10 +107,12 @@ page_classes: work
 </section>
 <section id="working_with" class="section section_column">
 	<h1 class="heading heading_subsection">We work with these organisations</h1>
-	<p id="working_wall">
-		<img src="/images/bg_logo_wall_left.png" alt="">
-		<img src="/images/bg_logo_wall_right_sans_post.png" alt="">
-	</p>
+	<ul class="logos logo_grid">
+		<% workLogos = data.clients.clients.select {|c| c[:workpageVisible] == true} %>
+		<% workLogos.each do |l| %>
+		<li><a href="<%= l[:url] %>" class="logo_<%= l[:class] %>"><%= l[:name] %></a></li>
+		<% end %>
+	</ul>
 </section>
 <section id="how_can_we_help" class="section section_column section_column_banner section_alternate">
   <div class="banner_container">

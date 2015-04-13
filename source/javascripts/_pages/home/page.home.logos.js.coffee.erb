@@ -48,7 +48,7 @@ class Abletech.HomepageLogos
   addLogos: =>
     newArray = window.shuffle(@logos)
     templateUl = document.createElement('ul')
-    templateUl.className = 'logo_blocks'
+    templateUl.className = 'logo_blocks logos'
 
     counter = 0
     for i in [0..(@config.maxColumns-1)]

@@ -55,9 +55,10 @@ page_classes: team
 </section>
 <section id="life_at_abletech" class="section section_aside section_column">
 	<aside id="team_activities">
+		<% photo = data.team_photos.photos.sample %>
 		<figure class="figure figure_polaroid">
-			<img src="/images/team_pies.jpg" alt="Hot pies ready to be eaten">
-			<figcaption>Pie day Thursday. Home-made pies!</figcaption>
+			<img src="<%= image_path(photo[:url]) %>" alt="<%= photo[:alt] %>">
+			<figcaption><%= photo[:caption] %></figcaption>
 		</figure>
 	</aside>
 	<h1 class="heading heading_section">Join us, we’d love to have you!</h1>

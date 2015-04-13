@@ -1,0 +1,39 @@
+{
+	"photos": [
+		{
+		      "url": "team_snow.jpg",
+		      "alt": "Playing with the left-over snow whilst on a hike around Mount Cheeseman",
+		  "caption": "Rails Camp at Mt. Cheeseman near Christchurch."
+		},
+		{
+		      "url": "team_cycling.jpg",
+		      "alt": "Abletech, Kiwibank and HyTech team members pose for a photo next to the Brooklyn wind turbine, overlooking Wellington.",
+		  "caption": "Abletech joined with Kiwibank and HyTech for a ride in Brooklyn."
+		},
+		{
+		      "url": "team_coffee.jpg",
+		      "alt": "Impressive latte art by Jordan",
+		  "caption": "Jordan perfects his coffee."
+		},
+		{
+		      "url": "team_brewing.jpg",
+		      "alt": "Kendall and Tracey pose next to the brewing equipment",
+		  "caption": "Serious business: brewing, bottling."
+		},
+		{
+		      "url": "team_harbour_bridge.jpg",
+		      "alt": "The harbour bridge looms overhead while the Sydney Opera House is visible across the bay.",
+		  "caption": "Ruby Conference in Sydney, Australia."
+		},
+		{
+		      "url": "team_mountain_biking.jpg",
+		      "alt": "Carl’s bike stands propped up against a tree in the middle of the bush",
+		  "caption": "Mountain biking in the bush."
+		},
+		{
+		      "url": "team_pies.jpg",
+		      "alt": "Hot pies ready to be eaten",
+		  "caption": "Pie day Thursday. Home-made pies!"
+		}
+	]
+}

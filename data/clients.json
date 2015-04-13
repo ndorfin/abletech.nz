@@ -37,6 +37,18 @@
 			"workpageVisible": true
 		},
 		{
+			"name": "BNZ",
+			"url": "https://www.bnz.co.nz/",
+			"class": "bnz",
+			"logo": {
+				"url": "logo_bnz.png",
+				"background_color": "#1d3e74",
+				"min_height": 100
+			},
+			"homepageVisible": false,
+			"workpageVisible": true
+		},
+		{
 			"name": "Cycling & Walking Journey Planner",
 			"url": "http://www.journeyplanner.org.nz/",
 			"class": "c_w_j_p",
@@ -46,6 +58,30 @@
 				"min_height": 120
 			},
 			"homepageVisible": true,
+			"workpageVisible": true
+		},
+		{
+			"name": "Greater Wellington Regional Council",
+			"url": "http://www.gw.govt.nz/",
+			"class": "g_w_r_c",
+			"logo": {
+				"url": "logo_g_w_r_c.png",
+				"background_color": "#0179a2",
+				"min_height": 100
+			},
+			"homepageVisible": false,
+			"workpageVisible": true
+		},
+		{
+			"name": "FXNetworks",
+			"url": "http://www.fx.net.nz/",
+			"class": "fx_networks",
+			"logo": {
+				"url": "logo_fx_networks.png",
+				"background_color": "#fff",
+				"min_height": 80
+			},
+			"homepageVisible": false,
 			"workpageVisible": true
 		},
 		{
@@ -72,6 +108,18 @@
 			},
 			"homepageVisible": false,
 			"workpageVisible": false
+		},
+		{
+			"name": "KiwiRail",
+			"url": "http://www.kiwirail.co.nz/",
+			"class": "kiwi_rail",
+			"logo": {
+				"url": "logo_kiwi_rail.png",
+				"background_color": "#fff",
+				"min_height": 80
+			},
+			"homepageVisible": false,
+			"workpageVisible": true
 		},
 		{
 			"name": "Loyalty NZ",
@@ -140,7 +188,7 @@
 			"logo": {
 				"url": "logo_red_cross.png",
 				"background_color": "#fff",
-				"min_height": 80
+				"min_height": 120
 			},
 			"homepageVisible": false,
 			"workpageVisible": true
@@ -224,7 +272,7 @@
 			"logo": {
 				"url": "logo_spring_to_the_street.png",
 				"background_color": "#bddda6",
-				"min_height": 100
+				"min_height": 80
 			},
 			"homepageVisible": false,
 			"workpageVisible": true
