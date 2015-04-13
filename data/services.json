@@ -1,0 +1,40 @@
+{
+	"services": [
+		{
+			      "class": "service_apis",
+			      "title": "APIs",
+              "url": "/work/services/apis/",
+			"description": "Web APIs (Application Programming Interface) allow data to be shared between applications, publicly or privately, over the Internet."
+		},
+		{
+			      "class": "service_maps_and_geo_data",
+			      "title": "Maps and Geospatial",
+              "url": "/work/services/mapping/",
+			"description": "We specialise in Google Maps development and build custom online maps to meet your unique needs."
+		},
+		{
+			      "class": "service_mobile_apps",
+			      "title": "Mobile apps",
+              "url": "/work/services/mobile/",
+			"description": "Get the most out of the mobile revolution. We have extensive experience developing stand-alone and integrated applications."
+		},
+		{
+			      "class": "service_rapid_projects",
+			      "title": "Rapid projects",
+              "url": "/work/services/rapid-projects/",
+			"description": "A great way to see how we operate, understand our capablities and experience the huge benefits of the technologies that we use."
+		},
+		{
+			      "class": "service_saas",
+			      "title": "<acronym title=\"Software as a service\">SaaS</acronym>",
+              "url": "/work/services/saas/",
+			"description": "Web applications can offer sophisticated functionality without the need to have specific computer software loaded on the end-users PC."
+		},
+		{
+			      "class": "service_web_apps",
+			      "title": "Web apps",
+			        "url": "/work/services/web/",
+			"description": "Web apps offer sophisticated functionality from inside the web browser and are accessible from anywhere with web access."
+		}
+	]
+}

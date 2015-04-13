@@ -1,5 +1,5 @@
-window.Abletech ||= {}
-class Abletech.MenuLink
+window.UI ||= {}
+class UI.MenuLink
   'use strict'
 
   constructor: (elemID) ->

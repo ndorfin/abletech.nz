@@ -4,11 +4,9 @@
 
 root = true
 
-
-[*]
-
 # Change these settings to your own preference
-indent_style = space
+[*]
+indent_style = tab
 indent_size = 2
 
 # We recommend you to keep these unchanged
@@ -18,12 +16,8 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 [*.md]
+indent_style = space
 trim_trailing_whitespace = false
 
-[*.html, *.html.erb]
-indent_style = tab
-indent_size = 2
-
-[*.scss, *.css]
-indent_style = tab
-indent_size = 2
+[*/*.coffee]
+indent_style = space
