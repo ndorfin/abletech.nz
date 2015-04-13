@@ -8,7 +8,10 @@
 		<% if current_page.data.description %>
 		<meta name="description" content="<%= current_page.data.description %>">
 		<% end %>
-		<link rel="dns-prefetch" href="//www.google-analytics.com">
+		<link rel="dns-prefetch" href="https://www.google-analytics.com">
+		<% if current_page.data.page_classes == 'home' %>
+		<link rel="dns-prefetch" href="https://api.tumblr.com">
+		<% end %>
 		<script>document.documentElement.className = 'js';</script>
 		<%= inline_stylesheet "main" if current_page.data.page_classes == 'home' %>
 		<%= stylesheet_link_tag "other-pages" unless current_page.data.page_classes == 'home' %>
