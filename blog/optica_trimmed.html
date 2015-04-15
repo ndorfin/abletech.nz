@@ -11,6 +11,20 @@
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     <link rel="stylesheet" href="https://abletech.nz/stylesheets/blog.css?4">
     <link rel="shortcut icon" href="https://abletech.nz/favicon.ico">
+    <style>
+      #pagination ul {overflow:hidden; padding:0 0 1px;}
+      #pagination p {margin:1em 0;}
+      @media (min-width:480px) {
+          #pagination ul {overflow:visible; padding:0;}
+          #pagination p {margin:0 140px;}
+      }
+      .post_controls {float:right; list-style:none; margin:0 0 -.5em; padding:0; display:inline;}
+      .post_controls li {display:inline-block; margin:0 0 0 1em;}
+      .post_link {margin:-1em -1em 0; text-align:center;}
+      .post_link .link_title {padding:2em 1em; margin:0; background:#7e000c; color:#fff; border-radius:5px 5px 0 0;}
+      .post_link .link_title a {color:#fff; font-size:2em;}
+      .post_link .caption {padding:1px 1em;}
+    </style>
   </head>
   <body class="blog {select:Layout}
   {block:IndexPage} blog-index-page{/block:IndexPage}
@@ -86,21 +100,10 @@
         {/block:Quote}
 
         {block:Link}
-        <div>
-          <p>
-            <a {Target} href="{URL}">
-              {block:Thumbnail}
-              <img src="{Thumbnail}" alt="">
-              {/block:Thumbnail}
-              <span class="link-text-wrapper">
-                <span class="link-text">
-                  <span class="link-title">{Name}</span>
-                  {block:Host}
-                  <span class="link-host">{Host}</span>
-                  {/block:Host}
-                </span>
-              </span>
-            </a>
+        <div class="post_link">
+          <p class="link_title">
+            <a {Target} href="{URL}">{Name}</a>
+            <br>{block:Host}on {Host}{/block:Host}
           </p>
           {block:Description}
           <div class="caption">
@@ -187,6 +190,10 @@
 
         {block:Date}
         <footer>
+          <ul class="post_controls">
+          	<li>{ReblogButton size="21" color="gray"}</li>
+          	<li>{LikeButton size="20" color="gray"}</li>
+          </ul>
           <p class="date"><a href="{Permalink}" title="{TimeAgo}" class="meta-item post-date">{ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}</a></p>
           {block:HasTags}
           <ul class="tags">

@@ -9,8 +9,10 @@
     a,
     a:visited {color:#999; text-decoration:none;}
   }
-
-  .tags {list-style:none; margin:0; padding:0; display:inline;
+	.post_controls {float:right; list-style:none; margin:0 0 -.5em; padding:0; display:inline;
+		li {display:inline-block; margin:0 0 0 1em;}
+	}
+  .tags {@include list_stripped(); display:inline;
     li {display:inline-block; margin-right:1em;}
     a:before {content:"#";}
     a,
@@ -20,7 +22,14 @@
   .date a:hover,
   .tags a:hover {text-decoration:underline;}
 
-  blockquote > p:first-child {
+  .post_link {margin:-1em -1em 0; text-align:center;
+  	.link_title {padding:2em 1em; margin:0; background:#7e000c; color:#fff; border-radius:5px 5px 0 0;
+  		a {color:#fff; font-size:2em;}
+  	}
+  	.caption {padding:1px 1em;}
+  }
+
+  blockquote > p {
     &:before {content:"“";}
     &:after {content:"”";}
   }
@@ -61,7 +70,9 @@
   .section_post {padding:1em; border:#eee solid 1px; border-radius:5px;}
 }
 @media (min-width:1000px) {
-  .section_post {margin:3em auto;}
+  .section_post {margin:3em auto;
+  	blockquote > p {font-size:2em;}
+  }
   #blog_header {
     p a {width:52px; height:52px; margin-top:-26px;}
   }
