@@ -39,7 +39,7 @@
 	> a {display:block; margin:0 auto;
 		img {border-radius:5px 5px 0 0;}
 	}
-	figcaption {position:absolute; transition:bottom .2s; bottom:-100%; left:0; right:0; padding:1em; color:#fff; text-shadow:0 0 5px #000; background:rgba(0,0,0,.2);
+	figcaption {position:absolute; transition:bottom .2s; bottom:-100%; left:0; right:0; padding:1em; color:#fff; text-shadow:0 0 5px #000; background:rgba(0,0,0,.2); background:linear-gradient(to bottom, transparent 0%,rgba(0,0,0,.3) 100%);
 		p {margin:0;}
 	}
 	&:hover figcaption {bottom:0;}
