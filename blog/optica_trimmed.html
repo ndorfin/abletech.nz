@@ -1,23 +1,21 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
     {block:Description}
     <meta name="description" content="{MetaDescription}">
     {/block:Description}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <script>document.documentElement.className = 'js';</script>
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     <link rel="stylesheet" href="https://abletech.nz/stylesheets/blog.css?4">
     <link rel="shortcut icon" href="https://abletech.nz/favicon.ico">
+    <link rel="dns-prefetch" href="http://assets.tumblr.com">
+    <link rel="dns-prefetch" href="https://secure.assets.tumblr.com">
+    <link rel="dns-prefetch" href="http://geo.yahoo.com">
+    <link rel="dns-prefetch" href="http://www.google-analytics.com">
     <style>
-      #pagination ul {overflow:hidden; padding:0 0 1px;}
-      #pagination p {margin:1em 0;}
-      @media (min-width:480px) {
-          #pagination ul {overflow:visible; padding:0;}
-          #pagination p {margin:0 140px;}
-      }
       .post_controls {float:right; list-style:none; margin:0 0 -.5em; padding:0; display:inline;}
       .post_controls li {display:inline-block; margin:0 0 0 1em;}
       .post_link {margin:-1em -1em 0; text-align:center;}
@@ -75,10 +73,14 @@
         {/block:Text}
 
         {block:Photo}
-        {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}
-        {block:Caption}
-        {Caption}
-        {/block:Caption}
+        <figure class="figure_post">
+        	{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}
+	        {block:Caption}
+	        <figcaption>
+	        {Caption}
+	        </figcaption>
+	        {/block:Caption}
+        </figure>
         {/block:Photo}
 
         {block:Photoset}
@@ -217,7 +219,7 @@
                var dsq = document.createElement('script');
                dsq.async = 1;
                dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
-               (document.getElementsByTagName('head')[0] || document.body).appendChild(dsq);
+               document.body.appendChild(dsq);
               })();
             </script>
             <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
@@ -275,11 +277,11 @@
       </div>
     </footer>
     <script>
-      window.addEventListener('load', function(){
+      window.onload = function(){
         var s = document.createElement('script');
         s.src = 'https://abletech.nz/javascripts/blog.js?1';
         document.body.appendChild(s);
-      });
+      };
     </script>
   </body>
 </html>

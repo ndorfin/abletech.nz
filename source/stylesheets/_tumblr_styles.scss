@@ -35,6 +35,16 @@
   }
 }
 
+.figure_post {margin:-1em -1em 0; position:relative; overflow:hidden;
+	> a {display:block; margin:0 auto;
+		img {border-radius:5px 5px 0 0;}
+	}
+	figcaption {position:absolute; transition:bottom .2s; bottom:-100%; left:0; right:0; padding:1em; color:#fff; text-shadow:0 0 5px #000; background:rgba(0,0,0,.2);
+		p {margin:0;}
+	}
+	&:hover figcaption {bottom:0;}
+}
+
 .blog {
   img {height:auto;}
   figcaption p {margin-bottom:0;}
@@ -68,6 +78,9 @@
 }
 @media (min-width:600px) {
   .section_post {padding:1em; border:#eee solid 1px; border-radius:5px;}
+  .figure_post {
+  	figcaption {font-size:1.5em; padding:.5em .75em;}
+  }
 }
 @media (min-width:1000px) {
   .section_post {margin:3em auto;
