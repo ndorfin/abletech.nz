@@ -155,7 +155,7 @@ hide_from_sitemap: true
 				<p>Web APIs (Application Programming Interface) allow data to be shared between applications, publicly or privately, over the Internet.</p>
 			</a></li>
 			<li class="service service_saas"><a href="#">
-				<h2><acronym title="Software as a service">SaaS</acronym></h2>
+				<h2><abbr title="Software as a service">SaaS</abbr></h2>
 				<p>Web applications can offer sophisticated functionality without the need to have specific computer software loaded on the end-users PC.</p>
 			</a></li>
 			<li class="service service_maps_and_geo_data"><a href="#">
@@ -172,7 +172,7 @@ hide_from_sitemap: true
 	<h2>All Logos</h2>
 	<div class="sg_example">
 		<ul class="logo_grid logos">
-			<% data.clients.clients.each do |l| %>
+			<% data.clients.each do |l| %>
 			<li><a class="logo_<%=l[:class]%>" href="<%= l[:url]%>"><%= l[:url]%></a></li>
 			<% end %>
 		</ul>

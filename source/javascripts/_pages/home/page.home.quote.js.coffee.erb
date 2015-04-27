@@ -7,7 +7,7 @@ class Abletech.Quote
 
   testimonials: null
   quotes: [
-  	<% data.quotes.quotes.each do |q| %>
+  	<% data.quotes.each do |q| %>
     {
       q: '<%= q[:quote] %>'
       a: '<%= q[:cite] %>'

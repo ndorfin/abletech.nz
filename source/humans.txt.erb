@@ -1,5 +1,5 @@
 Abletech is:
-<% data.team.profiles.each do |t| %>
+<% data.team.each do |t| %>
   <%= t[:name] %><% if t[:twitter] %> - @<%= t[:twitter] %><% end %>
 <% end %>
 

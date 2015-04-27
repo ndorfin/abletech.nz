@@ -16,7 +16,7 @@ class Abletech.HomepageLogos
   animationControl: null
 
   logos: [
-  	<% homepage_logos = data.clients.clients.select {|l| l[:homepageVisible] == true} %>
+  	<% homepage_logos = data.clients.select {|l| l[:homepageVisible] == true} %>
   	<% homepage_logos.each do |l| %>
   	{
   		c: 'logo_<%= l[:class] %>'
