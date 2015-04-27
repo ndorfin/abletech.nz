@@ -35,7 +35,8 @@
   }
 }
 
-.figure_post {margin:-1em -1em 0; position:relative; overflow:hidden;
+.blog .figure_post {margin:-1em -1em 0;}
+.figure_post {position:relative; overflow:hidden;
 	> a {display:block; margin:0 auto;
 		img {border-radius:5px 5px 0 0;}
 	}
