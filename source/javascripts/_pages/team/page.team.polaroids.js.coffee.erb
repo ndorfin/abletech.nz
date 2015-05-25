@@ -8,7 +8,7 @@ class Abletech.Polaroids
 
   polaroidContainer: null
   polaroids: [
-  	<% data.team_photos.photos.each do |p| %>
+  	<% data.team_photos.each do |p| %>
   	{
       u: '<%= image_path(p[:url]) %>'
       a: '<%= p[:alt] %>'

@@ -15,7 +15,7 @@
 
 .logo_grid {@include list_stripped();}
 
-<% homepageLogos = data.clients.clients.select {|l| l[:homepageVisible] == true || l[:workpageVisible] == true} %>
+<% homepageLogos = data.clients.select {|l| l[:homepageVisible] == true || l[:workpageVisible] == true} %>
 <% homepageLogos.each do |l| %>
 .logo_<%= l[:class] %> {background-image:inline-image('<%= l[:logo][:url] %>'); background-color:<%= l[:logo][:background_color] %>; min-height:<%= l[:logo][:min_height] %>px;}
 <% end %>

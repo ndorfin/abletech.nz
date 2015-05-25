@@ -4,8 +4,8 @@ description: The people that make up Abletech.
 page_classes: team
 ---
 <%
-	founders = data.team.profiles.select {|p| p[:founder] == true}
-	rest_of_the_gang = data.team.profiles.select {|p| p[:founder] != true}
+	founders = data.team.select {|p| p[:founder] == true}
+	rest_of_the_gang = data.team.select {|p| p[:founder] != true}
 %>
 <section class="section section_column section_column_banner">
   <div class="banner_container">
@@ -55,7 +55,7 @@ page_classes: team
 </section>
 <section id="life_at_abletech" class="section section_aside section_column">
 	<aside id="team_activities">
-		<% photo = data.team_photos.photos.sample %>
+		<% photo = data.team_photos.sample %>
 		<figure class="figure figure_polaroid">
 			<img src="<%= image_path(photo[:url]) %>" alt="<%= photo[:alt] %>">
 			<figcaption><%= photo[:caption] %></figcaption>
@@ -68,8 +68,8 @@ page_classes: team
 <section id="favourite_tech" class="section section_column section_column_banner">
   <div class="banner_container">
   	<h1 class="heading heading_section">Some of our favourite technologies</h1>
-  	<ul class="list_technologies list_count_<%= data.tech.tech.length %>">
-  		<% sorted_tech = data.tech.tech.sort_by {|t| t[:order]} %>
+  	<ul class="list_technologies list_count_<%= data.tech.length %>">
+  		<% sorted_tech = data.tech.sort_by {|t| t[:order]} %>
   		<% sorted_tech.each do |t| %>
   		<li class="technology <%= t[:class] %>"><%= t[:title] %></li>
   		<% end %>
