@@ -26,7 +26,9 @@ $banner_height:75px;
 }
 
 .nav_jobs a {
-  &:before {font-size:.75em; height:1em; width:1em; line-height:1em; margin-right:.5em; content:"2"; background:$colour_abletech_red; color:#fff; display:inline-block; padding:.3em; border-radius:50%; text-align:center;}
+	<% if data.jobs.count > 0 %>
+  &:before {font-size:.75em; height:1em; width:1em; line-height:1em; margin-right:.5em; content:"<%= data.jobs.count %>"; background:$colour_abletech_red; color:#fff; display:inline-block; padding:.3em; border-radius:50%; text-align:center;}
+  <% end %>
 }
 
 /* Set the active nav by body-class */

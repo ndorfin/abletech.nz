@@ -11,14 +11,18 @@ page_classes: jobs
 </section>
 
 <section class="section section_column">
-  <h2>We’re Hiring</h2>
-
-  <p>We have two positions available, both based at our Wellington office.</p>
-
+<% if data.jobs.count > 0 %>
+  <h2 class="heading heading_subheading">We’re hiring</h2>
+  <p>We have <%= pluralize(data.jobs.count, 'position', 'positions') %> available, based at our offices in Wellington.</p>
   <ul>
-    <li><a href="/jobs/senior-ruby-developer">Senior Ruby Developer, Wellington</a></li>
-    <li><a href="/jobs/intermediate-ruby-developer">Intermediate Ruby Developer, Wellington</a></li>
+  	<% data.jobs.each do |job| %>
+  	<li><a href="<%= job[:url] %>"><%= job[:title] %>, <%= job[:location] %></a></li>
+  	<% end %>
   </ul>
-
   <p>We’d love to meet you.</p>
+<% else %>
+	<h2 class="heading heading_subheading">Come say Hi!</h2>
+	<p>While we don’t have any positions open at the moment, we’re always looking to meet competent web workers.</p>
+	<p><a href="/contact">Get in touch</a>, we’d love to meet you.</p>
+<% end %>
 </section>
