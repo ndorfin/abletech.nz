@@ -24,6 +24,13 @@
 		"description": "<p>As an architect or systems designer, agile project manager or team mentor, Marcus works with solutions from beginning-to-end and is never too far away from code. He’s been deploying successful systems worldwide since 1992 and ensures Abletech customers receive outstanding solutions, swiftly.</p>"
 	},
 	{
+		       "name": "Alexandre Barret",
+		      "photo": "photo_alex_2x.jpg",
+		      "title": "Technical Consultant",
+		    "twitter": "Ruby_DRY",
+		"description": "<p>Alexandre graduated from Enspiral Dev Academy and joined Abletech in 2015. He loves creating robust and tested applications using Ruby on Rails. When he’s not coding, you’ll find him on the dance floor lindy hopping or tinkering with Internet of Things projects.</p>"
+	},
+	{
 		       "name": "Andrew French",
 		      "photo": "photo_andy_2x.jpg",
 		      "title": "Technical Consultant",
