@@ -71,6 +71,14 @@
   p {text-align:center; margin:1em 0;}
 }
 
+.list_chatlog {
+	dt {float:left; clear:left; line-height:1.5; color:#000; padding-left:.5em;}
+	dd {margin-left:5em; line-height:1.5; border-left:#eee solid 5px; padding-left:.5em; color:#666;}
+	kbd {line-height:1.5rem; background:#eee; border:#ccc solid 1px; padding:.25em .5em; border-radius:.5em;}
+}
+code {display: inline-block; color:#d14; background-color:#f7f7f9; border:1px solid #e1e1e8; word-wrap:break-word; border-radius: .4em; padding:0 .4em;}
+.highlight {overflow-x:auto; width:100%; padding:1px 1em; box-sizing:border-box; border-radius:.5em; background-color:#f8f8f8;}
+
 @media (min-width:480px) {
   #pagination {
     ul {overflow:visible; padding:0;}
