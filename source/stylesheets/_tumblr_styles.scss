@@ -71,14 +71,20 @@
   p {text-align:center; margin:1em 0;}
 }
 
-.list_chatlog {
-	dt {float:left; clear:left; line-height:1.5; color:#000; padding-left:.5em;}
-	dd {margin-left:5em; line-height:1.5; border-left:#eee solid 5px; padding-left:.5em; color:#666;}
-	kbd {line-height:1.5rem; background:#eee; border:#ccc solid 1px; padding:.25em .5em; border-radius:.5em;}
+.list_chatlog dt {line-height:1.5; color:#000; font-weight:600; padding:0; margin-bottom:.25em;}
+.list_chatlog dd {margin:.5em 0 1em; line-height:1.5; padding:.5em; color:#666; position:relative; background:#eee; border-radius:3px;}
+.list_chatlog dd::before {content:""; position:absolute; top:-10px; left:10px; width:0; height:0; border-top:0; border-bottom:#eee solid 10px; border-left:transparent solid 6px; border-right:transparent solid 6px;}
+.list_chatlog dd:nth-of-type(2n+1) {background-color:#d6e4ee; color:#333;}
+.list_chatlog dd:nth-of-type(2n+1)::before {border-bottom-color:#d6e4ee;}
+.list_chatlog kbd {line-height:1.5rem; background:#f5f5f5; border:#ccc solid 1px; padding:.1em .3em; border-radius:.2em;}
+@media (min-width:640px) {
+	.list_chatlog dt {float:left; clear:left; width:4.5em; padding:.5em; margin-bottom:0; text-align:right;}
+	.list_chatlog dd {margin:1em 0 1em 6em;}
+	.list_chatlog dd::before {top:1.5em; left:-10px; margin-top:-.6em; border-top:transparent solid 6px; border-right:#eee solid 10px; border-bottom:transparent solid 6px; border-left:0;}
+	.list_chatlog dd:nth-of-type(2n+1)::before {border-bottom-color:transparent; border-right-color:#d6e4ee;}
 }
 code {display: inline-block; color:#d14; background-color:#f7f7f9; border:1px solid #e1e1e8; word-wrap:break-word; border-radius: .4em; padding:0 .4em;}
-.highlight {overflow-x:auto; width:100%; padding:1px 1em; box-sizing:border-box; border-radius:.5em; background-color:#f8f8f8;}
-
+.highlight {overflow-x:auto; width:100%; padding:1px 1em; margin-bottom:.25em; box-sizing:border-box; border-radius:.5em; background-color:#f8f8f8;}
 @media (min-width:480px) {
   #pagination {
     ul {overflow:visible; padding:0;}

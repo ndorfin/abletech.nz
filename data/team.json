@@ -45,12 +45,6 @@
 		"description": "<p>Aurynn has experience in high-scale environments and cloud deployments. She is a Python engineer and enjoys making application deployments that are provable, testable, and scalable into the cloud through systems orchestration and automatic scaling. Aurynn finds NZ naturally photogenic and likes the way Wellington ‘has no winter’.</p>"
 	},
 	{
-		       "name": "Ben Campbell",
-		      "photo": "photo_ben_2x.jpg",
-		      "title": "Technical Consultant",
-		"description": "<p>Ben has a background in network engineering and is skilled at configuring routers, hardware and general <abbr title=\"Information Technology\">IT</abbr> support. He joined the Abletech team in 2014 as a Ruby on Rails developer and likes seeing the code come to life when he tests it. He enjoys Wellington’s rock-climbing walls and getting out motorcycling.</p>"
-	},
-	{
 		       "name": "Blair Macdonald",
 		      "photo": "photo_blair_2x.jpg",
 		      "title": "Sales Consultant",
@@ -151,7 +145,7 @@
 		      "photo": "photo_shaun_2x.jpg",
 		      "title": "Technical Consultant",
 		    "twitter": "ndorfin",
-		"description": "<p>With many years of experience as a web developer Shaun relocated from Cape Town, South Africa, to join the Abletech team after meeting at Webstock 2014. His interests are in front-end development, Interaction Design and User Experience Design. Shaun enjoys Wellington’s cultural and intellectual richness and likes mountain biking, robotics and marine conservation.</p>"
+		"description": "<p>With many years of experience as a web developer Shaun relocated from Cape Town, South Africa, to join the Abletech team after meeting at Webstock 2014. His interests are in front-end development, Interaction Design and User Experience Design. Shaun enjoys Wellington’s cultural and intellectual richness and likes mountain biking and PC gaming.</p>"
 	},
 	{
 		       "name": "Tracey Norrish",
