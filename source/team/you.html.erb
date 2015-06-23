@@ -11,7 +11,14 @@ page_classes: you
   		<span class="break">Wellington</span>
   		<span class="break">and You.</span>
   	</h1>
-  	<p class="paragraph_intro">Sound like a good fit? <a href="/jobs">Have a look at our available jobs</a>.</p>
+  	<p class="paragraph_intro">
+  		Sound like a good fit?
+  		<% if data.jobs.count %>
+  		<a href="/jobs">Have a look at our available jobs</a>.
+  		<% else %>
+  		<a href="mailto:hello@abletech.co.nz" class="button">Send us an email about yourself!</a>.
+  		<% end %>
+  	</p>
   </div>
 </section>
 <section class="section section_column section_aside">
@@ -79,7 +86,9 @@ page_classes: you
   	<h1 class="heading heading_content">Does working with Abletech sound like you?</h1>
   	<p>
       <a href="mailto:hello@abletech.co.nz" class="button button_banner">Send us an email about yourself!</a>
-      <a href="/jobs" class="button button_banner">Browse our available jobs</a>
+			<% if data.jobs.count %>
+  		<a href="/jobs" class="button button_banner">Browse our available jobs</a>
+  		<% end %>
     </p>
   </div>
 </section>
