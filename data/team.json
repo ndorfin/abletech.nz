@@ -55,7 +55,7 @@
 		      "photo": "photo_dawn_2x.jpg",
 		      "title": "Technical Consultant",
 		    "twitter": "dawnerfr",
-		"description": "<p>Dawn joined the Abletech team in 2014 after a Summer of Tech internship. She continues to work, with Ruby on Rails, while she completes her conjoint degree in Computer Science and Finance. She enjoys snowboarding, rock climbing and Sweden!</p>"
+		"description": "<p>Dawn is a developer who joined Abletech after a Summer of Tech internship in 2013. She completed a conjoint degree in Computer Science & Finance, before falling in love with Ruby on Rails and the web development world. Dawn also enjoys rock climbing, snowboarding, travel and anything that presents a good challenge.</p>"
 	},
 	{
 		       "name": "James Bowles",
@@ -63,6 +63,13 @@
 		      "title": "Technical Consultant, BInfSc",
 		    "twitter": "jameslbowles",
 		"description": "<p>James has a Bachelor of Information Science from Massey University. He loves his job; hand-crafting Rails applications and <acronym title=\"Application Programme Interface\">API</acronym>s and working alongside customers turning their ideas into realities. When he isn’t VIMing, he is out on his favourite mountain biking tracks, at the climbing gym or enjoying good coffee with his wife, Sarah-Rose.</p>"
+	},
+	{
+		       "name": "Jean van der Walt",
+		      "photo": "photo_jean_2x.jpg",
+		      "title": "Technical Consultant, BSc CompSci",
+		    "twitter": "jfvanderwalt",
+		"description": "<p>Jean is a Ruby developer from Cape Town, South Africa. He is passionate about clean and maintainable code, and continually seeking ways to improve and explore new things. Jean cares about developing high quality software that matters to people. When he’s not sitting in an office you can find him trail running or tramping.</p>"
 	},
 	{
 		       "name": "Jo Wilson",
@@ -153,5 +160,12 @@
 		      "title": "Technical Consultant, BSc, PGCertPH, BA (Hons)",
 		    "twitter": "tracey_norrish",
 		"description": "<p>Tracey brings a wealth of experience to each project. She majored in Computer Science at the University of Otago.  Tracey enjoys solving complex problems with Ruby and tinkering with other languages. She loves living in Wellington where the coffee’s hot, the beer is cold and there’s running and mountain biking trails right outside the window.</p>"
-	}
+	}//,
+	// {
+	// 	       "name": "Yanis Vieilly",
+	// 	      "photo": "photo_yanis_2x.jpg",
+	// 	      "title": "Technical Consultant",
+	// 	    "twitter": "yanisvieilly",
+	// 	"description": "<p></p>"
+	// }
 ]
