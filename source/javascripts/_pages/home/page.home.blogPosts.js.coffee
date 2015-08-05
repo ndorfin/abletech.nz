@@ -5,10 +5,12 @@ class Abletech.BlogPosts
     @blogPosts = document.getElementById(elemID)
 
   blogPosts: null
+  blogRSSFeed: 'http://abletech.ghost.io/tag/promoted/rss/'
   postsLoaded: false
+  googleFeedAPI: '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&callback=handlePostsData&q='
 
   handlePostsData: (data) =>
-    posts = data.response.posts
+    posts = data.responseData.feed.entries
 
     @blogPosts.innerHTML = '\
     <h1 class="heading heading_subsection">Latest from the Abletech Blog</h1>\
@@ -19,30 +21,30 @@ class Abletech.BlogPosts
 
     ul = @blogPosts.querySelector('.tumblr_posts')
     for i in [0..2]
-      regex = new RegExp('(<p[ >].*?</p>)')
-      firstP = regex.exec(posts[i]['body'])[0]
       li = document.createElement('li')
       li.innerHTML = '\
-      <h2><a href="' + posts[i]['post_url'] + '">' + posts[i]['title'] + '</a></h2>\
-      <p class="published-date">' + new Date(parseInt(posts[i]['timestamp'] + '000')).format('j F, Y') + '</p>\
-      <div class="post-body">' + firstP + '</div>\
-      <a href="' + posts[i]['post_url'] + '">Read more of ‘' + posts[i]['title'] + '’…</a>'
+      <h2><a href="' + posts[i]['link'] + '">' + posts[i]['title'] + '</a></h2>\
+      <p class="published-date">' + new Date(posts[i]['publishedDate'] + '000').format('j F, Y') + '</p>\
+      <div class="post-body">' + posts[i]['contentSnippet'] + '</div>\
+      <a href="' + posts[i]['link'] + '">Read more of ‘' + posts[i]['title'] + '’…</a>'
       ul.appendChild(li)
 
-  getPostsFromTumblr: =>
+  getPromotedBlogPosts: ->
+    url = document.location.protocol + @googleFeedAPI + encodeURIComponent(@blogRSSFeed)
+
+    callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random())
     @postsLoaded = true
     window.handlePostsData = @handlePostsData
 
-    baseURL = 'https://api.tumblr.com/v2/blog/blog.abletech.nz/posts'
-    consumerKey = 'A3b8bQpBReiqQz2t6aHj3xcfjolU8dNxDkvVE2xv4c5KNzXx1F'
-    filter = 'tag=promoted'
-    callback = 'handlePostsData'
-    xhrURL = baseURL + '?callback=' + callback + '&api_key=' + consumerKey + '&' + filter
+    window[callbackName] = (data) ->
+      delete window[callbackName]
+      @blogPosts.removeChild script
+      callback data
 
     script = document.createElement('script')
+    script.src = url + (if url.indexOf('?') >= 0 then '&' else '?') + 'callback=' + callbackName
     script.async = 1
-    script.src = xhrURL
     @blogPosts.appendChild(script)
 
   init: =>
-    @getPostsFromTumblr() if @blogPosts && !@postsLoaded
+    @getPromotedBlogPosts() if @blogPosts && !@postsLoaded
