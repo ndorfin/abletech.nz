@@ -173,12 +173,12 @@
 		    "twitter": "ndorfin",
 		"description": "<p>With many years of experience as a web developer Shaun relocated from Cape Town, South Africa, to join the Abletech team after meeting at Webstock 2014. His interests are in front-end development, Interaction Design and User Experience Design. Shaun enjoys Wellington’s cultural and intellectual richness and likes mountain biking and PC gaming.</p>"
 	},
-	// {
-	// 	       "name": "Suzanne Jones",
-	// 	      "photo": "photo_suzanne_2x.jpg",
-	// 	      "title": "Technical Consultant",
-	// 	"description": "<p></p>"
-	// },
+	{
+		       "name": "Suzanne Jones",
+		      "photo": "photo_suzanne_2x.jpg",
+		      "title": "Delivery lead",
+		"description": "<p>Suzanne has extensive experience working with software development teams as a Business Analyst and Delivery Lead. When Suzanne’s not in the office she is shanking a golf ball around the golf course, failing miserably at being pack leader to her dogs, and planning her next trip.</p>"
+	},
 	{
 		       "name": "Tracey Norrish",
 		      "photo": "photo_tracey_2x.jpg",
