@@ -50,10 +50,16 @@
 		      "title": "Sales Consultant",
 		"description": "<p>Blair brings a variety of skills and experience to Abletech from his investigative background. He works with the WatchMyGear team to ensure customers get the most from both their web-based dashboard and their mobile scanning app.  He enjoys spending time with his family, mountain-biking and Youth Group adventures.</p>"
 	},
+	// {
+	// 	       "name": "Cameron Fowler",
+	// 	      "photo": "photo_cam_2x.jpg",
+	// 	      "title": "Technical Consultant",
+	// 	"description": "<p></p>"
+	// },
 	{
 		       "name": "Dawn Richardson",
 		      "photo": "photo_dawn_2x.jpg",
-		      "title": "Technical Consultant",
+		      "title": "Technical Consultant, BSc, BC",
 		    "twitter": "dawnerfr",
 		"description": "<p>Dawn is a developer who joined Abletech after a Summer of Tech internship in 2013. She completed a conjoint degree in Computer Science & Finance, before falling in love with Ruby on Rails and the web development world. Dawn also enjoys rock climbing, snowboarding, travel and anything that presents a good challenge.</p>"
 	},
@@ -92,6 +98,12 @@
 		    "twitter": "josephleniston",
 		"description": "<p>Joseph has many years of development experience. He has worked with Ruby on Rails, Java in Enterprise, and on Android. He enjoys utilising new technologies to help businesses achieve their goals. Outside of work he likes walks around Zealandia and the Orongorongo River in the Rimutaka Forest Park. He prefers to drink good coffee or locally brewed beer.</p>"
 	},
+	// {
+	// 	       "name": "Kalo Pilato",
+	// 	      "photo": "photo_kalo_2x.jpg",
+	// 	      "title": "Technical Consultant",
+	// 	"description": "<p></p>"
+	// },
 	{
 		       "name": "Kendall Flutey",
 		      "photo": "photo_kendall_2x.jpg",
@@ -99,6 +111,13 @@
 		    "twitter": "kendallflutey",
 		"description": "<p>Kendall’s background in business, accounting and entrepreneurship gives her a keen interest in the customer’s bottom line. She joined the Abletech team in 2014 after studying in Otago, and enjoys working with a range of software development tools. Kendall enjoys Wellington’s creative events, she plays basketball, watches rugby and attends tech/innovation meetups.</p>"
 	},
+	// {
+	// 	       "name": "Michael Dowse",
+	// 	      "photo": "photo_michael_2x.jpg",
+	// 	      "title": "Technical Consultant",
+	// 	    "twitter": "michaeldowse",
+	// 	"description": "<p></p>"
+	// },
 	{
 		       "name": "Naiki Pohe",
 		      "photo": "photo_naiki_2x.jpg",
@@ -154,18 +173,24 @@
 		    "twitter": "ndorfin",
 		"description": "<p>With many years of experience as a web developer Shaun relocated from Cape Town, South Africa, to join the Abletech team after meeting at Webstock 2014. His interests are in front-end development, Interaction Design and User Experience Design. Shaun enjoys Wellington’s cultural and intellectual richness and likes mountain biking and PC gaming.</p>"
 	},
+	// {
+	// 	       "name": "Suzanne Jones",
+	// 	      "photo": "photo_suzanne_2x.jpg",
+	// 	      "title": "Technical Consultant",
+	// 	"description": "<p></p>"
+	// },
 	{
 		       "name": "Tracey Norrish",
 		      "photo": "photo_tracey_2x.jpg",
 		      "title": "Technical Consultant, BSc, PGCertPH, BA (Hons)",
 		    "twitter": "tracey_norrish",
 		"description": "<p>Tracey brings a wealth of experience to each project. She majored in Computer Science at the University of Otago.  Tracey enjoys solving complex problems with Ruby and tinkering with other languages. She loves living in Wellington where the coffee’s hot, the beer is cold and there’s running and mountain biking trails right outside the window.</p>"
-	}//,
-	// {
-	// 	       "name": "Yanis Vieilly",
-	// 	      "photo": "photo_yanis_2x.jpg",
-	// 	      "title": "Technical Consultant",
-	// 	    "twitter": "yanisvieilly",
-	// 	"description": "<p></p>"
-	// }
+	},
+	{
+		       "name": "Yanis Vieilly",
+		      "photo": "photo_yanis_2x.jpg",
+		      "title": "Technical Consultant, MIT",
+		    "twitter": "yanisvieilly",
+		"description": "<p>Yanis works with Ruby on Rails. He loves computer science and web development and is always looking for new technologies to play with. When he’s not coding, Yanis enjoys traveling the world, video games, and a cold beer with his friends.</p>"
+	}
 ]
