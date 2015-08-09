@@ -98,12 +98,12 @@
 		    "twitter": "josephleniston",
 		"description": "<p>Joseph has many years of development experience. He has worked with Ruby on Rails, Java in Enterprise, and on Android. He enjoys utilising new technologies to help businesses achieve their goals. Outside of work he likes walks around Zealandia and the Orongorongo River in the Rimutaka Forest Park. He prefers to drink good coffee or locally brewed beer.</p>"
 	},
-	// {
-	// 	       "name": "Kalo Pilato",
-	// 	      "photo": "photo_kalo_2x.jpg",
-	// 	      "title": "Technical Consultant",
-	// 	"description": "<p></p>"
-	// },
+	{
+		       "name": "Kalo Pilato",
+		      "photo": "photo_kalo_2x.jpg",
+		      "title": "Technical Consultant",
+		"description": "<p>With a background in IT Account Management and Audio Engineering, Kalo has always had a keen enthusiasm for emerging technologies. Currently finishing his Computer Science studies at Victoria University, he is particularly interested in Android development, the Internet of Things, and can't wait to learn Ruby on Rails! When he's not in the office you can find Kalo exploring Wellington's mountain bike trails, tinkering with Arduinos, or enjoying a local brew in his music studio.</p>"
+	},
 	{
 		       "name": "Kendall Flutey",
 		      "photo": "photo_kendall_2x.jpg",
