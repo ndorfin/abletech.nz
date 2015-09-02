@@ -4,5 +4,11 @@
 		   "location": "Wellington",
 		        "url": "/jobs/senior-ruby-developer",
 		"description": "We’re looking for a Ruby Developer who’s mastered their trade and wants to lead project development, mentor to their peers and shape the company."
+	},
+	{
+		      "title": "Front-end Developer",
+		   "location": "Wellington",
+		        "url": "/jobs/front-end-developer",
+		"description": "We’re looking for a well-experienced Front-end Developer to help solidify Abletech’s core competencies in HTML, CSS and JavaScript."
 	}
 ]
