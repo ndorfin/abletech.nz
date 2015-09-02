@@ -77,7 +77,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  activate :asset_hash, :ignore => [/blog/, /touch-icon/]
+  activate :asset_hash, :ignore => [/blog/, /touch-icon/, /opengraph/]
 
   activate :minify_html do |html|
     html.remove_http_protocol = false
