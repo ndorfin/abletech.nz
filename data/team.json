@@ -26,7 +26,7 @@
 	{
 		       "name": "Alexandre Barret",
 		      "photo": "photo_alex_2x.jpg",
-		      "title": "Technical Consultant",
+		      "title": "Technical Consultant, MSc (Eng)",
 		    "twitter": "Ruby_DRY",
 		"description": "<p>Alexandre graduated from Enspiral Dev Academy and joined Abletech in 2015. He loves creating robust and tested applications using Ruby on Rails. When he’s not coding, you’ll find him on the dance floor lindy hopping or tinkering with Internet of Things projects.</p>"
 	},
@@ -50,12 +50,18 @@
 		      "title": "Sales Consultant",
 		"description": "<p>Blair brings a variety of skills and experience to Abletech from his investigative background. He works with the WatchMyGear team to ensure customers get the most from both their web-based dashboard and their mobile scanning app.  He enjoys spending time with his family, mountain-biking and Youth Group adventures.</p>"
 	},
+	// {
+	// 	       "name": "Cameron Fowler",
+	// 	      "photo": "photo_cam_2x.jpg",
+	// 	      "title": "Technical Consultant",
+	// 	"description": "<p></p>"
+	// },
 	{
 		       "name": "Dawn Richardson",
 		      "photo": "photo_dawn_2x.jpg",
-		      "title": "Technical Consultant",
+		      "title": "Technical Consultant, BSc, BC",
 		    "twitter": "dawnerfr",
-		"description": "<p>Dawn joined the Abletech team in 2014 after a Summer of Tech internship. She continues to work, with Ruby on Rails, while she completes her conjoint degree in Computer Science and Finance. She enjoys snowboarding, rock climbing and Sweden!</p>"
+		"description": "<p>Dawn is a developer who joined Abletech after a Summer of Tech internship in 2013. She completed a conjoint degree in Computer Science & Finance, before falling in love with Ruby on Rails and the web development world. Dawn also enjoys rock climbing, snowboarding, travel and anything that presents a good challenge.</p>"
 	},
 	{
 		       "name": "James Bowles",
@@ -63,6 +69,13 @@
 		      "title": "Technical Consultant, BInfSc",
 		    "twitter": "jameslbowles",
 		"description": "<p>James has a Bachelor of Information Science from Massey University. He loves his job; hand-crafting Rails applications and <acronym title=\"Application Programme Interface\">API</acronym>s and working alongside customers turning their ideas into realities. When he isn’t VIMing, he is out on his favourite mountain biking tracks, at the climbing gym or enjoying good coffee with his wife, Sarah-Rose.</p>"
+	},
+	{
+		       "name": "Jean van der Walt",
+		      "photo": "photo_jean_2x.jpg",
+		      "title": "Technical Consultant, BSc CompSci",
+		    "twitter": "jfvanderwalt",
+		"description": "<p>Jean is a Ruby developer from Cape Town, South Africa. He is passionate about clean and maintainable code, and continually seeking ways to improve and explore new things. Jean cares about developing high quality software that matters to people. When he’s not sitting in an office you can find him trail running or tramping.</p>"
 	},
 	{
 		       "name": "Jo Wilson",
@@ -84,6 +97,12 @@
 		      "title": "Technical Consultant, BBI",
 		    "twitter": "josephleniston",
 		"description": "<p>Joseph has many years of development experience. He has worked with Ruby on Rails, Java in Enterprise, and on Android. He enjoys utilising new technologies to help businesses achieve their goals. Outside of work he likes walks around Zealandia and the Orongorongo River in the Rimutaka Forest Park. He prefers to drink good coffee or locally brewed beer.</p>"
+	},
+	{
+		       "name": "Kalo Pilato",
+		      "photo": "photo_kalo_2x.jpg",
+		      "title": "Technical Consultant",
+		"description": "<p>With a background in IT Account Management and Audio Engineering, Kalo has always had a keen enthusiasm for emerging technologies. Currently finishing his Computer Science studies at Victoria University, he is particularly interested in Android development, the Internet of Things, and can't wait to learn Ruby on Rails! When he's not in the office you can find Kalo exploring Wellington's mountain bike trails, tinkering with Arduinos, or enjoying a local brew in his music studio.</p>"
 	},
 	{
 		       "name": "Kendall Flutey",
@@ -148,10 +167,23 @@
 		"description": "<p>With many years of experience as a web developer Shaun relocated from Cape Town, South Africa, to join the Abletech team after meeting at Webstock 2014. His interests are in front-end development, Interaction Design and User Experience Design. Shaun enjoys Wellington’s cultural and intellectual richness and likes mountain biking and PC gaming.</p>"
 	},
 	{
+		       "name": "Suzanne Jones",
+		      "photo": "photo_suzanne_2x.jpg",
+		      "title": "Delivery lead",
+		"description": "<p>Suzanne has extensive experience working with software development teams as a Business Analyst and Delivery Lead. When Suzanne’s not in the office she is shanking a golf ball around the golf course, failing miserably at being pack leader to her dogs, and planning her next trip.</p>"
+	},
+	{
 		       "name": "Tracey Norrish",
 		      "photo": "photo_tracey_2x.jpg",
 		      "title": "Technical Consultant, BSc, PGCertPH, BA (Hons)",
 		    "twitter": "tracey_norrish",
 		"description": "<p>Tracey brings a wealth of experience to each project. She majored in Computer Science at the University of Otago.  Tracey enjoys solving complex problems with Ruby and tinkering with other languages. She loves living in Wellington where the coffee’s hot, the beer is cold and there’s running and mountain biking trails right outside the window.</p>"
+	},
+	{
+		       "name": "Yanis Vieilly",
+		      "photo": "photo_yanis_2x.jpg",
+		      "title": "Technical Consultant, MIT",
+		    "twitter": "yanisvieilly",
+		"description": "<p>Yanis works with Ruby on Rails. He loves computer science and web development and is always looking for new technologies to play with. When he’s not coding, Yanis enjoys traveling the world, video games, and a cold beer with his friends.</p>"
 	}
 ]
