@@ -6,16 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><%= current_page.data.title || "Abletech" %></title>
 		<meta property="og:site_name" content="Abletech">
-		<% if current_page.data.page_title %>
-		<meta property="og:title" content="<%= current_page.data.page_title %>">
+		<% if current_page.data.title %>
+		<meta property="og:title" content="<%= current_page.data.title %>">
 		<% else %>
 		<meta property="og:title" content="Abletech">
 		<% end %>
 		<meta property="og:image" content="<%= url_root %>/opengraph.png">
 		<meta property="og:url" content="<%= url_root %><%= current_page.url %>">
 		<meta property="og:type" content="website">
-		<% if current_page.data.page_description %>
-		<meta property="og:description" name="description" content="<%= current_page.data.page_description %>">
+		<% if current_page.data.description %>
+		<meta property="og:description" name="description" content="<%= current_page.data.description %>">
 		<% else %>
 		<meta property="og:description" name="description" content="Abletech is a web development consultancy based in Wellington, New Zealand. We love working with Ruby, Ruby on Rails (RoR), Middleman and other Open Source Software (OSS) stacks.">
 		<% end %>
