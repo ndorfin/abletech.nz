@@ -50,12 +50,12 @@
 		      "title": "Sales Consultant",
 		"description": "<p>Blair brings a variety of skills and experience to Abletech from his investigative background. He works with the WatchMyGear team to ensure customers get the most from both their web-based dashboard and their mobile scanning app.  He enjoys spending time with his family, mountain-biking and Youth Group adventures.</p>"
 	},
-	// {
-	// 	       "name": "Cameron Fowler",
-	// 	      "photo": "photo_cam_2x.jpg",
-	// 	      "title": "Technical Consultant",
-	// 	"description": "<p></p>"
-	// },
+	{
+		       "name": "Cameron Fowler",
+		      "photo": "photo_cam_2x.jpg",
+		      "title": "Technical Consultant, BE",
+		"description": "<p>Cameron majored in Software Engineering at Victoria University and enjoys working with Rails and Vim. He has solved problems using technologies ranging from geospatial databases to billing engines to single-page mobile friendly interfaces. When he’s not in front of the computer he’s often mixing sound in some of Wellington’s biggest indoor concert venues, rock climbing or playing squash.</p>"
+	},
 	{
 		       "name": "Dawn Richardson",
 		      "photo": "photo_dawn_2x.jpg",
@@ -102,7 +102,7 @@
 		       "name": "Kalo Pilato",
 		      "photo": "photo_kalo_2x.jpg",
 		      "title": "Technical Consultant",
-		"description": "<p>With a background in IT Account Management and Audio Engineering, Kalo has always had a keen enthusiasm for emerging technologies. Currently finishing his Computer Science studies at Victoria University, he is particularly interested in Android development, the Internet of Things, and can't wait to learn Ruby on Rails! When he's not in the office you can find Kalo exploring Wellington's mountain bike trails, tinkering with Arduinos, or enjoying a local brew in his music studio.</p>"
+		"description": "<p>With a background in IT Account Management and Audio Engineering, Kalo has always had a keen enthusiasm for emerging technologies. Currently finishing his Computer Science studies at Victoria University, he is particularly interested in Android development, the Internet of Things, and can’t wait to learn Ruby on Rails! When he’s not in the office you can find Kalo exploring Wellington’s mountain bike trails, tinkering with Arduinos, or enjoying a local brew in his music studio.</p>"
 	},
 	{
 		       "name": "Kendall Flutey",
@@ -136,7 +136,7 @@
 		       "name": "Pam Ramsay",
 		      "photo": "photo_pam_2x.jpg",
 		      "title": "Accounts, B.Ed, DipTchg",
-		"description": "<p>Pam’s been part of the Abletech team since the very beginning and works behind the scenes keeping all the company records in order. She manages administrative systems and keeps operations in full swing. Her family's favourite Wellington spots include Otari Bush and Scorching Bay.</p>"
+		"description": "<p>Pam’s been part of the Abletech team since the very beginning and works behind the scenes keeping all the company records in order. She manages administrative systems and keeps operations in full swing. Her family’s favourite Wellington spots include Otari Bush and Scorching Bay.</p>"
 	},
 	{
 		       "name": "Ross Jourdain",
