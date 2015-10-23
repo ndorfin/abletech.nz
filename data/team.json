@@ -38,13 +38,6 @@
 		"description": "<p>With experience across many software disciplines Andy now perfects mobile and web applications. He’s built multiple reliable and user-friendly Android & Ruby on Rails apps for both internal and external clients. A big football fan, Andy plays for a local team and follows the Wellington Phoenix.</p>"
 	},
 	{
-		       "name": "Aurynn Shaw",
-		      "photo": "photo_aurynn_2x.jpg",
-		      "title": "Technical Consultant",
-		    "twitter": "aurynn",
-		"description": "<p>Aurynn has experience in high-scale environments and cloud deployments. She is a Python engineer and enjoys making application deployments that are provable, testable, and scalable into the cloud through systems orchestration and automatic scaling. Aurynn finds NZ naturally photogenic and likes the way Wellington ‘has no winter’.</p>"
-	},
-	{
 		       "name": "Blair Macdonald",
 		      "photo": "photo_blair_2x.jpg",
 		      "title": "Sales Consultant",
@@ -105,13 +98,6 @@
 		"description": "<p>With a background in IT Account Management and Audio Engineering, Kalo has always had a keen enthusiasm for emerging technologies. Currently finishing his Computer Science studies at Victoria University, he is particularly interested in Android development, the Internet of Things, and can’t wait to learn Ruby on Rails! When he’s not in the office you can find Kalo exploring Wellington’s mountain bike trails, tinkering with Arduinos, or enjoying a local brew in his music studio.</p>"
 	},
 	{
-		       "name": "Kendall Flutey",
-		      "photo": "photo_kendall_2x.jpg",
-		      "title": "Technical Consultant, BCom, MEntr, DipGrad(Acc)",
-		    "twitter": "kendallflutey",
-		"description": "<p>Kendall’s background in business, accounting and entrepreneurship gives her a keen interest in the customer’s bottom line. She joined the Abletech team in 2014 after studying in Otago, and enjoys working with a range of software development tools. Kendall enjoys Wellington’s creative events, she plays basketball, watches rugby and attends tech/innovation meetups.</p>"
-	},
-	{
 		       "name": "Naiki Pohe",
 		      "photo": "photo_naiki_2x.jpg",
 		      "title": "Technical Consultant, BSc",
@@ -153,13 +139,6 @@
 		"description": "<p>Russell has extensive experience working with software development teams, as a Development Manager, Solution Architect and Software Developer in both private and public sectors. He is an experienced speaker at LeanKanban and Agile conferences. Russell reckons Wellington summers are the best in the world.</p>"
 	},
 	{
-		       "name": "Sean Arnold",
-		      "photo": "photo_sean_2x.jpg",
-		      "title": "Technical Consultant, BSc",
-		    "twitter": "arniesean",
-		"description": "<p>Via the Summer of Tech Internship Programme, Sean joined the Abletech team in 2012. He has a BSc in Computer Science from Victoria University of Wellington. Sean enjoys consulting with customers and developing high-functioning user-friendly web and mobile solutions.</p>"
-	},
-	{
 		       "name": "Shaun O’Connell",
 		      "photo": "photo_shaun_2x.jpg",
 		      "title": "Technical Consultant",
@@ -178,12 +157,5 @@
 		      "title": "Technical Consultant, BSc, PGCertPH, BA (Hons)",
 		    "twitter": "tracey_norrish",
 		"description": "<p>Tracey brings a wealth of experience to each project. She majored in Computer Science at the University of Otago.  Tracey enjoys solving complex problems with Ruby and tinkering with other languages. She loves living in Wellington where the coffee’s hot, the beer is cold and there’s running and mountain biking trails right outside the window.</p>"
-	},
-	{
-		       "name": "Yanis Vieilly",
-		      "photo": "photo_yanis_2x.jpg",
-		      "title": "Technical Consultant, MIT",
-		    "twitter": "yanisvieilly",
-		"description": "<p>Yanis works with Ruby on Rails. He loves computer science and web development and is always looking for new technologies to play with. When he’s not coding, Yanis enjoys traveling the world, video games, and a cold beer with his friends.</p>"
 	}
 ]
