@@ -315,3 +315,6 @@ DEPENDENCIES
   poltergeist
   rake
   rspec
+
+BUNDLED WITH
+   1.10.0
