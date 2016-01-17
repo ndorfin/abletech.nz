@@ -51,12 +51,18 @@
 }
 
 @media (min-width:720px) {
-  #team_activities {
-    .figure {}
+	#team_activities {min-height:360px;}
+  #life_at_abletech {overflow:hidden;
+  	.heading_section {font-size:2em;}
+  	.banner_container {float:right; width:50%;}
+  	aside {margin-right:55%;}
   }
 }
 
 @media (min-width:900px) {
+	#life_at_abletech {
+  	.heading_section {font-size:4em;}
+  }
 	#favourite_tech {
 		.list_technologies {
 			> li {float:left; width:16.5%; box-sizing:border-box;}
