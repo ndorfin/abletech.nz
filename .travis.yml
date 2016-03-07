@@ -6,7 +6,7 @@ branches:
   - "/^hotfix\\/.*$/"
 language: ruby
 rvm:
-- 2.2.1
+- 2.3.0
 env:
   matrix:
   - RAILS_ENV=development
@@ -22,13 +22,11 @@ env:
 cache:
 - apt
 - bundler
-script:
-- xvfb-run bundle exec rspec
 after_success:
-- if [[ "$TRAVIS_BRANCH" = "master" ]]; then export MM_ENV=production; fi
-- if [[ "$TRAVIS_BRANCH" != "master" ]]; then export MM_ENV=staging; fi
+- if [[ "$TRAVIS_BRANCH" = "master" ]]; then export APP_ENV=production; fi
+- if [[ "$TRAVIS_BRANCH" != "master" ]]; then export APP_ENV=staging; fi
 - echo "BRANCH is $TRAVIS_BRANCH"
-- echo "MM_ENV is $MM_ENV"
+- echo "APP_ENV is $APP_ENV"
 - echo "TRAVIS_PULL_REQUEST is $TRAVIS_PULL_REQUEST"
 - bundle exec middleman build --verbose
 - if [[ "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then bundle exec middleman s3_sync; fi
