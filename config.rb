@@ -1,5 +1,5 @@
 env_name = ENV['APP_ENV'] || 'development'
-require "config/environments/#{env_name}"
+require "environments/#{env_name}"
 require 'helpers/asset_helpers'
 
 ###
@@ -60,7 +60,6 @@ set :images_dir, 'images'
 set :url_root, ApplicationConfig::BASE_URL
 
 activate :directory_indexes
-activate :gzip
 
 activate :autoprefixer do |config|
 	config.browsers = ['last 2 versions', 'Explorer >= 9']
