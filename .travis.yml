@@ -22,7 +22,7 @@ env:
 cache:
 - apt
 - bundler
-after_success:
+script:
 - if [[ "$TRAVIS_BRANCH" = "master" ]]; then export APP_ENV=production; fi
 - if [[ "$TRAVIS_BRANCH" != "master" ]]; then export APP_ENV=staging; fi
 - echo "BRANCH is $TRAVIS_BRANCH"
