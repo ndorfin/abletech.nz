@@ -38,16 +38,30 @@
 		"description": "<p>With experience across many software disciplines Andy now perfects mobile and web applications. He’s built multiple reliable and user-friendly Android & Ruby on Rails apps for both internal and external clients. A big football fan, Andy plays for a local team and follows the Wellington Phoenix.</p>"
 	},
 	{
-		       "name": "Blair Macdonald",
-		      "photo": "photo_blair_2x.jpg",
-		      "title": "Sales Consultant",
-		"description": "<p>Blair brings a variety of skills and experience to Abletech from his investigative background. He works with the WatchMyGear team to ensure customers get the most from both their web-based dashboard and their mobile scanning app.  He enjoys spending time with his family, mountain-biking and Youth Group adventures.</p>"
+		       "name": "Andrew Pett",
+		      "photo": "photo_andrew_2x.jpg",
+		      "title": "Technical Consultant, BSc CompSci",
+		    "twitter": "andrewpett1",
+		"description": "<p>Andrew studied Computer Science at Victoria University. He enjoys tackling the challenges and responsibilities of back end web development. Andrew is relearning French and hopes to travel to French Canada to try it out. He’s also working with a friend to build a mobile game.</p>"
 	},
 	{
 		       "name": "Cameron Fowler",
 		      "photo": "photo_cam_2x.jpg",
 		      "title": "Technical Consultant, BE",
 		"description": "<p>Cameron majored in Software Engineering at Victoria University and enjoys working with Rails and Vim. He has solved problems using technologies ranging from geospatial databases to billing engines to single-page mobile friendly interfaces. When he’s not in front of the computer he’s often mixing sound in some of Wellington’s biggest indoor concert venues, rock climbing or playing squash.</p>"
+	},
+	{
+		       "name": "Dana Iti",
+		      "photo": "photo_dana_2x.jpg",
+		      "title": "Technical Consultant, Dip.WebDev",
+		    "twitter": "itidana",
+		"description": "<p>Dana has many years of experience working and teaching web development. She loves good design and is enjoying focusing on front-end development. Dana uses her technical skills on the home front too, writing personalised apps to help her kids with their maths and spelling! When she’s not at the keyboard Dana loves spending time fishing and biking with her husband and family.</p>"
+	},
+	{
+		       "name": "David Oram",
+		      "photo": "photo_david_2x.jpg",
+		      "title": "Technical Consultant, BSc CompSci",
+		"description": "<p>David studied Computer Science at Victoria University. He likes solving business problems and enjoys working with business professionals, technical consultants and users, towards solutions. Out of hours David enjoys family time with his wife and two boys, especially in and around the Hutt River.</p>"
 	},
 	{
 		       "name": "Dawn Richardson",
@@ -129,7 +143,7 @@
 		      "photo": "photo_ross_2x.jpg",
 		      "title": "Technical Consultant, BSc",
 		    "twitter": "rossjourdain",
-		"description": "<p>With an extensive background in systems integration and security projects ranging from print publishing and self-service kiosks to secure email, Ross now focuses on system design and development. He has two young boys at home who keep him out of trouble most of the time.</p>"
+		"description": "<p>With an extensive background in systems integration and security projects ranging from print publishing and self-service kiosks to secure email, Ross now focuses on system design and development. He has three young boys at home who keep him out of trouble most of the time.</p>"
 	},
 	{
 		       "name": "Russell Healy",

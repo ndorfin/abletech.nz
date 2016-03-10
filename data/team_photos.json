@@ -33,5 +33,25 @@
 	      "url": "team_pies.jpg",
 	      "alt": "Hot pies ready to be eaten",
 	  "caption": "Pie day Thursday. Home-made pies!"
+	},
+	{
+	      "url": "team_lunches.jpg",
+	      "alt": "Close-up of yummy springrolls",
+	  "caption": "Nutritious team lunches."
+	},
+	{
+	      "url": "team_movieworld.jpg",
+	      "alt": "Abletech’s Ruby Developers at the MovieWorld theme park",
+	  "caption": "Ruby Conference on Australia’s Gold Coast"
+	},
+	{
+	      "url": "team_charleston.jpg",
+	      "alt": "The Abletech team learning to swing dance",
+	  "caption": "Unearthing our inner-Charleston!"
+	},
+	{
+	      "url": "team_french_raclette.jpg",
+	      "alt": "The Abletech team got together for dinner at Le Marché Français",
+	  "caption": "Team dinner of French raclette, yum."
 	}
 ]
