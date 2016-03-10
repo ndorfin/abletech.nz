@@ -1,5 +1,4 @@
-@import "vars";
-@import "mixins";
+@import "_config";
 
 .section_post {margin:3em 1em; padding:1em 0; max-width:1000px; box-sizing:border-box;
   > blockquote {margin:1em 1em 2em;}

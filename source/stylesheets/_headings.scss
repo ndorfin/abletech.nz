@@ -1,5 +1,5 @@
-@import "vars";
-@import "mixins";
+@import "_config";
+
 .heading {letter-spacing:-0.05em; line-height:1; font-weight:600; margin:0; -webkit-font-smoothing:antialiased;}
 	.heading_page {font-size:2em;}
 	.heading_section {font-size:1.6em;}

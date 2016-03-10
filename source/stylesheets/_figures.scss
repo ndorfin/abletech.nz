@@ -1,5 +1,4 @@
-@import "vars";
-@import "mixins";
+@import "_config";
 
 .profiles {list-style:none; margin:0; padding:0;}
 .profile_scope {position:relative; margin:2em 0;
