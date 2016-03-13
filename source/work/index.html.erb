@@ -110,7 +110,7 @@ page_classes: work
 	<ul class="logos logo_grid">
 		<% workLogos = data.clients.select {|c| c[:workpageVisible] == true} %>
 		<% workLogos.each do |l| %>
-		<li><a href="<%= l[:url] %>" class="logo_<%= l[:class] %>"><%= l[:name] %></a></li>
+		<li><a href="<%= l[:url] %>" class="logo logo_<%= l[:class] %>"><%= l[:name] %></a></li>
 		<% end %>
 	</ul>
 </section>

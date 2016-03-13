@@ -19,7 +19,7 @@ class Abletech.HomepageLogos
   	<% homepage_logos = data.clients.select {|l| l[:homepageVisible] == true} %>
   	<% homepage_logos.each do |l| %>
   	{
-  		c: 'logo_<%= l[:class] %>'
+  		c: 'logo logo_<%= l[:class] %>'
   		t: '<%= l[:name] %>'
   	}
   	<% end %>
@@ -30,20 +30,19 @@ class Abletech.HomepageLogos
     @spareLogos = []
 
   addLogoToListItem: (logo, li) =>
-    templateAnchor = document.createElement('a')
-    templateAnchor.href = '#'
-    templateAnchor.className = logo.c
-    templateAnchor.innerHTML = logo.t
-    li.appendChild(templateAnchor)
+    templateLogo = document.createElement('span')
+    templateLogo.className = logo.c
+    templateLogo.innerHTML = logo.t
+    li.appendChild(templateLogo)
 
   replaceLogo: (logo, anchor) =>
-    oldAnchor = {
+    oldLogo = {
       c: anchor.className
       t: anchor.innerHTML
     }
     anchor.className = logo.c
     anchor.innerHTML = logo.t
-    @spareLogos.unshift(oldAnchor)
+    @spareLogos.unshift(oldLogo)
 
   addLogos: =>
     newArray = window.shuffle(@logos)
@@ -68,10 +67,10 @@ class Abletech.HomepageLogos
       @spareLogos.push(@logos[i])
 
   swopSpareLogo: =>
-    anchors = document.querySelectorAll('#logos_container a')
-    anchor = anchors[Math.floor(Math.random()*anchors.length)];
+    blocks = document.querySelectorAll('#logos_container .logo')
+    block = blocks[Math.floor(Math.random()*blocks.length)];
     spareLogo = @spareLogos[@spareLogos.length-1]
-    @replaceLogo(spareLogo, anchor)
+    @replaceLogo(spareLogo, block)
     @spareLogos.pop()
 
   loopThruLogos: =>

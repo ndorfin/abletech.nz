@@ -1,3 +1,8 @@
+@mixin hide_text() {text-indent:-9999em; line-height:0;}
+@mixin list_stripped() {list-style:none; margin:0; padding:0;}
+@mixin off_left() {position:absolute; left:-999em; top:-999em;}
+@mixin clearfix() {content:""; display:block; clear:both; height:0;}
+
 $colour_background:#fff;
 $colour_text_default:#333;
 $colour_abletech_red:#7e000c;

@@ -1,5 +1,4 @@
 //= require _lib/classList
-//= require _lib/document.head
 //= require _lib/date.extensions
 //= require _lib/window.shuffle
 //= require _lib/window.debounce

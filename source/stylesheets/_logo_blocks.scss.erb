@@ -1,8 +1,7 @@
-@import "vars";
-@import "mixins";
+@import "_config";
 
 .logos {
-	a {display:block; box-sizing:border-box; @include hide_text(); background-position:50% 50%; background-repeat:no-repeat;}
+	.logo {display:block; box-sizing:border-box; @include hide_text(); background-position:50% 50%; background-repeat:no-repeat;}
 }
 
 .logo_blocks {z-index:2; list-style:none; display:table; margin:2em 0 0; padding:0; width:100%; min-height:240px;
@@ -10,7 +9,7 @@
     &:first-child,
     &:nth-child(2) {display:none;}
   }
-  a {transition:all .3s;}
+  .logo {transition:all .3s;}
 }
 
 .logo_grid {@include list_stripped();}
@@ -23,7 +22,7 @@
 @media (min-width:430px) {
   .logo_grid {overflow:hidden;
   	li {width:50%; float:left; display:block;}
-  	a {min-height:120px;}
+  	.logo {min-height:120px;}
   }
 }
 

@@ -70,7 +70,7 @@ end
 configure :build do
 
 	activate :gzip do |gzip|
-		gzip.exts = %w(.js .css .html .htm .svg)
+		gzip.exts = %w(.js .css .html .htm .svg .txt)
 	end
 
 	# For example, change the Compass output style for deployment
@@ -78,7 +78,7 @@ configure :build do
 
 	# Minify Javascript on build
 	activate :minify_javascript
-	set :js_compressor, Uglifier.new(:mangle => false)
+	set :js_compressor, Uglifier.new()
 
 	# Enable cache buster
 	activate :asset_hash, :ignore => [/blog/, /touch-icon/, /opengraph/]
@@ -86,7 +86,7 @@ configure :build do
 	activate :minify_html do |html|
 		html.remove_http_protocol    = false
 		html.remove_input_attributes = false
-		html.remove_quotes           = false
+		html.remove_quotes           = true
 		html.remove_intertag_spaces  = true
 	end
 
@@ -123,6 +123,7 @@ if ApplicationConfig.const_defined?(:S3)
 	caching_policy 'application/font-woff2', max_age: (60 * 60 * 24 * 365), public: true
 	caching_policy 'font/woff',              max_age: (60 * 60 * 24 * 365), public: true
 	caching_policy 'font/woff2',             max_age: (60 * 60 * 24 * 365), public: true
+	caching_policy 'text/plain',             max_age: (60 * 60 * 24 * 365), public: true
 	caching_policy 'text/html',              max_age: (60 * 5), public: true
 
 	activate :cloudfront do |cf|

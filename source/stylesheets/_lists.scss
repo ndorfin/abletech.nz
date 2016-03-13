@@ -1,5 +1,5 @@
-@import "vars";
-@import "mixins";
+@import "_config";
+
 .list {}
 	.list_simple {@include list_stripped();
 		> li {display:inline-block;}

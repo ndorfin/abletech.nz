@@ -1,5 +1,5 @@
-@import "vars";
-@import "mixins";
+@import "_config";
+
 $slide-width:1000px;
 .section_scene {padding:0 0 1em !important; position:relative; min-height:500px;
   .banner_container {padding:0 !important;}
