@@ -46,7 +46,9 @@ $process_colour_gradient_end:$process_colour_default;
 	}
 }
 @media (min-width:640px) {
-	.list_process {margin-top:3em;}
+	.list_process {margin-top:3em;
+		li {font-size:.85em;}
+	}
 	#working_with {
 		.heading {padding:0 60px 45px 0;
       &:after {left:auto; right:0;}
@@ -59,8 +61,17 @@ $process_colour_gradient_end:$process_colour_default;
 
 @media (min-width:800px) {
 	.list_process {padding-bottom:25%;
-		li {
+		li {font-size:1em;
 			&:after {transform:skew(0, -19deg);}
+		}
+	}
+}
+
+@media (min-width:850px) {
+	.list_process {
+		li {
+			&:before {text-shadow:1px 1px 6px rgba(0,0,0,.5);}
+			span {font-size:1.2em; padding-left:3em;}
 		}
 	}
 }
