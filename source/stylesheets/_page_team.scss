@@ -1,5 +1,5 @@
-@import "vars";
-@import "mixins";
+@import "_config";
+
 .team {
 	.section_column_banner {background-color:#efefef;}
 }
@@ -36,6 +36,12 @@
 	}
 }
 
+#you_next_steps {
+	a {display:block; max-width:none; margin-top:1rem;
+		&:first-of-type {margin-top:0;}
+	}
+}
+
 @media (min-width:500px) {
   #team_activities {min-height:480px;}
   .the_rest_of_the_gang {margin-left:20px;}
@@ -50,6 +56,11 @@
   .founding_partners {margin-left:100px;}
 }
 
+@media (min-width:600px) {
+	#you_next_steps {overflow:hidden;
+		a {float:left; margin:0 1rem 0 0;}
+	}
+}
 @media (min-width:720px) {
 	#team_activities {min-height:360px;}
   #life_at_abletech {overflow:hidden;

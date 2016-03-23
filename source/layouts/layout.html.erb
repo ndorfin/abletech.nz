@@ -19,9 +19,9 @@
 		<% else %>
 		<meta property="og:description" name="description" content="Abletech is a web development consultancy based in Wellington, New Zealand. We love working with Ruby, Ruby on Rails (RoR), Middleman and other Open Source Software (OSS) stacks.">
 		<% end %>
-		<link rel="dns-prefetch" href="https://www.google-analytics.com">
+		<link rel="preconnect" href="https://www.google-analytics.com">
 		<% if current_page.data.page_classes == 'home' %>
-		<link rel="dns-prefetch" href="https://api.tumblr.com">
+		<link rel="preconnect" href="https://api.tumblr.com">
 		<% end %>
 		<script>document.documentElement.className = 'js';</script>
 		<%= inline_stylesheet "main" if current_page.data.page_classes == 'home' %>
@@ -70,18 +70,36 @@
 			</div>
 		</footer>
 <script>
-var highResCSSURL = '<%= asset_path(:css, "high-res") %>';
+(function(w,d){
+w.highResCSSURL = '<%= asset_path(:css, "high-res") %>';
 function addScript(url){
-	var s = document.createElement('script');
+	var s = d.createElement('script');
 	s.src = url;
-	document.body.appendChild(s);
+	d.body.appendChild(s);
 }
-window.onload = function(){
+w.addEventListener('DOMContentLoaded', function(){
 	addScript('<%= asset_path(:js, "main") %>');
 <%- if content_for?(:load_page_script) %>
 	<%= yield_content :load_page_script %>
 <% end -%>
+});
+<%- if current_page.data.page_classes == 'home' %>
+var prefetchAssets = function(){
+	var prefetchArray = ['<%= asset_path(:css, "other-pages") %>'],
+	    i = 0;
+	var prefetchLength = prefetchArray.length;
+	for (i; i<prefetchLength; i++) {
+		var l  = d.createElement('link');
+		l.rel  = 'prefetch';
+		l.href = prefetchArray[i];
+		d.head.appendChild(l);
+	}
 }
+w.addEventListener('load', function(){
+	prefetchAssets();
+});
+<% end -%>
+})(window, document);
 </script>
 	</body>
 </html>
