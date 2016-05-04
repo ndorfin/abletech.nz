@@ -45,6 +45,12 @@
 		"description": "<p>Andrew studied Computer Science at Victoria University. He enjoys tackling the challenges and responsibilities of back end web development. Andrew is relearning French and hopes to travel to French Canada to try it out. He’s also working with a friend to build a mobile game.</p>"
 	},
 	{
+		       "name": "Carl Douglas",
+		      "photo": "photo_carl_d_2x.jpg",
+		      "title": "Technical Consultant, BSc",
+		"description": "<p>Carl studied Philosophy and Computer Science at Canterbury University. He brings an extensive tech history to the Abletech team and has worked with everything from PalmPilots to Ruby. Carl enjoys traveling; he's worked in the USA, the UK and Australia. He likes living in Wellington, where he was born, and his hobbies include running, mountain biking, Judo, reading and a programming language from the 50's called Lisp.</p>"
+	},
+	{
 		       "name": "Cameron Fowler",
 		      "photo": "photo_cam_2x.jpg",
 		      "title": "Technical Consultant, BE",
@@ -69,6 +75,12 @@
 		      "title": "Technical Consultant, BSc, BC",
 		    "twitter": "dawnerfr",
 		"description": "<p>Dawn is a developer who joined Abletech after a Summer of Tech internship in 2013. She completed a conjoint degree in Computer Science & Finance, before falling in love with Ruby on Rails and the web development world. Dawn also enjoys rock climbing, snowboarding, travel and anything that presents a good challenge.</p>"
+	},
+	{
+		       "name": "Fiona Sanggang",
+		      "photo": "photo_fiona_2x.jpg",
+		      "title": "Technical Consultant BSc, DipGrad",
+		"description": "<p>Fiona initially studied Biochemistry at Massey University and worked for AgResearch in Dunedin. She became interested in Bioinformatics and this led to a postgraduate diploma in Computer Science from Otago University. Fiona loves the way there's always something new to learn. Outside of work Fiona enjoys going to the gym, horse riding, knitting and baking.</p>"
 	},
 	{
 		       "name": "James Bowles",
@@ -108,8 +120,8 @@
 	{
 		       "name": "Kalo Pilato",
 		      "photo": "photo_kalo_2x.jpg",
-		      "title": "Technical Consultant",
-		"description": "<p>With a background in IT Account Management and Audio Engineering, Kalo has always had a keen enthusiasm for emerging technologies. Currently finishing his Computer Science studies at Victoria University, he is particularly interested in Android development, the Internet of Things, and can’t wait to learn Ruby on Rails! When he’s not in the office you can find Kalo exploring Wellington’s mountain bike trails, tinkering with Arduinos, or enjoying a local brew in his music studio.</p>"
+		      "title": "Technical Consultant, BSc CompSci",
+		"description": "<p>With a background in IT Account Management and Audio Engineering, Kalo has always had a keen enthusiasm for emerging technologies. He studied at Victoria University, and is particularly interested in Android development, the Internet of Things, and Ruby on Rails. When he’s not in the office you can find Kalo exploring Wellington’s mountain bike trails, tinkering with Arduinos, or enjoying a local brew in his music studio.</p>"
 	},
 	{
 		       "name": "Naiki Pohe",
