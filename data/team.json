@@ -26,9 +26,9 @@
 	{
 		       "name": "Alexandre Barret",
 		      "photo": "photo_alex_2x.jpg",
-		      "title": "Technical Consultant, MSc (Eng)",
+		      "title": "Technical Consultant, MSc",
 		    "twitter": "Ruby_DRY",
-		"description": "<p>Alexandre graduated from Enspiral Dev Academy and joined Abletech in 2015. He loves creating robust and tested applications using Ruby on Rails. When he’s not coding, you’ll find him on the dance floor lindy hopping or tinkering with Internet of Things projects.</p>"
+		"description": "<p>Alexandre graduated from Enspiral Dev Academy in 2015 and he also has a degree in Engineering. He loves creating robust and tested applications using Ruby on Rails. When he’s not coding, you’ll find him on the dance floor lindy hopping or tinkering with Internet of Things projects.</p>"
 	},
 	{
 		       "name": "Andrew French",
@@ -40,9 +40,15 @@
 	{
 		       "name": "Andrew Pett",
 		      "photo": "photo_andrew_2x.jpg",
-		      "title": "Technical Consultant, BSc CompSci",
+		      "title": "Technical Consultant, BSc",
 		    "twitter": "andrewpett1",
 		"description": "<p>Andrew studied Computer Science at Victoria University. He enjoys tackling the challenges and responsibilities of back end web development. Andrew is relearning French and hopes to travel to French Canada to try it out. He’s also working with a friend to build a mobile game.</p>"
+	},
+	{
+		       "name": "Carl Douglas",
+		      "photo": "photo_carl_d_2x.jpg",
+		      "title": "Technical Consultant, BSc",
+		"description": "<p>Carl studied Philosophy and Computer Science at Canterbury University. He brings an extensive tech history to the Abletech team and has worked with everything from PalmPilots to Ruby. Carl enjoys traveling; he's worked in the USA, the UK and Australia. He likes living in Wellington, where he was born, and his hobbies include running, mountain biking, Judo, reading and a programming language from the 50's called Lisp.</p>"
 	},
 	{
 		       "name": "Cameron Fowler",
@@ -53,14 +59,14 @@
 	{
 		       "name": "Dana Iti",
 		      "photo": "photo_dana_2x.jpg",
-		      "title": "Technical Consultant, Dip.WebDev",
+		      "title": "Technical Consultant, DipWebDev",
 		    "twitter": "itidana",
 		"description": "<p>Dana has many years of experience working and teaching web development. She loves good design and is enjoying focusing on front-end development. Dana uses her technical skills on the home front too, writing personalised apps to help her kids with their maths and spelling! When she’s not at the keyboard Dana loves spending time fishing and biking with her husband and family.</p>"
 	},
 	{
 		       "name": "David Oram",
 		      "photo": "photo_david_2x.jpg",
-		      "title": "Technical Consultant, BSc CompSci",
+		      "title": "Technical Consultant, BSc",
 		"description": "<p>David studied Computer Science at Victoria University. He likes solving business problems and enjoys working with business professionals, technical consultants and users, towards solutions. Out of hours David enjoys family time with his wife and two boys, especially in and around the Hutt River.</p>"
 	},
 	{
@@ -69,6 +75,12 @@
 		      "title": "Technical Consultant, BSc, BC",
 		    "twitter": "dawnerfr",
 		"description": "<p>Dawn is a developer who joined Abletech after a Summer of Tech internship in 2013. She completed a conjoint degree in Computer Science & Finance, before falling in love with Ruby on Rails and the web development world. Dawn also enjoys rock climbing, snowboarding, travel and anything that presents a good challenge.</p>"
+	},
+	{
+		       "name": "Fiona Sanggang",
+		      "photo": "photo_fiona_2x.jpg",
+		      "title": "Technical Consultant, BSc, DipGrad",
+		"description": "<p>Fiona initially studied Biochemistry at Massey University and worked for AgResearch in Dunedin. She became interested in Bioinformatics and this led to a postgraduate diploma in Computer Science from Otago University. Fiona loves the way there's always something new to learn. Outside of work Fiona enjoys going to the gym, horse riding, knitting and baking.</p>"
 	},
 	{
 		       "name": "James Bowles",
@@ -80,9 +92,9 @@
 	{
 		       "name": "Jean van der Walt",
 		      "photo": "photo_jean_2x.jpg",
-		      "title": "Technical Consultant, BSc CompSci",
+		      "title": "Technical Consultant, BSc",
 		    "twitter": "jfvanderwalt",
-		"description": "<p>Jean is a Ruby developer from Cape Town, South Africa. He is passionate about clean and maintainable code, and continually seeking ways to improve and explore new things. Jean cares about developing high quality software that matters to people. When he’s not sitting in an office you can find him trail running or tramping.</p>"
+		"description": "<p>Jean is a Ruby developer from Cape Town, South Africa, where he studied Computer Science. He is passionate about clean and maintainable code, and continually seeking ways to improve and explore new things. Jean cares about developing high quality software that matters to people. When he’s not sitting in an office you can find him trail running or tramping.</p>"
 	},
 	{
 		       "name": "Jo Wilson",
@@ -108,8 +120,8 @@
 	{
 		       "name": "Kalo Pilato",
 		      "photo": "photo_kalo_2x.jpg",
-		      "title": "Technical Consultant",
-		"description": "<p>With a background in IT Account Management and Audio Engineering, Kalo has always had a keen enthusiasm for emerging technologies. Currently finishing his Computer Science studies at Victoria University, he is particularly interested in Android development, the Internet of Things, and can’t wait to learn Ruby on Rails! When he’s not in the office you can find Kalo exploring Wellington’s mountain bike trails, tinkering with Arduinos, or enjoying a local brew in his music studio.</p>"
+		      "title": "Technical Consultant, BSc",
+		"description": "<p>With a background in IT Account Management and Audio Engineering, Kalo has always had a keen enthusiasm for emerging technologies. He studied Computer Science at Victoria University, and is particularly interested in Android development, the Internet of Things, and Ruby on Rails. When he’s not in the office you can find Kalo exploring Wellington’s mountain bike trails, tinkering with Arduinos, or enjoying a local brew in his music studio.</p>"
 	},
 	{
 		       "name": "Naiki Pohe",
@@ -135,7 +147,7 @@
 	{
 		       "name": "Pam Ramsay",
 		      "photo": "photo_pam_2x.jpg",
-		      "title": "Accounts, B.Ed, DipTchg",
+		      "title": "Accounts, BEd, DipTchg",
 		"description": "<p>Pam’s been part of the Abletech team since the very beginning and works behind the scenes keeping all the company records in order. She manages administrative systems and keeps operations in full swing. Her family’s favourite Wellington spots include Otari Bush and Scorching Bay.</p>"
 	},
 	{
