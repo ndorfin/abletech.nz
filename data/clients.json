@@ -12,6 +12,18 @@
 		"workpageVisible": true
 	},
 	{
+		"name": "Auckland Transport",
+		"url": "https://at.govt.nz/",
+		"class": "auckland_transport",
+		"logo": {
+			"url": "logo_auckland_transport.png",
+			"background_color": "#1e3d51",
+			"min_height": 100
+		},
+		"homepageVisible": true,
+		"workpageVisible": false
+	},
+	{
 		"name": "Powershop",
 		"url": "http://www.powershop.co.nz/",
 		"class": "powershop",
