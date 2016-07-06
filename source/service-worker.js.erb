@@ -34,20 +34,31 @@ var URLS = [                            // Add URL you want to cache in this lis
 ];
 
 // Respond with cached resources
-self.addEventListener('fetch', function (e) {
+self.addEventListener('fetch', function(e) {
 	<%= "console.log('fetch request : ' + e.request.url);" if env_name != 'production' %>
 	e.respondWith(
-		caches.match(e.request).then(function (request) {
-			if (request) { // if cache is available, respond with cache
-				<%= "console.log('responding with cache : ' + e.request.url);" if env_name != 'production' %>
-				return request;
-			} else {       // if there are no cache, try fetching request
-				<%= "console.log('file is not cached, fetching : ' + e.request.url);" if env_name != 'production' %>
-				return fetch(e.request);
-			}
-
-			// You can omit if/else for console.log & put one line below like this too.
-			// return request || fetch(e.request)
+		caches.open(CACHE_NAME).then(function(cache) {
+			return cache.match(e.request).then(function(response) {
+				if (response) { // if cache is available, respond with cache
+					<%= "console.log('responding with cache : ' + e.request.url);" if env_name != 'production' %>
+					return response;
+				}
+				// if there are no cache, try fetching request
+				<%= "console.log('file is not cached, fetching and caching: ' + e.request.url);" if env_name != 'production' %>
+				return fetch(e.request.clone()).then(function(response) {
+					<%= "console.log('  Response for %s from network is: %O', e.request.url, response);" if env_name != 'production' %>
+					var matchesDomain = e.request.url.indexOf('<%= url_root %>') > -1;
+					console.log('matchesDomain', matchesDomain);
+					if (response.status < 400 && matchesDomain) {
+						<%= "console.log('  Caching the response to', e.request.url);" if env_name != 'production' %>
+						cache.put(e.request, response.clone());
+					} <%= "else { console.log('  Not caching the response to', e.request.url); }" if env_name != 'production' %>
+					return response;
+				});
+			});
+		}).catch(function(error) {
+			console.error('  Error in fetch handler:', error);
+			throw error;
 		})
 	);
 });
