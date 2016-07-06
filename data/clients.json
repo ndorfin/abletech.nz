@@ -189,6 +189,6 @@
 			"min_height": 80
 		},
 		"homepageVisible": true,
-		"workpageVisible": true
+		"workpageVisible": false
 	}
 ]
