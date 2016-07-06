@@ -1,3 +1,18 @@
+GIT
+  remote: git://github.com/jamesbowles/middleman-s3_sync.git
+  revision: 110a62b3e83c7e4527765048b12ded77e070444b
+  branch: individual_file_cache_control
+  specs:
+    middleman-s3_sync (3.3.10)
+      ansi (~> 1.5.0)
+      fog-aws (>= 0.7.0)
+      map
+      middleman-core (~> 3.3)
+      mime-types (>= 3.0)
+      parallel
+      ruby-progressbar
+      unf
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -207,15 +222,6 @@ GEM
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
-    middleman-s3_sync (3.3.9)
-      ansi (~> 1.5.0)
-      fog-aws (>= 0.7.0)
-      map
-      middleman-core (~> 3.3)
-      mime-types (>= 3.0)
-      parallel
-      ruby-progressbar
-      unf
     middleman-sprockets (3.4.2)
       middleman-core (>= 3.3)
       sprockets (~> 2.12.1)
@@ -235,7 +241,7 @@ GEM
       tilt (~> 1.4.1)
     padrino-support (0.12.5)
       activesupport (>= 3.1)
-    parallel (1.6.2)
+    parallel (1.9.0)
     rack (1.6.4)
     rack-livereload (0.3.16)
       rack
@@ -248,7 +254,7 @@ GEM
       builder
       nokogiri (>= 1.4.1)
       trollop
-    ruby-progressbar (1.7.5)
+    ruby-progressbar (1.8.1)
     sass (3.4.21)
     sprockets (2.12.4)
       hike (~> 1.2)
@@ -286,7 +292,7 @@ DEPENDENCIES
   middleman-cloudfront
   middleman-livereload
   middleman-minify-html
-  middleman-s3_sync
+  middleman-s3_sync!
   uglifier
 
 BUNDLED WITH

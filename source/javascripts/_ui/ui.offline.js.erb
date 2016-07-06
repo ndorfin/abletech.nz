@@ -1,0 +1,24 @@
+(function(w){
+	w.UI || (w.UI = {});
+	var offline = (function() {
+		function Offline() {
+			var ol = this;
+			ol.register = function() {
+				if ('serviceWorker' in navigator && <%= service_worker_enabled %>) {
+					navigator.serviceWorker.register('<%= asset_path(:js, "service-worker.js") %>', {scope: '/'})
+						// .then(function(registration) {
+						// 	// Registration was successful
+						// 	console.log('ServiceWorker registration successful with scope: ', registration.scope);
+						// })
+						// .catch(function(err) {
+						// 	// registration failed :(
+						// 	console.log('ServiceWorker registration failed: ', err);
+						// });
+				}
+			};
+			ol.register();
+		}
+		return Offline;
+	})();
+	w.UI.Offline = offline;
+})(window);
