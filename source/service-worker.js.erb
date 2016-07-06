@@ -48,7 +48,7 @@ self.addEventListener('fetch', function(e) {
 				return fetch(e.request.clone()).then(function(response) {
 					<%= "console.log('  Response for %s from network is: %O', e.request.url, response);" if env_name != 'production' %>
 					var matchesDomain = e.request.url.indexOf('<%= url_root %>') > -1;
-					console.log('matchesDomain', matchesDomain);
+					<%= "console.log('matchesDomain', matchesDomain);" if env_name != 'production' %>
 					if (response.status < 400 && matchesDomain) {
 						<%= "console.log('  Caching the response to', e.request.url);" if env_name != 'production' %>
 						cache.put(e.request, response.clone());
