@@ -1,10 +1,5 @@
 [
 	{
-		"quote": "Fantastic service. We're delighted to improve our customer ordering experience with AddressFinder",
-		 "cite": "Robin de Haan",
-		"title": "Natural Beds"
-	},
-	{
 	  "quote": "Abletech gave us outstanding technical know-how and support",
 	   "cite": "Scott Ryburn",
 	  "title": "Product Manager, Sharesight"
@@ -12,6 +7,10 @@
 	  "quote": "They were willing to go the extra mile",
 	   "cite": "Scott Ryburn",
 	  "title": "Product Manager, Sharesight"
+	},{
+	  "quote": "Fantastic service. We're delighted to improve our customer ordering experience with AddressFinder",
+	   "cite": "Robin de Haan",
+	  "title": "Natural Beds"
 	},{
 	  "quote": "Abletech made the vision a reality",
 	   "cite": "Gareth Jenkins",
