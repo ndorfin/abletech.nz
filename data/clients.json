@@ -5,7 +5,7 @@
 		"class": "homes",
 		"logo": {
 			"url": "logo_homes.png",
-			"background_color": "#262a35",
+			"background_color": "#313944",
 			"min_height": 80
 		},
 		"homepageVisible": true,
