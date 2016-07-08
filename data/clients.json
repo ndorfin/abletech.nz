@@ -36,18 +36,6 @@
 		"workpageVisible": true
 	},
 	{
-		"name": "Hive News",
-		"url": "http://www.hivenews.co.nz/",
-		"class": "hivenews",
-		"logo": {
-			"url": "logo_hivenews.png",
-			"background_color": "#fff",
-			"min_height": 100
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
 		"name": "Lighthouse Funds",
 		"url": "https://lighthousefunds.nz/",
 		"class": "lighthousefunds",
@@ -55,6 +43,18 @@
 			"url": "logo_lighthousefunds.png",
 			"background_color": "#333333",
 			"min_height": 80
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
+		"name": "Hive News",
+		"url": "http://www.hivenews.co.nz/",
+		"class": "hivenews",
+		"logo": {
+			"url": "logo_hivenews.png",
+			"background_color": "#fff",
+			"min_height": 100
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
@@ -156,6 +156,18 @@
 		"workpageVisible": true
 	},
 	{
+		"name": "AddressFinder",
+		"url": "https://addressfinder.nz/",
+		"class": "addressfinder",
+		"logo": {
+			"url": "logo_addressfinder.png",
+			"background_color": "#1e1e1e",
+			"min_height": 80
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
 		"name": "AED Locations",
 		"url": "http://aedlocations.co.nz/",
 		"class": "aed_locations",
@@ -175,18 +187,6 @@
 			"url": "logo_c_w_j_p.png",
 			"background_color": "#f1f4d9",
 			"min_height": 120
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "AddressFinder",
-		"url": "https://addressfinder.nz/",
-		"class": "addressfinder",
-		"logo": {
-			"url": "logo_addressfinder.png",
-			"background_color": "#1e1e1e",
-			"min_height": 80
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
