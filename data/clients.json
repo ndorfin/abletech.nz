@@ -36,18 +36,6 @@
 		"workpageVisible": true
 	},
 	{
-		"name": "Hive News",
-		"url": "http://www.hivenews.co.nz/",
-		"class": "hivenews",
-		"logo": {
-			"url": "logo_hivenews.png",
-			"background_color": "#fff",
-			"min_height": 100
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
 		"name": "Lighthouse Funds",
 		"url": "https://lighthousefunds.nz/",
 		"class": "lighthousefunds",
@@ -55,6 +43,18 @@
 			"url": "logo_lighthousefunds.png",
 			"background_color": "#333333",
 			"min_height": 80
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
+		"name": "Hive News",
+		"url": "http://www.hivenews.co.nz/",
+		"class": "hivenews",
+		"logo": {
+			"url": "logo_hivenews.png",
+			"background_color": "#fff",
+			"min_height": 100
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
@@ -113,8 +113,8 @@
 		"class": "radio_nz",
 		"logo": {
 			"url": "logo_radio_nz.png",
-			"background_color": "#320d04",
-			"min_height": 120
+			"background_color": "#2E2A25",
+			"min_height": 100
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
@@ -144,6 +144,18 @@
 		"workpageVisible": true
 	},
 	{
+		"name": "AddressFinder",
+		"url": "https://addressfinder.nz/",
+		"class": "addressfinder",
+		"logo": {
+			"url": "logo_addressfinder.png",
+			"background_color": "#1e1e1e",
+			"min_height": 80
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
 		"name": "New Zealand Transport Agency",
 		"url": "http://nzta.govt.nz/",
 		"class": "nzta",
@@ -151,18 +163,6 @@
 			"url": "logo_nzta.png",
 			"background_color": "#fff",
 			"min_height": 80
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "AED Locations",
-		"url": "http://aedlocations.co.nz/",
-		"class": "aed_locations",
-		"logo": {
-			"url": "logo_aed_locations.png",
-			"background_color": "#fff",
-			"min_height": 100
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
@@ -180,13 +180,13 @@
 		"workpageVisible": true
 	},
 	{
-		"name": "AddressFinder",
-		"url": "https://addressfinder.nz/",
-		"class": "addressfinder",
+		"name": "AED Locations",
+		"url": "http://aedlocations.co.nz/",
+		"class": "aed_locations",
 		"logo": {
-			"url": "logo_addressfinder.png",
-			"background_color": "#1e1e1e",
-			"min_height": 80
+			"url": "logo_aed_locations.png",
+			"background_color": "#fff",
+			"min_height": 100
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
