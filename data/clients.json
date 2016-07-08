@@ -113,7 +113,7 @@
 		"class": "radio_nz",
 		"logo": {
 			"url": "logo_radio_nz.png",
-			"background_color": "#320d04",
+			"background_color": "#2E2A25",
 			"min_height": 120
 		},
 		"homepageVisible": true,
