@@ -114,7 +114,7 @@
 		"logo": {
 			"url": "logo_radio_nz.png",
 			"background_color": "#2E2A25",
-			"min_height": 120
+			"min_height": 100
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
