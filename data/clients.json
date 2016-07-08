@@ -144,18 +144,6 @@
 		"workpageVisible": true
 	},
 	{
-		"name": "New Zealand Transport Agency",
-		"url": "http://nzta.govt.nz/",
-		"class": "nzta",
-		"logo": {
-			"url": "logo_nzta.png",
-			"background_color": "#fff",
-			"min_height": 80
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
 		"name": "AddressFinder",
 		"url": "https://addressfinder.nz/",
 		"class": "addressfinder",
@@ -168,13 +156,13 @@
 		"workpageVisible": true
 	},
 	{
-		"name": "AED Locations",
-		"url": "http://aedlocations.co.nz/",
-		"class": "aed_locations",
+		"name": "New Zealand Transport Agency",
+		"url": "http://nzta.govt.nz/",
+		"class": "nzta",
 		"logo": {
-			"url": "logo_aed_locations.png",
+			"url": "logo_nzta.png",
 			"background_color": "#fff",
-			"min_height": 100
+			"min_height": 80
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
@@ -187,6 +175,18 @@
 			"url": "logo_c_w_j_p.png",
 			"background_color": "#f1f4d9",
 			"min_height": 120
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
+		"name": "AED Locations",
+		"url": "http://aedlocations.co.nz/",
+		"class": "aed_locations",
+		"logo": {
+			"url": "logo_aed_locations.png",
+			"background_color": "#fff",
+			"min_height": 100
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
