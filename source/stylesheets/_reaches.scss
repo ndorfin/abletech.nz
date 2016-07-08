@@ -31,16 +31,27 @@ $carousel_width:320px - (16px * 2);
       .reach_description {transform:rotateY(0); opacity:1;}
     }
   }
+	.reach_homes {
+		.reach_description {
+			&:before {height:75%;}
+		}
+	}
   .figure_reach {backface-visibility:hidden; transform:rotateY(0); transition:.4s;}
   .reach_description {transform:rotateY(-180deg); transition:.4s; backface-visibility:hidden; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,.9); z-index:2; padding:1em; opacity:0; height:100%; background-repeat:no-repeat; background-position:50% 1em;
     &:before {content:""; width:1px; display:inline-block; vertical-align:middle; height:100%; margin-left:-6px;}
     &.invert {color:#fff; text-shadow:none;}
     p {display:inline-block; vertical-align:middle; text-align:center; font-size:13px; line-height:1.2; background-repeat:no-repeat; background-position:50% 0;}
-    // .reach_nz_post              & {
-    //   p {background-image:image-url('logo_nz_post.png'); padding-top:44px;}
-    // }
-    .reach_meatmail             & {background-color:#f14f50;
-      p {background-image:image-url('logo_meat_mail.png'); padding-top:46px;}
+    .reach_homes             & {background-color:#313944;
+      p {background-image:image-url('logo_homes.png'); padding-top:100px;}
+			.reach_description {
+				&:before {height:70%;}
+			}
+    }
+    .reach_glimp            & {background-color:#fff;
+      p {background-image:image-url('logo_glimp.png'); padding-top:80px;}
+    }
+    .reach_powershop            & {background-color:#fff;
+      p {background-image:image-url('logo_powershop.png'); padding-top:80px;}
     }
     .reach_auckland_transport   & {background-color:#1e3d51;
       p {background-image:image-url('logo_auckland_transport.png'); padding-top:67px;}
@@ -51,7 +62,7 @@ $carousel_width:320px - (16px * 2);
     .reach_spring_to_the_street & {background-color:#bddda6;
       p {background-image:image-url('logo_spring_to_the_street.png'); padding-top:66px;}
     }
-    .reach_radio_nz             & {background-color:#320d04;
+    .reach_radio_nz             & {background-color:#2E2A25;
       p {background-image:image-url('logo_radio_nz.png'); padding-top:74px;}
     }
     .reach_journey_planner      & {background-color:#f1f4d9;
@@ -62,6 +73,9 @@ $carousel_width:320px - (16px * 2);
     }
     .reach_regthedog            & {background-color:#dd4432;
       p {background-image:image-url('logo_reg_the_dog.png'); padding-top:101px;}
+    }
+    .reach_lighthouse_funds            & {background-color:#333333;
+      p {background-image:image-url('logo_lighthousefunds.png'); padding: 80px 10px 0;}
     }
   }
 }

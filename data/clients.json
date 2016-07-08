@@ -1,24 +1,12 @@
 [
 	{
-		"name": "AddressFinder",
-		"url": "https://addressfinder.nz/",
-		"class": "addressfinder",
+		"name": "Homes.co.nz",
+		"url": "https://homes.co.nz/",
+		"class": "homes",
 		"logo": {
-			"url": "logo_addressfinder.png",
-			"background_color": "#1e1e1e",
+			"url": "logo_homes.png",
+			"background_color": "#313944",
 			"min_height": 80
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "AED Locations",
-		"url": "http://aedlocations.co.nz/",
-		"class": "aed_locations",
-		"logo": {
-			"url": "logo_aed_locations.png",
-			"background_color": "#fff",
-			"min_height": 100
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
@@ -33,135 +21,14 @@
 			"min_height": 100
 		},
 		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "BNZ",
-		"url": "https://www.bnz.co.nz/",
-		"class": "bnz",
-		"logo": {
-			"url": "logo_bnz.png",
-			"background_color": "#1d3e74",
-			"min_height": 100
-		},
-		"homepageVisible": false,
-		"workpageVisible": true
-	},
-	{
-		"name": "Cycling & Walking Journey Planner",
-		"url": "http://www.journeyplanner.org.nz/",
-		"class": "c_w_j_p",
-		"logo": {
-			"url": "logo_c_w_j_p.png",
-			"background_color": "#f1f4d9",
-			"min_height": 120
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "Greater Wellington Regional Council",
-		"url": "http://www.gw.govt.nz/",
-		"class": "g_w_r_c",
-		"logo": {
-			"url": "logo_g_w_r_c.png",
-			"background_color": "#0179a2",
-			"min_height": 100
-		},
-		"homepageVisible": false,
-		"workpageVisible": true
-	},
-	{
-		"name": "FXNetworks",
-		"url": "http://www.fx.net.nz/",
-		"class": "fx_networks",
-		"logo": {
-			"url": "logo_fx_networks.png",
-			"background_color": "#fff",
-			"min_height": 80
-		},
-		"homepageVisible": false,
-		"workpageVisible": true
-	},
-	{
-		"name": "Horizons Regional Council",
-		"url": "http://www.horizons.govt.nz/",
-		"class": "horizons",
-		"logo": {
-			"url": "logo_horizons.png",
-			"background_color": "#fff",
-			"min_height": 100
-		},
-		"homepageVisible": false,
-		"workpageVisible": true
-	},
-	{
-		"name": "Kiwibank",
-		"url": "http://www.kiwibank.co.nz/",
-		"class": "kiwi_bank",
-		"logo": {
-			"url": "logo_kiwi_bank.png",
-			"background_color": "#fff",
-			"min_height": 100,
-			"bias": "left"
-		},
-		"homepageVisible": false,
 		"workpageVisible": false
 	},
 	{
-		"name": "KiwiRail",
-		"url": "http://www.kiwirail.co.nz/",
-		"class": "kiwi_rail",
+		"name": "Powershop",
+		"url": "http://www.powershop.co.nz/",
+		"class": "powershop",
 		"logo": {
-			"url": "logo_kiwi_rail.png",
-			"background_color": "#fff",
-			"min_height": 80
-		},
-		"homepageVisible": false,
-		"workpageVisible": true
-	},
-	{
-		"name": "Loyalty NZ",
-		"url": "http://www.loyalty.co.nz/",
-		"class": "loyalty_nz",
-		"logo": {
-			"url": "logo_loyalty_nz.png",
-			"background_color": "#f0efed",
-			"min_height": 80
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "MeatMail",
-		"url": "http://www.meatmail.co.nz/",
-		"class": "meat_mail",
-		"logo": {
-			"url": "logo_meat_mail.png",
-			"background_color": "#f14f50",
-			"min_height": 80
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "MetService",
-		"url": "http://www.metservice.com/",
-		"class": "met_service",
-		"logo": {
-			"url": "logo_met_service.png",
-			"background_color": "#00264d",
-			"min_height": 80
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "Ministry of Social Development",
-		"url": "https://www.msd.govt.nz/",
-		"class": "msd",
-		"logo": {
-			"url": "logo_msd.png",
+			"url": "logo_powershop.png",
 			"background_color": "#fff",
 			"min_height": 80
 		},
@@ -169,73 +36,25 @@
 		"workpageVisible": true
 	},
 	{
-		"name": "New Zealand Post",
-		"url": "https://www.nzpost.co.nz/",
-		"class": "nz_post",
+		"name": "Lighthouse Funds",
+		"url": "https://lighthousefunds.nz/",
+		"class": "lighthousefunds",
 		"logo": {
-			"url": "logo_nz_post.png",
-			"background_color": "#fff",
-			"min_height": 80
-		},
-		"homepageVisible": false,
-		"workpageVisible": false
-	},
-	{
-		"name": "New Zealand Red Cross",
-		"url": "https://www.redcross.org.nz/",
-		"class": "red_cross",
-		"logo": {
-			"url": "logo_red_cross.png",
-			"background_color": "#fff",
-			"min_height": 120
-		},
-		"homepageVisible": false,
-		"workpageVisible": true
-	},
-	{
-		"name": "New Zealand Transport Agency",
-		"url": "http://nzta.govt.nz/",
-		"class": "nzta",
-		"logo": {
-			"url": "logo_nzta.png",
-			"background_color": "#fff",
+			"url": "logo_lighthousefunds.png",
+			"background_color": "#333333",
 			"min_height": 80
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
 	},
 	{
-		"name": "NZX",
-		"url": "https://www.nzx.com/",
-		"class": "nzx",
+		"name": "Hive News",
+		"url": "http://www.hivenews.co.nz/",
+		"class": "hivenews",
 		"logo": {
-			"url": "logo_nzx.png",
-			"background_color": "#015ea4",
-			"min_height": 80
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "Radio New Zealand",
-		"url": "http://www.radionz.co.nz/",
-		"class": "radio_nz",
-		"logo": {
-			"url": "logo_radio_nz.png",
-			"background_color": "#320d04",
-			"min_height": 120
-		},
-		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "Reg the Dog",
-		"url": "https://www.regthedog.co.nz/",
-		"class": "reg_the_dog",
-		"logo": {
-			"url": "logo_reg_the_dog.png",
-			"background_color": "#df4329",
-			"min_height": 120
+			"url": "logo_hivenews.png",
+			"background_color": "#fff",
+			"min_height": 100
 		},
 		"homepageVisible": true,
 		"workpageVisible": true
@@ -253,11 +72,71 @@
 		"workpageVisible": true
 	},
 	{
-		"name": "Snapper",
-		"url": "https://www.snapper.co.nz/",
-		"class": "snapper",
+		"name": "Loyalty NZ",
+		"url": "http://www.loyalty.co.nz/",
+		"class": "loyalty_nz",
 		"logo": {
-			"url": "logo_snapper.png",
+			"url": "logo_loyalty_nz.png",
+			"background_color": "#f0efed",
+			"min_height": 80
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
+		"name": "BNZ",
+		"url": "https://www.bnz.co.nz/",
+		"class": "bnz",
+		"logo": {
+			"url": "logo_bnz.png",
+			"background_color": "#1d3e74",
+			"min_height": 100
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
+		"name": "Reg the Dog",
+		"url": "https://www.regthedog.co.nz/",
+		"class": "reg_the_dog",
+		"logo": {
+			"url": "logo_reg_the_dog.png",
+			"background_color": "#df4329",
+			"min_height": 120
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
+		"name": "RNZ",
+		"url": "http://www.radionz.co.nz/",
+		"class": "radio_nz",
+		"logo": {
+			"url": "logo_radio_nz.png",
+			"background_color": "#2E2A25",
+			"min_height": 100
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
+		"name": "NZX",
+		"url": "https://www.nzx.com/",
+		"class": "nzx",
+		"logo": {
+			"url": "logo_nzx.png",
+			"background_color": "#015ea4",
+			"min_height": 80
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
+		"name": "Flick Electric Co.",
+		"url": "https://www.flickelectric.co.nz/",
+		"class": "flickelectric",
+		"logo": {
+			"url": "logo_flick_electric.png",
 			"background_color": "#fff",
 			"min_height": 100
 		},
@@ -265,27 +144,51 @@
 		"workpageVisible": true
 	},
 	{
-		"name": "Spring to the Street Challenge",
-		"url": "http://www.springtothestreet.org.nz/",
-		"class": "spring_to_the_street",
+		"name": "AddressFinder",
+		"url": "https://addressfinder.nz/",
+		"class": "addressfinder",
 		"logo": {
-			"url": "logo_spring_to_the_street.png",
-			"background_color": "#bddda6",
+			"url": "logo_addressfinder.png",
+			"background_color": "#1e1e1e",
 			"min_height": 80
 		},
-		"homepageVisible": false,
+		"homepageVisible": true,
 		"workpageVisible": true
 	},
 	{
-		"name": "Summer of Tech",
-		"url": "http://www.summeroftech.co.nz/",
-		"class": "summer_of_tech",
+		"name": "New Zealand Transport Agency",
+		"url": "http://nzta.govt.nz/",
+		"class": "nzta",
 		"logo": {
-			"url": "logo_summer_of_tech.png",
-			"background_color": "#d1232a",
+			"url": "logo_nzta.png",
+			"background_color": "#fff",
 			"min_height": 80
 		},
-		"homepageVisible": false,
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
+		"name": "Cycling & Walking Journey Planner",
+		"url": "http://www.journeyplanner.org.nz/",
+		"class": "c_w_j_p",
+		"logo": {
+			"url": "logo_c_w_j_p.png",
+			"background_color": "#f1f4d9",
+			"min_height": 120
+		},
+		"homepageVisible": true,
+		"workpageVisible": true
+	},
+	{
+		"name": "AED Locations",
+		"url": "http://aedlocations.co.nz/",
+		"class": "aed_locations",
+		"logo": {
+			"url": "logo_aed_locations.png",
+			"background_color": "#fff",
+			"min_height": 100
+		},
+		"homepageVisible": true,
 		"workpageVisible": true
 	},
 	{
@@ -298,18 +201,6 @@
 			"min_height": 80
 		},
 		"homepageVisible": true,
-		"workpageVisible": true
-	},
-	{
-		"name": "Watties",
-		"url": "http://www.watties.co.nz/",
-		"class": "watties",
-		"logo": {
-			"url": "logo_watties.png",
-			"background_color": "#fff",
-			"min_height": 80
-		},
-		"homepageVisible": false,
-		"workpageVisible": true
+		"workpageVisible": false
 	}
 ]

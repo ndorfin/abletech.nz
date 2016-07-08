@@ -1,0 +1,104 @@
+<%
+require 'digest'
+url_list = []
+ignored_file_patterns = [
+	'service-worker',
+	'sitemap',
+	'robots',
+	'humans',
+	'touch-icon',
+	'opengraph',
+	'favicon',
+	'styleguide',
+	'blog',
+	'.jpg',
+	'.png',
+	'.gif'
+]
+sitemap.resources.each do |r|
+	unless ignored_file_patterns.any? {|pattern| r.url.include? pattern}
+		url_list.push r.url
+	end
+end
+fingerprint = Digest::MD5.hexdigest(url_list.sort.join(''))
+git_revision = `git rev-parse HEAD`.chomp
+%>
+
+var APP_PREFIX = 'Abletech_';      // Identifier for this app (this needs to be consistent across every cache update)
+var FINGERPRINT = '<%= fingerprint  + git_revision %>'; // Generated hash for the URL list
+var CACHE_NAME = APP_PREFIX + FINGERPRINT;
+var URLS = [                            // Add URL you want to cache in this list.
+<% url_list.each_with_index do |r,i| %>
+  <%= "'#{r}'" %><%= ',' unless i == url_list.size - 1 %>
+<% end %>
+];
+
+// Respond with cached resources
+self.addEventListener('fetch', function(e) {
+	<%= "console.log('fetch request : ' + e.request.url);" if env_name != 'production' %>
+	e.respondWith(
+		caches.open(CACHE_NAME).then(function(cache) {
+			return cache.match(e.request).then(function(response) {
+				if (response) { // if cache is available, respond with cache
+					<%= "console.log('responding with cache : ' + e.request.url);" if env_name != 'production' %>
+					return response;
+				}
+				// if there are no cache, try fetching request
+				<%= "console.log('file is not cached, fetching and caching: ' + e.request.url);" if env_name != 'production' %>
+				return fetch(e.request.clone()).then(function(response) {
+					<%= "console.log('  Response for %s from network is: %O', e.request.url, response);" if env_name != 'production' %>
+					var matchesDomain = e.request.url.indexOf('<%= url_root %>') > -1;
+					<%= "console.log('matchesDomain', matchesDomain);" if env_name != 'production' %>
+					if (response.status < 400 && matchesDomain) {
+						<%= "console.log('  Caching the response to', e.request.url);" if env_name != 'production' %>
+						cache.put(e.request, response.clone());
+					} <%= "else { console.log('  Not caching the response to', e.request.url); }" if env_name != 'production' %>
+					return response;
+				});
+			});
+		}).catch(function(error) {
+			console.error('  Error in fetch handler:', error);
+			throw error;
+		})
+	);
+});
+
+// Cache resources
+self.addEventListener('install', function (e) {
+	e.waitUntil(
+		caches.open(CACHE_NAME).then(function (cache) {
+			<%= "console.log('installing cache : ' + CACHE_NAME);" if env_name != 'production' %>
+			return cache.addAll(URLS);
+		})
+	);
+});
+
+// Delete outdated caches
+self.addEventListener('activate', function (e) {
+	<%= "console.log('activate called');" if env_name != 'production' %>
+	e.waitUntil(
+		caches
+			/* This method returns a promise which will resolve to an array of available
+				 cache keys.
+			*/
+			.keys()
+			.then(function (keyList) {
+				<%= "console.log('keyList', keyList);" if env_name != 'production' %>
+				// We return a promise that settles when all outdated caches are deleted.
+				return Promise.all(
+					keyList
+						.filter(function (key) {
+							// Filter by keys that don't start with the latest version prefix.
+							return !key.startsWith(CACHE_NAME);
+						})
+						.map(function (key) {
+							/* Return a promise that's fulfilled
+								 when each outdated cache is deleted.
+							*/
+							return caches.delete(key);
+						})
+				);
+			})
+			<%= ".then(function() {console.log('WORKER: activate completed.');})" if env_name != 'production' %>
+	);
+});
