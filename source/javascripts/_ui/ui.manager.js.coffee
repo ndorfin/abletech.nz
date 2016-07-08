@@ -27,6 +27,10 @@ class Abletech.UIManager
     @_textReplacement.init()
     @_textReplacement
 
+  addOffline: ->
+    return @_addOL if @_addOL?
+    @_addOL = new UI.Offline()
+
   addResizeHandler: =>
     window.addEventListener 'resize', window.debounce( () =>
 
@@ -42,6 +46,7 @@ class Abletech.UIManager
 
     # Phase 2, resolution-independent classes
     @addGA()
+    @addOffline()
 
     # Phase 3, resolution-specific classes
     if document.body.clientWidth >= 600

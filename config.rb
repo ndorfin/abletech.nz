@@ -43,7 +43,10 @@ page "/sitemap.xml", :layout => false
 # Reload the browser automatically whenever files change
 configure :development do
 	activate :livereload
+	set :debug_assets, true
 end
+
+ignore '*__config*'
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -51,8 +54,8 @@ end
 #     "Helping"
 #   end
 # end
-
-
+set :env_name, env_name
+set :service_worker_enabled, ApplicationConfig::SERVICE_WORKER_ENABLED
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
@@ -70,7 +73,7 @@ end
 configure :build do
 
 	activate :gzip do |gzip|
-		gzip.exts = %w(.js .css .html .htm .svg .txt)
+		gzip.exts = %w(.js .css .html .htm .svg .txt .ico)
 	end
 
 	# For example, change the Compass output style for deployment
@@ -81,7 +84,7 @@ configure :build do
 	set :js_compressor, Uglifier.new()
 
 	# Enable cache buster
-	activate :asset_hash, :ignore => [/blog/, /touch-icon/, /opengraph/]
+	activate :asset_hash, :ignore => [/blog/, /service-worker/, /touch-icon/, /opengraph/]
 
 	activate :minify_html do |html|
 		html.remove_http_protocol    = false
@@ -112,19 +115,9 @@ if ApplicationConfig.const_defined?(:S3)
 		s3_sync.encryption                 = false
 	end
 
-	caching_policy 'text/css',               max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'application/javascript', max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'image/gif',              max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'image/png',              max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'image/jpeg',             max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'image/x-icon',           max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'image/svg+xml',          max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'application/font-woff',  max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'application/font-woff2', max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'font/woff',              max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'font/woff2',             max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'text/plain',             max_age: (60 * 60 * 24 * 365), public: true
-	caching_policy 'text/html',              max_age: (60 * 5), public: true
+	default_caching_policy                               max_age: (60 * 60 * 24 * 365), public: true
+  caching_policy 'text/html',                          max_age: 0, must_revalidate: true
+  individual_caching_policy 'build/service-worker.js', max_age: 0, must_revalidate: true
 
 	activate :cloudfront do |cf|
 		cf.access_key_id = ApplicationConfig::S3::ACCESS_ID
