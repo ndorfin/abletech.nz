@@ -116,6 +116,7 @@ if ApplicationConfig.const_defined?(:S3)
 	end
 
 	default_caching_policy                               max_age: (60 * 60 * 24 * 365), public: true
+	caching_policy 'text/html',                          max_age: (60 * 15), public: true
 	individual_caching_policy 'build/service-worker.js', max_age: 0, must_revalidate: true
 
 	activate :cloudfront do |cf|
