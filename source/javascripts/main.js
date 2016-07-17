@@ -12,3 +12,4 @@
 //= require_self
 window.Abletech || (window.Abletech = {});
 Abletech.LOADED = true;
+var happy = true;
