@@ -35,24 +35,18 @@ var URLS = [                            // Add URL you want to cache in this lis
 
 // Respond with cached resources
 self.addEventListener('fetch', function(e) {
-	<%= "console.log('fetch request : ' + e.request.url);" if env_name != 'production' %>
 	e.respondWith(
 		caches.open(CACHE_NAME).then(function(cache) {
 			return cache.match(e.request).then(function(response) {
 				if (response) { // if cache is available, respond with cache
-					<%= "console.log('responding with cache : ' + e.request.url);" if env_name != 'production' %>
 					return response;
 				}
 				// if there are no cache, try fetching request
-				<%= "console.log('file is not cached, fetching and caching: ' + e.request.url);" if env_name != 'production' %>
 				return fetch(e.request.clone()).then(function(response) {
-					<%= "console.log('  Response for %s from network is: %O', e.request.url, response);" if env_name != 'production' %>
 					var matchesDomain = e.request.url.indexOf('<%= url_root %>') > -1;
-					<%= "console.log('matchesDomain', matchesDomain);" if env_name != 'production' %>
 					if (response.status < 400 && matchesDomain) {
-						<%= "console.log('  Caching the response to', e.request.url);" if env_name != 'production' %>
 						cache.put(e.request, response.clone());
-					} <%= "else { console.log('  Not caching the response to', e.request.url); }" if env_name != 'production' %>
+					}
 					return response;
 				});
 			});
@@ -70,6 +64,13 @@ self.addEventListener('install', function (e) {
 			<%= "console.log('installing cache : ' + CACHE_NAME);" if env_name != 'production' %>
 			return cache.addAll(URLS);
 		})
+		.then(function() {
+      // `skipWaiting()` forces the waiting ServiceWorker to become the
+      // active ServiceWorker, triggering the `onactivate` event.
+      // Together with `Clients.claim()` this allows a worker to take effect
+      // immediately in the client(s).
+      return self.skipWaiting();
+    })
 	);
 });
 
@@ -98,6 +99,10 @@ self.addEventListener('activate', function (e) {
 							return caches.delete(key);
 						})
 				);
+			})
+			.then(function(){
+				<%= "console.log('WORKER: self.clients.claim()');" if env_name != 'production' %>
+				return self.clients.claim();
 			})
 			<%= ".then(function() {console.log('WORKER: activate completed.');})" if env_name != 'production' %>
 	);
