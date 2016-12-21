@@ -50,9 +50,6 @@ self.addEventListener('fetch', function(e) {
 					return response;
 				});
 			});
-		}).catch(function(error) {
-			console.error('  Error in fetch handler:', error);
-			throw error;
 		})
 	);
 });
