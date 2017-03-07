@@ -23,7 +23,7 @@ class Abletech.BlogPosts
       </div>'
 
       ul = @blogPosts.querySelector('.blog_posts')
-      for i in [0..(Math.min(2, posts.length))]
+      for i in [0..(Math.min(2, (posts.length - 1)))]
         regex = new RegExp('(<p[ >].*?</p>)')
         firstP = regex.exec(posts[i]['description'])[0]
         li = document.createElement('li')
