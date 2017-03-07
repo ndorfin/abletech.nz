@@ -13,11 +13,11 @@ class Abletech.BlogPosts
     posts = data.items || []
     @blogPosts.innerHTML = ''
 
-    if posts && posts.length > 1
+    if posts && posts.length > 0
 
       @blogPosts.innerHTML = '\
       <h1 class="heading heading_subsection">Latest from the Abletech Blog</h1>\
-      <p id="blog_rss"><a href="http://m.abletech.nz/feed">Subscribe to the Abletech Blog</a></p>\
+      <p id="blog_rss"><a href="https://stories.abletech.nz/feed">Subscribe to the Abletech Blog</a></p>\
       <div class="blog_container">\
         <ul class="blog_posts"></ul>\
       </div>'
@@ -38,7 +38,7 @@ class Abletech.BlogPosts
     @postsLoaded = true
     window.handlePostsData = @handlePostsData
 
-    xhrURL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fm.abletech.com%2Ffeed%2Ftagged%2Ffeatured&api_key=eyqr8biv6z4ol88dbc87hclmuvrw2mm4mzqaduh0'
+    xhrURL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fstories.abletech.nz%2Ffeed%2Ftagged%2Ffeatured&api_key=eyqr8biv6z4ol88dbc87hclmuvrw2mm4mzqaduh0'
     xhrURL += '&callback=handlePostsData'
 
     script = document.createElement('script')
