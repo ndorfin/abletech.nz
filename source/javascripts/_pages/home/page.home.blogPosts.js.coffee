@@ -8,8 +8,6 @@ class Abletech.BlogPosts
   postsLoaded: false
 
   handlePostsData: (data) =>
-    console.log("callback")
-    console.log(data)
     posts = data.items || []
     @blogPosts.innerHTML = ''
 
