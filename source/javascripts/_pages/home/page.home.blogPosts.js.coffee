@@ -8,36 +8,37 @@ class Abletech.BlogPosts
   postsLoaded: false
 
   handlePostsData: (data) =>
-    posts = data.response.posts
+    posts = data.items || []
+    @blogPosts.innerHTML = ''
 
-    @blogPosts.innerHTML = '\
-    <h1 class="heading heading_subsection">Latest from the Abletech Blog</h1>\
-    <p id="blog_rss"><a href="http://blog.abletech.nz/rss">Subscribe to the Abletech Blog</a></p>\
-    <div class="tumblr_container">\
-      <ul class="tumblr_posts"></ul>\
-    </div>'
+    if posts && posts.length > 0
 
-    ul = @blogPosts.querySelector('.tumblr_posts')
-    for i in [0..2]
-      regex = new RegExp('(<p[ >].*?</p>)')
-      firstP = regex.exec(posts[i]['body'])[0]
-      li = document.createElement('li')
-      li.innerHTML = '\
-      <h2><a href="' + posts[i]['post_url'] + '">' + posts[i]['title'] + '</a></h2>\
-      <p class="published-date">' + new Date(parseInt(posts[i]['timestamp'] + '000')).format('j F, Y') + '</p>\
-      <div class="post-body">' + firstP + '</div>\
-      <a href="' + posts[i]['post_url'] + '">Read more of ‘' + posts[i]['title'] + '’…</a>'
-      ul.appendChild(li)
+      @blogPosts.innerHTML = '\
+      <h1 class="heading heading_subsection">Latest from the Abletech Blog</h1>\
+      <p id="blog_rss"><a href="https://stories.abletech.nz/feed">Subscribe to the Abletech Blog</a></p>\
+      <div class="blog_container">\
+        <ul class="blog_posts"></ul>\
+      </div>'
 
-  getPostsFromTumblr: =>
+      ul = @blogPosts.querySelector('.blog_posts')
+      for i in [0..(Math.min(2, (posts.length - 1)))]
+        regex = new RegExp('(<p class=.medium-feed-snippet.>.*?</p>)')
+        snippet = regex.exec(posts[i]['description'])
+        firstP = snippet && snippet[0] || ''
+        li = document.createElement('li')
+        li.innerHTML = '\
+        <h2><a href="' + posts[i]['post_url'] + '">' + posts[i]['title'] + '</a></h2>\
+        <p class="published-date">' + new Date(posts[i]['pubDate']).format('j F, Y') + '</p>\
+        <div class="post-body">' + firstP + '</div>\
+        <a href="' + posts[i]['link'] + '">Read more of ‘' + posts[i]['title'] + '’…</a>'
+        ul.appendChild(li)
+
+  getPosts: =>
     @postsLoaded = true
     window.handlePostsData = @handlePostsData
 
-    baseURL = 'https://api.tumblr.com/v2/blog/blog.abletech.nz/posts'
-    consumerKey = 'A3b8bQpBReiqQz2t6aHj3xcfjolU8dNxDkvVE2xv4c5KNzXx1F'
-    filter = 'tag=promoted'
-    callback = 'handlePostsData'
-    xhrURL = baseURL + '?callback=' + callback + '&api_key=' + consumerKey + '&' + filter
+    xhrURL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fstories.abletech.nz%2Ffeed%2Ftagged%2Ffeatured&api_key=eyqr8biv6z4ol88dbc87hclmuvrw2mm4mzqaduh0'
+    xhrURL += '&callback=handlePostsData'
 
     script = document.createElement('script')
     script.async = 1
@@ -45,4 +46,4 @@ class Abletech.BlogPosts
     @blogPosts.appendChild(script)
 
   init: =>
-    @getPostsFromTumblr() if @blogPosts && !@postsLoaded
+    @getPosts() if @blogPosts && !@postsLoaded
