@@ -27,7 +27,7 @@ class Abletech.BlogPosts
         firstP = snippet && snippet[0] || ''
         li = document.createElement('li')
         li.innerHTML = '\
-        <h2><a href="' + posts[i]['post_url'] + '">' + posts[i]['title'] + '</a></h2>\
+        <h2><a href="' + posts[i]['link'] + '">' + posts[i]['title'] + '</a></h2>\
         <p class="published-date">' + new Date(posts[i]['pubDate']).format('j F, Y') + '</p>\
         <div class="post-body">' + firstP + '</div>\
         <a href="' + posts[i]['link'] + '">Read more of ‘' + posts[i]['title'] + '’…</a>'
