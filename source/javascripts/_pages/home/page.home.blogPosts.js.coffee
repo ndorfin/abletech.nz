@@ -22,7 +22,7 @@ class Abletech.BlogPosts
 
       ul = @blogPosts.querySelector('.blog_posts')
       for i in [0..(Math.min(2, (posts.length - 1)))]
-        regex = new RegExp('(<p class=.medium-feed-snippet.>.*?</p>)')
+        regex = new RegExp('\<p.*?\<\/p\>')
         snippet = regex.exec(posts[i]['description'])
         firstP = snippet && snippet[0] || ''
         li = document.createElement('li')
