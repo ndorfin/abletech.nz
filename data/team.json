@@ -64,13 +64,6 @@
 		"description": "<p>David studied Computer Science at Victoria University. He likes solving business problems and enjoys working with business professionals, technical consultants and users, towards solutions. Out of hours David enjoys family time with his wife and two boys, especially in and around the Hutt River.</p>"
 	},
 	{
-		       "name": "Dawn Richardson",
-		      "photo": "photo_dawn_2x.jpg",
-		      "title": "Technical Consultant, BSc, BC",
-		    "twitter": "dawnerfr",
-		"description": "<p>Dawn is a developer who joined Abletech after a Summer of Tech internship in 2013. She completed a conjoint degree in Computer Science & Finance, before falling in love with Ruby on Rails and the web development world. Dawn also enjoys rock climbing, snowboarding, travel and anything that presents a good challenge.</p>"
-	},
-	{
 		       "name": "Fiona Sanggang",
 		      "photo": "photo_fiona_2x.jpg",
 		      "title": "Technical Consultant, BSc, DipGrad",
@@ -171,7 +164,7 @@
 		"description": "<p>Suzanne has extensive experience working with software development teams as a Business Analyst and Delivery Lead. When Suzanne’s not in the office she is shanking a golf ball around the golf course, failing miserably at being pack leader to her dogs, and planning her next trip.</p>"
 	},
 	{
-		       "name": "Tania Jacob",
+		       "name": "Tania Walker",
 		      "photo": "photo_tania_2x.jpg",
 		      "title": "Technical Consultant, BE (Hons)",
 		    "twitter": "teejay1109",
