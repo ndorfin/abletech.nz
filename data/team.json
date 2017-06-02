@@ -111,6 +111,13 @@
 		"description": "<p>With a background in IT Account Management and Audio Engineering, Kalo has always had a keen enthusiasm for emerging technologies. He studied Computer Science at Victoria University, and is particularly interested in Android development, the Internet of Things, and Ruby on Rails. When he’s not in the office you can find Kalo exploring Wellington’s mountain bike trails, tinkering with Arduinos, or enjoying a local brew in his music studio.</p>"
 	},
 	{
+		"name": "Kate Norquay",
+		"photo": "photo_kate_2x.jpg",
+		"title": "Intern, BA",
+		"twitter": "katenorquay",
+		"description": "<p>Kate is Abletech’s newest intern. She graduated from Enspiral Dev Academy in 2016, after being introduced to coding while on an OE in South America. She has an eclectic background, with a degree in Media Studies, Film and Theatre, and a <abbr title='Teaching English to Speakers of Other Languages'>TESOL</abbr> certificate. She loves making theatre, her neon puffer jacket, Javascript, reality tv, travel and pizza.</p>"
+	},
+	{
 		       "name": "Matt Ramsay",
 		      "photo": "photo_matt_2x.jpg",
 		      "title": "Product Manager, BPharm",
@@ -176,12 +183,5 @@
 		      "title": "Technical Consultant, BSc, PGCertPH, BA (Hons)",
 		    "twitter": "tracey_norrish",
 		"description": "<p>Tracey brings a wealth of experience to each project. She majored in Computer Science at the University of Otago.  Tracey enjoys solving complex problems with Ruby and tinkering with other languages. She loves living in Wellington where the coffee’s hot, the beer is cold and there’s running and mountain biking trails right outside the window.</p>"
-	},
-	{
-		"name": "Kate Norquay",
-		"photo": "photo_kate_2x.jpg",
-		"title": "Intern, BA",
-		"twitter": "katenorquay",
-		"description": "<p>Kate is Abletech’s newest intern. She graduated from Enspiral Dev Academy in 2016, after being introduced to coding while on an OE in South America. She has an eclectic background, with a degree in Media Studies, Film and Theatre, and a <abbr title='Teaching English to Speakers of Other Languages'>TESOL</abbr> certificate. She loves making theatre, her neon puffer jacket, Javascript, reality tv, travel and pizza.</p>"
 	}
 ]
