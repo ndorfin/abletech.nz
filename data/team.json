@@ -45,6 +45,12 @@
 		"description": "<p>Andrew studied Computer Science at Victoria University. He enjoys tackling the challenges and responsibilities of back end web development. Andrew is relearning French and hopes to travel to French Canada to try it out. He’s also working with a friend to build a mobile game.</p>"
 	},
 	{
+		       "name": "Carl Douglas",
+		      "photo": "photo_carl_d_2x.jpg",
+		      "title": "Technical Consultant, BSc",
+		"description": "<p>Carl studied Philosophy and Computer Science at Canterbury University. He brings an extensive tech history to the Abletech team and has worked with everything from PalmPilots to Ruby. Carl enjoys travelling; he's worked in the USA, the UK and Australia. He likes living in Wellington, where he was born, and his hobbies include running, mountain biking, Judo, reading and a programming language from the 50s called Lisp.</p>"
+	},
+	{
 		       "name": "Cameron Fowler",
 		      "photo": "photo_cam_2x.jpg",
 		      "title": "Technical Consultant, BE",
