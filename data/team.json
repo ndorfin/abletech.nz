@@ -42,7 +42,7 @@
 		      "photo": "photo_andrew_2x.jpg",
 		      "title": "Technical Consultant, BSc",
 		    "twitter": "andrewpett1",
-		"description": "<p>Andrew studied Computer Science at Victoria University. He enjoys tackling the challenges and responsibilities of back end web development. Andrew is relearning French and hopes to travel to French Canada to try it out. He’s also working with a friend to build a mobile game.</p>"
+		"description": "<p>Andrew studied Computer Science at Victoria University. He enjoys tackling the challenges and responsibilities of back-end and front-end web development, and has a particular place in his heart for Elixir right now. Andrew is currently based in Calgary, Canada and is spending his spare time exploring the world with his partner.</p>"
 	},
 	{
 		       "name": "Carl Douglas",
@@ -59,21 +59,20 @@
 	{
 		       "name": "David Oram",
 		      "photo": "photo_david_2x.jpg",
-		      "title": "Technical Consultant, BSc",
-		"description": "<p>David studied Computer Science at Victoria University. He likes solving business problems and enjoys working with business professionals, technical consultants and users, towards solutions. Out of hours David enjoys family time with his wife and two boys, especially in and around the Hutt River.</p>"
+		      "title": "Customer and Technical Lead, BSc",
+		"description": "<p>David has worked as a Software Engineer for over 25yrs. He understands how to bring new value to a business through a combination of technology and process. Dave likes to work collaboratively with clients, to understand their needs, then design and build solutions providing real business utility. He also enjoys building good team culture, through mentoring and team leadership roles. In his spare time David enjoys watching his boys play sport, and getting outdoors with his family.</p>"
+	},
+	{
+					 "name": "Dawn Richardson",
+					"photo": "photo_dawn_3x.jpg",
+					"title": "Technical Consultant, BSc",
+		"description": "<p>Dawn graduated from Victoria University with a double degree in Computer Science and Finance. She has experience with Ruby, Elixir and Javascript and loves working across all areas of the technology stack. Dawn is a previous organizer of Wellington Ruby Girls events and is passionate about using technology for positive social impact.  Dawn is currently based out of Vancouver, Canada where she works remotely for Abletech and spends her weekends adventuring; rock climbing, snowboarding and paragliding.</p>"
 	},
 	{
 		       "name": "Fiona Sanggang",
 		      "photo": "photo_fiona_2x.jpg",
 		      "title": "Technical Consultant, BSc, DipGrad",
 		"description": "<p>Fiona initially studied Biochemistry at Massey University and worked for AgResearch in Dunedin. She became interested in Bioinformatics and this led to a postgraduate diploma in Computer Science from Otago University. Fiona loves the way there's always something new to learn. Outside of work Fiona enjoys going to the gym, horse riding, knitting and baking.</p>"
-	},
-	{
-		       "name": "James Bowles",
-		      "photo": "photo_james_2x.jpg",
-		      "title": "Technical Consultant, BInfSc",
-		    "twitter": "jameslbowles",
-		"description": "<p>James has a Bachelor of Information Science from Massey University. He loves his job; hand-crafting Rails applications and <acronym title=\"Application Programme Interface\">API</acronym>s and working alongside customers turning their ideas into realities. When he isn’t VIMing, he is out on his favourite mountain biking tracks, at the climbing gym or enjoying good coffee with his wife, Sarah-Rose.</p>"
 	},
 	{
 		       "name": "Jean van der Walt",
@@ -112,9 +111,15 @@
 	{
 					"name": "Kate Norquay",
 				"photo": "photo_kate_2x.jpg",
-				"title": "Intern, BA",
+				"title": "Technical Consultant",
 				"twitter": "katenorquay",
-				"description": "<p>Kate is Abletech’s newest intern. She graduated from Enspiral Dev Academy in 2016, after being introduced to coding while on an OE in South America. She has an eclectic background, with a degree in Media Studies, Film and Theatre, and a <abbr title='Teaching English to Speakers of Other Languages'>TESOL</abbr> certificate. She loves making theatre, her neon puffer jacket, Javascript, reality tv, travel and pizza.</p>"
+				"description": "<p>Kate graduated from Enspiral Dev Academy in 2016 after being introduced to coding while on an OE in South America. She has a degree in Media Studies, Film and Theatre and is trained in TESOL. Kate interned with Abletech before joining the team permanently. She has enjoyed up-skilling with the Rapid Projects team and gaining experience in front-end development. Kate enjoys theatre, Javascript, reality TV, travel, pizza and her trusty puffer jacket.</p>"
+	},
+	{
+					 "name": "Matt Lee",
+					"photo": "photo_matt_lee_2x.png",
+					"title": "Intern",
+		"description": "<p>Matt is Abletech’s newest intern. He is studying towards a BE(Hons) in Software Engineering at Victoria University. Matt enjoys full-stack development, project management and machine learning.  Matt has experience with coding in Java, Ruby and Python and enjoys learning about anything AI related, new web frameworks and developing web applications. In his spare time, Matt enjoys going for walks around Wellington, skiing and travelling.</p>"
 	},
 	{
 		       "name": "Matt Ramsay",
@@ -150,11 +155,10 @@
 		"description": "<p>Pam’s been part of the Abletech team since the very beginning and works behind the scenes keeping all the company records in order. She manages administrative systems and keeps operations in full swing. Her family’s favourite Wellington spots include Otari Bush and Scorching Bay.</p>"
 	},
 	{
-		       "name": "Ross Jourdain",
-		      "photo": "photo_ross_2x.jpg",
-		      "title": "Technical Consultant, BSc",
-		    "twitter": "rossjourdain",
-		"description": "<p>With an extensive background in systems integration and security projects ranging from print publishing and self-service kiosks to secure email, Ross now focuses on system design and development. He has three young boys at home who keep him out of trouble most of the time.</p>"
+					 "name": "Sam Gard",
+					"photo": "photo_sam_2x.png",
+					"title": "Technical Consultant, BDI",
+		"description": "<p>Sam graduated from Victoria University with a degree in Media Design. Before joining the team permanently, Sam interned with Abletech and made significant improvements to the AED Locations web app. Her interests lie in front-end development and UI/UX design. In her spare time Sam enjoys a number of sports including football and handball, and has represented NZ in the latter.</p>"
 	},
 	{
 		       "name": "Shaun O’Connell",
@@ -174,6 +178,6 @@
 		      "photo": "photo_tania_2x.jpg",
 		      "title": "Technical Consultant, BE (Hons)",
 		    "twitter": "teejay1109",
-		"description": "<p>Tania studied Software Engineering at Victoria University and graduated with First-class Honours. She is experienced in working with waterfall and agile teams within the Java, DevOps and Ruby on Rails spaces. She loves the variety and challenges of working in back-end and front-end development. Previously a student at Rails Girls, Tania now enjoys volunteering as a coach. In her spare time Tania likes baking, exploring the outdoors, boogie-boarding and skiing.</p>"
+		"description": "<p>Tania studied Software Engineering at Victoria University and graduated with First-class Honours. She is a certified AWS developer associate. Tania enjoys organising Rails Girls events and also loves learning new tech. She is currently upskilling in React.  In her spare time, you can find Tania spending time with her husband, watching TV, gardening, baking, exploring the outdoors or boogie-boarding and skiing when she can.</p>"
 	}
 ]
