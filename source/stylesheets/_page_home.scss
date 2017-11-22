@@ -8,14 +8,6 @@
   }
 	.logo_blocks {@include off_left();}
 }
-
-#meet_carl {margin:-2em auto 0; overflow:hidden; max-width:250px; height:320px; background:image-url('bg_carl_large_25.jpg') 100% 0 no-repeat; background-size:188px 500px;
-	a {@include hide_text(); margin:0 auto; display:block; width:250px; height:500px; background:image-url('sprite_homepage_headings.png') 0 -32px no-repeat; background-size:141px 101px; position:relative;
-		&:before {content:""; position:absolute; top:56px; left:82px; width:40px; height:36px; background-position:0 0; background-size:40px auto;}
-		&:after {content:""; position:absolute; top:125px; left:119px; background:image-url('bg_video_play.png') 0 0 no-repeat; width:85px; height:49px;}
-		&:hover:after {background-color:#fff; border-radius:5px;}
-	}
-}
 #logos_container {position:absolute; bottom:0; left:0; right:0;}
 #homepage_masthead {position:relative;
   .iframe_container {margin:0; transition:opacity .5s; opacity:0; position:relative; padding-bottom:56.25%; height:0;
@@ -62,11 +54,6 @@
 #product_watch_my_gear a {background-image:image-url('logo_watch_my_gear_large.png'); height:56px; min-width:214px; background-position:50% 100%;}
 #product_addressfinder a {background-image:image-url('logo_addressfinder_large.png'); height:22px; min-width:220px;}
 
-#working_with .heading:after,
-.the_rest_of_the_gang:after,
-#pages_heading:after,
-#meet_carl a:before {background-image:image-url('sprite_grey_arrows.png'); background-repeat:no-repeat;}
-
 @media (min-width:520px) {
 	#our_products {
 		ul {margin-top:2em;}
@@ -81,7 +68,6 @@
       .heading {padding-right:220px;}
     }
 	}
-	#meet_carl {position:absolute; top:0; right:1em; z-index:1; height:500px;}
 }
 @media (min-width:800px) {
 	#client_testimonials {position:relative;
@@ -107,7 +93,6 @@
       .iframe_container {width:1000px; height:560px; margin-left:auto; margin-right:auto; padding:0;}
     }
   }
-  #meet_carl {right:0;}
 	.home {
 		article > header {padding-bottom:0;
       .heading {margin-bottom:1em;}

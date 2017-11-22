@@ -25,12 +25,6 @@ class Abletech.HomepageManager
     @_homepageQuote.init()
     @_homepageQuote
 
-  homepageVideo: ->
-    return @_homepageVideo if @_homepageVideo?
-    @_homepageVideo = new Abletech.HomepageVideo('homepage_masthead')
-    @_homepageVideo.init()
-    @_homepageVideo
-
   addResizeHandler: =>
     window.addEventListener 'resize', window.debounce( () =>
 
@@ -51,7 +45,6 @@ class Abletech.HomepageManager
 
     # Phase 2, resolution-independent classes
     @homepageQuote()
-    @homepageVideo()
 
     # Phase 3, resolution-specific classes
     if document.body.clientWidth >= 600
