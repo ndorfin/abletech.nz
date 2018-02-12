@@ -4,7 +4,7 @@ $slide-width:1000px;
 .section_scene {padding:0 0 1em !important; position:relative; min-height:500px;
   .banner_container {padding:0 !important;}
 	figure {position:relative; margin:0;}
-	figcaption {position:absolute; bottom:0; left:0; right:0; padding:0.5em; color:#fff; font-size:36px; text-shadow:0 0 10px #000; font-weight:600; line-height:1;}
+	figcaption {position:absolute; bottom:0; left:0; right:0; padding:0.5em; color:#fff; font-size:36px; text-shadow:0 0 2px #000; font-weight:600; line-height:1;}
   nav {position:absolute; bottom:2em; left:50%; width:120px; margin-left:-60px; text-align:center;
     ul {@include list_stripped(); display:inline-block;}
     li {display:inline-block; margin:0 5px;}

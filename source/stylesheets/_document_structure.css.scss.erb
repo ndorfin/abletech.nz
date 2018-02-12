@@ -2,6 +2,7 @@
 
 html {background:$colour_footer_background;}
 body {margin:0; font:normal normal 16px/1.5 $font_family; background:#fff; color:#222; -webkit-font-smoothing:subpixel-antialiased; overflow-x:hidden;}
+abbr {border-bottom: none; text-decoration: none;}
 $banner_height:75px;
 [role="banner"] {padding:0 1em; max-width:$max-width; margin:0 auto; position:relative;
 	h1 {margin:0; padding:11px 0; float:left; font-size:1em;
@@ -12,6 +13,7 @@ $banner_height:75px;
 		a {text-transform:uppercase;}
 	}
 }
+
 [role="navigation"] {padding:1em 0 0; clear:left;
 	.js & {max-height:400px; padding-left:1em; padding-right:1em; overflow:hidden; position:absolute; top:53px; left:0; right:0; transition:max-height .3s, padding-top .3s; background:#fff; z-index:10;}
 	.menu_closed & {max-height:0; padding-top:0;}
@@ -67,8 +69,9 @@ $banner_height:75px;
 		.telephone {margin:1.4em 0 0;}
 		.address {position:absolute; right:1em; top:4.25em; margin:0; text-align:right;}
 		.network {position:absolute; right:1em; top:0; margin:0; line-height:0;}
-		.icon_footer_facebook {position:absolute; right:64px;}
-		.icon_footer_linkedin {position:absolute; right:132px;}
+		.icon_footer_facebook {position:absolute; right:165px;}
+		.icon_footer_linkedin {position:absolute; right:110px;}
+		.icon_footer_twitter {position:absolute; right:55px;}
 		dl:after {content:""; clear:both; width:0; height:0; display:block;}
 	}
 }
