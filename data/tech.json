@@ -47,6 +47,7 @@
 		"class": "technology_react",
 		"title": "React",
 		"logo": "icon_technology_react.png",
+		"min_width": 106,
 		"order": 6
 	},
 	{
