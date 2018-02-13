@@ -20,15 +20,21 @@ class Abletech.HomepageCarousel
       request = null
 
   addIScroll: =>
-    @homepageScroller = new IScroll('#slideshow_wrapper', {
-      scrollX: true
-      eventPassthrough: true
-      snap: 'li'
+    slides = document.getElementById('slideshow_container')
+    @homepageScroller = new IScroll(slides, {
+      scrollX: true,
+      snap: 'li',
+      eventPassthrough: true,
+      momentum: false
     })
 
-  bindCarouselScrollHint: =>
-    @homepageScroller.on 'scrollEnd', () =>
-      document.getElementById('carousel_nav').className = 'selected_' + Math.abs(@homepageScroller.x/1000)
+  bindClickEvents: =>
+    document.getElementById('carousel_btnleft').addEventListener 'click', (e) =>
+      @homepageScroller.prev()
+
+    document.getElementById('carousel_btnright').addEventListener 'click', (e) =>
+      @homepageScroller.next()
+
 
   handleHomepageCarouselResponse: (response) =>
     @hasHomepageScroller = true
@@ -36,11 +42,12 @@ class Abletech.HomepageCarousel
 
     @addIScroll()
 
-    @bindCarouselScrollHint()
+    @bindClickEvents()
 
     setTimeout( () =>
       @homepageScroller.refresh()
     , 1000)
+
 
     # export the homepageScroller object to the window,
     # so that the carousel step anchors can trigger the next slide.
