@@ -31,13 +31,6 @@
 		"description": "<p>Alexandre graduated from Enspiral Dev Academy in 2015 and he also has a degree in Engineering. He loves creating robust and tested applications using Ruby on Rails. When he’s not coding, you’ll find him on the dance floor lindy hopping or tinkering with Internet of Things projects.</p>"
 	},
 	{
-		       "name": "Andrew French",
-		      "photo": "photo_andy_2x.jpg",
-		      "title": "Technical Consultant",
-		    "twitter": "FrostieDaSnoman",
-		"description": "<p>With experience across many software disciplines Andy now perfects mobile and web applications. He’s built multiple reliable and user-friendly Android & Ruby on Rails apps for both internal and external clients. A big football fan, Andy plays for a local team and follows the Wellington Phoenix.</p>"
-	},
-	{
 		       "name": "Andrew Pett",
 		      "photo": "photo_andrew_2x.jpg",
 		      "title": "Technical Consultant, BSc",
