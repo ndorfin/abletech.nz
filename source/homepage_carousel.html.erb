@@ -2,8 +2,8 @@
 hide_from_sitemap: true
 ---
 
+
 <div class="banner_container">
-  <div id="slideshow_wrapper">
   	<div id="slideshow_container">
   		<ul>
   			<li id="slideshow-sharesight" class="example example_sharesight">
@@ -15,7 +15,7 @@ hide_from_sitemap: true
         <li id="slideshow-homes" class="example example_homes">
   				<figure>
   					<%= inline_jpg('slide_homes_50.jpg') %>
-  					<figcaption>We help Kiwis make smart decisions with free property insights at Homes.</figcaption>
+  					<figcaption>We help Kiwis make smart decisions with free property insights at Homes.co.nz</figcaption>
   				</figure>
   			</li>
   			<li id="slideshow-flybuys" class="example example_flybuys">
@@ -26,12 +26,10 @@ hide_from_sitemap: true
   			</li>
   		</ul>
   	</div>
-  </div>
   <nav>
     <ul id="carousel_nav" class="selected_0">
-      <li><a href="javascript:homepageScroller.scrollToElement(document.querySelector('#slideshow-sharesight'))">Sharesight</a></li>
-      <li><a href="javascript:homepageScroller.scrollToElement(document.querySelector('#slideshow-homes'))">Homes</a></li>
-      <li><a href="javascript:homepageScroller.scrollToElement(document.querySelector('#slideshow-flybuys'))">Flybuys</a></li>
+      <li id="carousel_btnleft"></li>
+      <li id="carousel_btnright"></li>
     </ul>
   </nav>
 </div>

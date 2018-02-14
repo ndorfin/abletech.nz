@@ -43,24 +43,16 @@
 	}
 }
 
-#our_products {text-align:center;
-	.heading {font-weight:300;}
-	ul {list-style:none; padding:0; margin:1em 0 0;}
-	li {margin:1em 0 0;}
-	a {display:block; border-radius:6px; background-position:50% 50%; background-repeat:no-repeat; @include hide_text(); padding:0.5em;
-		&:hover {background-color:rgba(255,255,255,.2);}
+#our_products {
+	div {
+		.heading {font-weight:300; margin-left:25px;}
+		a {display:block; border-radius:6px; background-size:contain; background-position:50% 50%; background-repeat:no-repeat; @include hide_text(); padding:0.5em;
+			&:hover {background-color:rgba(255,255,255,.2);}
+		}
+		#product_addressfinder {background-image:image-url('logo_addressfinder_large.png'); height:25px; min-width:220px;}
 	}
 }
-#product_watch_my_gear a {background-image:image-url('logo_watch_my_gear_large.png'); height:56px; min-width:214px; background-position:50% 100%;}
-#product_addressfinder a {background-image:image-url('logo_addressfinder_large.png'); height:22px; min-width:220px;}
 
-@media (min-width:520px) {
-	#our_products {
-		ul {margin-top:2em;}
-		li {display:inline-block; margin:0 -3px; line-height:56px; vertical-align:middle; box-sizing:border-box; width:50%;}
-	}
-	#product_addressfinder a {height:56px;}
-}
 @media (min-width:600px) {
 	.home {
 		article > header {
@@ -79,9 +71,11 @@
 }
 
 @media (min-width:900px) {
-	#our_products {padding:1em;
-		.heading {float:left; font-size:1.2em; width:45%; text-align:left; line-height:72px;}
-		ul {margin-left:46%; margin-top:0;}
+	#our_products {padding:1.5em;
+		div {display:flex; justify-content:center; align-items:center;
+			.heading {font-size:1.2em; display:inline-block;}
+			#product_addressfinder {display:inline-block; width:30%;}
+		}
 	}
 }
 

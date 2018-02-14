@@ -1,46 +1,81 @@
 [
 	{
-		    "class": "technology_android",
-		    "title": "Android",
-		     "logo": "icon_technology_android.png",
+    "class": "technology_android",
+    "title": "Android",
+    "logo": "icon_technology_android.png",
 		"min_width": 123,
-		    "order": 3
+    "order": 3
 	},
 	{
-		    "class": "technology_apple",
-		    "title": "Apple",
-		     "logo": "icon_technology_apple.png",
+    "class": "technology_apple",
+    "title": "Apple",
+    "logo": "icon_technology_apple.png",
 		"min_width": 117,
-		   "offset": "50% 40%",
-		    "order": 4
+   	"offset": "50% 40%",
+    "order": 4
 	},
 	{
-		    "class": "technology_google_maps",
-		    "title": "Google Maps",
-		     "logo": "icon_technology_google_maps.png",
+		"class": "technology_google_maps",
+		"title": "Google Maps",
+		"logo": "icon_technology_google_maps.png",
 		"min_width": 130,
-		   "offset": "50% 55%",
-		    "order": 5
+		"offset": "50% 55%",
+		"order": 5
 	},
 	{
-		    "class": "technology_html5",
-		    "title": "HTML5",
-		     "logo": "icon_technology_html5.png",
+		"class": "technology_html5",
+		"title": "HTML5",
+		"logo": "icon_technology_html5.png",
 		"min_width": 102,
-		    "order": 2
+		"order": 2
 	},
 	{
-		    "class": "technology_javascript",
-		    "title": "JavaScript",
-		     "logo": "icon_technology_javascript.png",
+		"class": "technology_javascript",
+		"title": "JavaScript",
+		"logo": "icon_technology_javascript.png",
 		"min_width": 125,
-		    "order": 1
+		"order": 1
 	},
 	{
-		    "class": "technology_ruby_on_rails",
-		    "title": "Ruby on Rails",
-		     "logo": "icon_technology_ruby_on_rails.png",
+		"class": "technology_ruby_on_rails",
+		"title": "Ruby on Rails",
+		"logo": "icon_technology_ruby_on_rails.png",
 		"min_width": 106,
-		    "order": 0
+		"order": 0
+	},
+	{
+		"class": "technology_react",
+		"title": "React",
+		"logo": "icon_technology_react.png",
+		"min_width": 106,
+		"order": 6
+	},
+	{
+		"class": "technology_angular",
+		"title": "Angular",
+		"logo": "icon_technology_angular.svg",
+		"min_width": 106,
+		"order": 7
+	},
+	{
+		"class": "technology_elixir",
+		"title": "Elixir",
+		"logo": "icon_technology_elixir.png",
+		"min_width": 106,
+		"order": 8
+	},
+	{
+		"class": "technology_node_js",
+		"title": "Node.js",
+		"logo": "icon_technology_node_js.png",
+		"min_width": 106,
+		"order": 9
+	},
+	{
+		"class": "technology_cloud_aws",
+		"title": "Cloud AWS",
+		"logo": "icon_technology_cloud_aws.png",
+		"min_width": 106,
+		"order": 10
 	}
 ]
