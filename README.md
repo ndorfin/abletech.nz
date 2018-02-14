@@ -12,6 +12,10 @@ The static website is hosted on Amazon S3, and published using the Amazon CloudF
 4. bundle install
 5. bundle exec middleman server
 
+The `develop` and `master` branches are automatically deployed by Travis CI on completion of the tests.
+
+You can also deploy the application manually using the following steps.
+
 ## Building/Deploying UAT:
 
     git checkout develop

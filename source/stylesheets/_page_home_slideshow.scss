@@ -17,8 +17,8 @@ $slide-width:1000px;
   li {margin: 0px; display:table-cell; width:$slide-width; padding:0; height:500px;}
 }
 #carousel_nav {list-style:none;
-  #carousel_btnleft, #carousel_btnright {text-decoration:none; position:absolute; bottom:20px; height:40px; width:55px; z-index:100; background-image:url('icon_carousel_arrow.png'); background-size:cover; background-repeat:no-repeat;
-    &:hover {background-image:url('icon_carousel_arrow_hover.png');}
+  #carousel_btnleft, #carousel_btnright {text-decoration:none; position:absolute; bottom:20px; height:40px; width:55px; z-index:100; background-image:image-url('icon_carousel_arrow.png'); background-size:cover; background-repeat:no-repeat;
+    &:hover {background-image:image-url('icon_carousel_arrow_hover.png');}
     &.hidden {display: none;}
   }
   #carousel_btnleft{ left:20px; }
