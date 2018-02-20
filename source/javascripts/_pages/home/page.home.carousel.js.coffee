@@ -20,15 +20,36 @@ class Abletech.HomepageCarousel
       request = null
 
   addIScroll: =>
-    @homepageScroller = new IScroll('#slideshow_wrapper', {
-      scrollX: true
-      eventPassthrough: true
-      snap: 'li'
+    @homepageScroller = new IScroll('#slideshow_container', {
+      scrollX: true,
+      snap: 'li',
+      eventPassthrough: true,
+      momentum: false
     })
 
-  bindCarouselScrollHint: =>
-    @homepageScroller.on 'scrollEnd', () =>
-      document.getElementById('carousel_nav').className = 'selected_' + Math.abs(@homepageScroller.x/1000)
+  hideShowNavButtons: () =>
+    slideNumber = @homepageScroller.currentPage.pageX;
+    slideLength = @homepageScroller.pages.length - 1;
+
+    if slideNumber == 0
+      @btnLeft.classList.add 'hidden'
+      @btnRight.classList.remove 'hidden'
+    else if slideNumber == slideLength
+      @btnRight.classList.add 'hidden'
+      @btnLeft.classList.remove 'hidden'
+    else
+      @btnLeft.classList.remove 'hidden'
+      @btnRight.classList.remove 'hidden'
+
+  bindEvents: =>
+    @btnLeft = document.getElementById('carousel_btnleft')
+    @btnRight = document.getElementById('carousel_btnright')
+
+    @btnLeft.addEventListener 'click', (e) => @homepageScroller.prev()
+    @btnRight.addEventListener 'click', (e) => @homepageScroller.next()
+
+    @homepageScroller.on 'scrollEnd', (e) => @hideShowNavButtons()
+    @hideShowNavButtons()
 
   handleHomepageCarouselResponse: (response) =>
     @hasHomepageScroller = true
@@ -36,12 +57,11 @@ class Abletech.HomepageCarousel
 
     @addIScroll()
 
-    @bindCarouselScrollHint()
-
     setTimeout( () =>
       @homepageScroller.refresh()
-    , 1000)
+    , 1500)
 
+    @bindEvents()
     # export the homepageScroller object to the window,
     # so that the carousel step anchors can trigger the next slide.
     window.homepageScroller = @homepageScroller
