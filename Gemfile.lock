@@ -232,7 +232,7 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.3.0)
     minitest (5.8.4)
-    multi_json (1.11.2)
+    multi_json (1.13.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     padrino-helpers (0.12.5)
@@ -242,7 +242,7 @@ GEM
     padrino-support (0.12.5)
       activesupport (>= 3.1)
     parallel (1.9.0)
-    rack (1.6.4)
+    rack (1.6.11)
     rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
@@ -256,7 +256,7 @@ GEM
       trollop
     ruby-progressbar (1.8.1)
     sass (3.4.21)
-    sprockets (2.12.4)
+    sprockets (2.12.5)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
