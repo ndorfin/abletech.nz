@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/jamesbowles/middleman-s3_sync.git
+  remote: https://github.com/jamesbowles/middleman-s3_sync.git
   revision: 110a62b3e83c7e4527765048b12ded77e070444b
   branch: individual_file_cache_control
   specs:
@@ -241,8 +241,8 @@ GEM
       tilt (~> 1.4.1)
     padrino-support (0.12.5)
       activesupport (>= 3.1)
-    parallel (1.9.0)
-    rack (1.6.4)
+    parallel (1.22.1)
+    rack (1.6.13)
     rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
@@ -254,7 +254,7 @@ GEM
       builder
       nokogiri (>= 1.4.1)
       trollop
-    ruby-progressbar (1.8.1)
+    ruby-progressbar (1.11.0)
     sass (3.4.21)
     sprockets (2.12.4)
       hike (~> 1.2)
@@ -278,7 +278,7 @@ GEM
       json (>= 1.8.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.2)
+    unf_ext (0.0.8.2)
     xml-simple (1.1.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
